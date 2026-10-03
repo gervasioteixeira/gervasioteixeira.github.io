@@ -2,8 +2,8 @@
 layout: base.njk
 ---
 <article class="post">
-  <p class="meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | dataBR }}</time></p>
+  <span class="meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | dataBR }}</time></span>
   <h1>{{ title }}</h1>
   {{ content | safe }}
-  <p class="back"><a href="/blog/">&larr; Todos os artigos</a></p>
+  <p class="back"><a href="/blog/">← Todos os artigos</a></p>
 </article>

@@ -3,18 +3,19 @@ layout: base.njk
 titulo: Blog — Gervasio Teixeira
 descricao: Artigos sobre desenvolvimento web, Laravel, Vue, automação e IA aplicada.
 ---
-<header class="hero">
-  <h1>Blog</h1>
-  <p>Artigos sobre desenvolvimento, decisões de arquitetura e o que aprendo construindo.</p>
-</header>
+<div class="page-head">
+  <span class="kicker">Blog</span>
+  <h1>Artigos</h1>
+  <p>Decisões de arquitetura, bastidores e o que aprendo construindo.</p>
+</div>
+<section>
 {% if collections.posts.length %}
 <ul class="posts">
   {% for p in collections.posts %}
-  <li><a href="{{ p.url }}">{{ p.data.title }}</a>
-    <span class="meta">{{ p.date | dataBR }}</span>
-    <p>{{ p.data.resumo }}</p></li>
+  <li><a href="{{ p.url }}">{{ p.data.title }}</a> <span class="meta">{{ p.date | dataBR }}</span><p>{{ p.data.resumo }}</p></li>
   {% endfor %}
 </ul>
 {% else %}
 <p class="vazio">Os primeiros artigos chegam em breve.</p>
 {% endif %}
+</section>

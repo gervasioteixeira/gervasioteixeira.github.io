@@ -1,6 +1,10 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  // CNAME é criado quando o domínio próprio for configurado (ver README).
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2": "assets/fonts/space-grotesk.woff2",
+    "node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "assets/fonts/inter.woff2",
+  });
+  // CNAME do domínio próprio
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
 
   eleventyConfig.addCollection("posts", (api) =>
@@ -10,6 +14,7 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date)
   );
 
+  eleventyConfig.addFilter("head", (arr, n) => arr.slice(0, n));
   eleventyConfig.addFilter("dataBR", (d) =>
     new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric", timeZone: "UTC" })
   );

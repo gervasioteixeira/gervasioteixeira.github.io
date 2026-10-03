@@ -2,25 +2,71 @@
 layout: base.njk
 titulo: Gervasio Teixeira — Dev web
 ---
-<header class="hero">
-  <h1>Gervasio Teixeira</h1>
-  <p>Desenvolvedor web. Construo sistemas completos, do banco de dados à interface, com Laravel, Vue e automação com IA. Aqui estão alguns dos projetos que mantenho.</p>
-  <div class="stats">
-    <div class="stat"><b>20+</b><span>projetos construídos</span></div>
-    <div class="stat"><b>Laravel · Vue</b><span>stack principal</span></div>
-    <div class="stat"><b>Offline-first · Multi-tenant · IA</b><span>o que mais exploro</span></div>
+{% set icones = {
+  eventos: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h3M8 18h3M14 14h2"/>',
+  varejo: '<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>',
+  saas: '<path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
+  automacao: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
+  educacao: '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>'
+} %}
+<section class="hero">
+  <div class="rv">
+    <span class="eyebrow"><i></i> Dev web · Laravel · Vue · IA</span>
+    <h1>Sistemas completos, do banco de dados à <span class="grad">interface</span>.</h1>
+    <p class="lead">Sou Gervasio, desenvolvedor web. Construo plataformas de eventos, varejo, delivery e SaaS, e automações com IA. Aqui estão os projetos que mantenho.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projetos">Ver projetos →</a>
+      <a class="btn ghost" href="/blog/">Ler o blog</a>
+    </div>
   </div>
-</header>
-{% for g in projetos %}
-<h2>{{ g.grupo }}</h2>
-<div class="grid">
-  {% for p in g.itens %}
-  <div class="card{% if p.destaque %} feat{% endif %}">
-    <span class="tag">{{ p.tag }}</span>
-    <h3>{{ p.nome }}</h3>
-    <p>{{ p.texto }}</p>
-    <div class="stack">{% for s in p.stack %}<span>{{ s }}</span>{% endfor %}</div>
+  <div class="term rv" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <div class="body" id="term" data-lines='["<span class=\"c\"># perfil</span>","<span class=\"k\">nome</span>   = <span class=\"v\">\"Gervasio Teixeira\"</span>","<span class=\"k\">stack</span>  = <span class=\"v\">[\"Laravel\", \"Vue\", \"n8n\"]</span>","<span class=\"k\">foco</span>   = <span class=\"v\">[\"offline-first\", \"multi-tenant\", \"IA\"]</span>","<span class=\"k\">status</span> = <span class=\"v\">\"construindo algo novo\"</span>"]'></div>
   </div>
-  {% endfor %}
+</section>
+
+<div class="stats rv">
+  <div class="stat"><b data-count="20" data-suf="+">20+</b><span>projetos construídos</span></div>
+  <div class="stat"><b data-count="5">5</b><span>áreas: eventos, varejo, SaaS, automação, educação</span></div>
+  <div class="stat"><b>Laravel · Vue</b><span>stack principal</span></div>
 </div>
-{% endfor %}
+
+<section id="projetos">
+  <div class="sec-head rv">
+    <div><span class="kicker">Portfólio</span><h2>Projetos</h2></div>
+    <div class="chips" role="group" aria-label="Filtrar projetos">
+      <button class="chip" data-f="todos" aria-pressed="true">Todos</button>
+      <button class="chip" data-f="eventos" aria-pressed="false">Eventos</button>
+      <button class="chip" data-f="varejo" aria-pressed="false">Varejo</button>
+      <button class="chip" data-f="saas" aria-pressed="false">SaaS</button>
+      <button class="chip" data-f="automacao" aria-pressed="false">IA e automação</button>
+      <button class="chip" data-f="educacao" aria-pressed="false">Educação</button>
+    </div>
+  </div>
+  <div class="grid">
+    {% for p in projetos %}
+    <article class="card rv{% if p.destaque %} feat{% endif %}" data-cat="{{ p.cat }}">
+      <div class="ico"><svg viewBox="0 0 24 24">{{ icones[p.cat] | safe }}</svg></div>
+      <span class="tag">{{ p.tag }}</span>
+      <h3>{{ p.nome }}</h3>
+      <p>{{ p.texto }}</p>
+      <div class="stack">{% for s in p.stack %}<span>{{ s }}</span>{% endfor %}</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="marq rv" aria-hidden="true"><div>
+  {% for i in [1,2] %}<span>Laravel</span><span>Vue 3</span><span>Livewire</span><span>Filament</span><span>React</span><span>Node</span><span>MySQL</span><span>n8n</span><span>Tailwind</span><span>Chrome MV3</span><span>Mercado Pago</span><span>QEMU</span>{% endfor %}
+</div></div>
+
+{% if collections.posts.length %}
+<section>
+  <div class="sec-head rv"><div><span class="kicker">Blog</span><h2>Últimos artigos</h2></div><a class="btn ghost" href="/blog/">Ver todos</a></div>
+  <ul class="posts">
+    {% for p in collections.posts | head(3) %}
+    <li class="rv"><a href="{{ p.url }}">{{ p.data.title }}</a> <span class="meta">{{ p.date | dataBR }}</span><p>{{ p.data.resumo }}</p></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

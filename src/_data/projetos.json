@@ -1,69 +1,162 @@
 [
   {
-    "grupo": "Em destaque",
-    "itens": [
-      { "nome": "DescomplicaPJe", "tag": "Conteúdo e ferramentas", "destaque": true,
-        "texto": "Canal e site com tutoriais e séries de IA aplicada à rotina de cartório (MinutaIA), mais ferramentas de apoio, como a extensão CEMAN 2.0 para o Chrome.",
-        "stack": ["YouTube", "Extensão Chrome", "n8n", "Laravel"] },
-      { "nome": "Colloquium", "tag": "Eventos", "destaque": true,
-        "texto": "Plataforma de eventos acadêmicos e científicos: inscrições, pagamentos, submissão e avaliação de trabalhos, emissão de certificados e boas-vindas automáticas por WhatsApp.",
-        "stack": ["Laravel 12", "MySQL", "n8n", "Evolution API"] }
-    ]
+    "nome": "DescomplicaPJe",
+    "tag": "Conteúdo e ferramentas",
+    "destaque": true,
+    "texto": "Canal e site com tutoriais e séries de IA aplicada à rotina de cartório (MinutaIA), mais ferramentas de apoio, como a extensão CEMAN 2.0 para o Chrome.",
+    "stack": [
+      "YouTube",
+      "Extensão Chrome",
+      "n8n",
+      "Laravel"
+    ],
+    "cat": "automacao"
   },
   {
-    "grupo": "Varejo e comércio local",
-    "itens": [
-      { "nome": "Supermercado ERP + PDV", "tag": "Varejo",
-        "texto": "Retaguarda e frente de caixa para supermercados. O PDV continua vendendo mesmo sem internet e emite NFC-e em contingência.",
-        "stack": ["Laravel 13", "PHP 8.3", "MySQL 8", "PDV offline-first"] },
-      { "nome": "Delivery da Cidade", "tag": "Delivery",
-        "texto": "Marketplace de delivery para o comércio local: cadastro de lojas, catálogo com preço e desconto, checkout com Mercado Pago e divisão automática de comissão.",
-        "stack": ["Laravel", "Mercado Pago", "Split de pagamento"] },
-      { "nome": "Plataforma de Ingressos", "tag": "Eventos",
-        "texto": "SaaS multi-tenant de venda de ingressos para futebol, shows e festas. Um único código atende vários produtores, com identidade visual por domínio.",
-        "stack": ["Multi-tenant", "Laravel"] }
-    ]
+    "nome": "Colloquium",
+    "tag": "Eventos",
+    "destaque": true,
+    "texto": "Plataforma de eventos acadêmicos e científicos: inscrições, pagamentos, submissão e avaliação de trabalhos, emissão de certificados e boas-vindas automáticas por WhatsApp.",
+    "stack": [
+      "Laravel 12",
+      "MySQL",
+      "n8n",
+      "Evolution API"
+    ],
+    "cat": "eventos"
   },
   {
-    "grupo": "SaaS e IA",
-    "itens": [
-      { "nome": "FlowDash", "tag": "SaaS",
-        "texto": "Gestão clínica, operacional e financeira para clínicas, estúdios de pilates e prestadores de serviço, em modelo multi-tenant.",
-        "stack": ["Laravel 12", "Vue 3", "Inertia.js"] },
-      { "nome": "LexUp", "tag": "SaaS",
-        "texto": "Sistema de gestão para escritórios de advocacia.",
-        "stack": ["Laravel 11", "Filament 3", "Multi-tenant"] },
-      { "nome": "AdvocacIA", "tag": "IA",
-        "texto": "Portal de IA jurídica: o usuário envia um documento, escolhe a área e recebe a análise gerada por um fluxo de IA dedicado, com créditos pré-pagos via Mercado Pago.",
-        "stack": ["React", "Vite", "Node/Express", "n8n"] }
-    ]
+    "nome": "Supermercado ERP + PDV",
+    "tag": "Varejo",
+    "texto": "Retaguarda e frente de caixa para supermercados. O PDV continua vendendo mesmo sem internet e emite NFC-e em contingência.",
+    "stack": [
+      "Laravel 13",
+      "PHP 8.3",
+      "MySQL 8",
+      "PDV offline-first"
+    ],
+    "cat": "varejo"
   },
   {
-    "grupo": "Automação e produtividade",
-    "itens": [
-      { "nome": "Controle de prazos processuais", "tag": "Extensão + painel",
-        "texto": "Extensão para o Chrome que identifica etiquetas na tela e um painel web que calcula o vencimento de prazos de 90 dias e envia alertas por e-mail, no lugar da planilha.",
-        "stack": ["Chrome MV3", "Laravel", "Filament"] },
-      { "nome": "AuditaJud", "tag": "API pública",
-        "texto": "Consulta a API pública do DataJud (CNJ), confere quais movimentos processuais existem em cada processo e exporta o resultado em Excel.",
-        "stack": ["Laravel 12", "Filament 5", "Filas", "Excel"] },
-      { "nome": "Pauta → Google Calendar", "tag": "Automação",
-        "texto": "Lê PDFs de pauta de audiências e cria e atualiza os eventos correspondentes no Google Calendar, sem digitação manual.",
-        "stack": ["Apps Script", "Google Calendar", "Drive"] },
-      { "nome": "Gestão de horários de cursos", "tag": "Front-end",
-        "texto": "Agenda turmas e professores, calcula o calendário letivo, bloqueia choque de horário e gera PDF por turma e por professor. Funciona só no navegador.",
-        "stack": ["Vue 3", "localStorage", "PDF"] }
-    ]
+    "nome": "Delivery da Cidade",
+    "tag": "Delivery",
+    "texto": "Marketplace de delivery para o comércio local: cadastro de lojas, catálogo com preço e desconto, checkout com Mercado Pago e divisão automática de comissão.",
+    "stack": [
+      "Laravel",
+      "Mercado Pago",
+      "Split de pagamento"
+    ],
+    "cat": "varejo"
   },
   {
-    "grupo": "Educação",
-    "itens": [
-      { "nome": "Grade Horária", "tag": "Algoritmos",
-        "texto": "Gera grades de aulas resolvendo um problema de satisfação de restrições: aloca professores, salas e horários respeitando regras obrigatórias e preferências.",
-        "stack": ["Laravel 13", "Livewire 4", "Tailwind 4"] },
-      { "nome": "Laboratório de virtualização", "tag": "Virtualização",
-        "texto": "Ambiente para aulas de manutenção e virtualização, com máquinas virtuais QEMU acessadas pelo navegador via noVNC.",
-        "stack": ["QEMU", "noVNC", "Windows"] }
-    ]
+    "nome": "Plataforma de Ingressos",
+    "tag": "Eventos",
+    "texto": "SaaS multi-tenant de venda de ingressos para futebol, shows e festas. Um único código atende vários produtores, com identidade visual por domínio.",
+    "stack": [
+      "Multi-tenant",
+      "Laravel"
+    ],
+    "cat": "eventos"
+  },
+  {
+    "nome": "FlowDash",
+    "tag": "SaaS",
+    "texto": "Gestão clínica, operacional e financeira para clínicas, estúdios de pilates e prestadores de serviço, em modelo multi-tenant.",
+    "stack": [
+      "Laravel 12",
+      "Vue 3",
+      "Inertia.js"
+    ],
+    "cat": "saas"
+  },
+  {
+    "nome": "LexUp",
+    "tag": "SaaS",
+    "texto": "Sistema de gestão para escritórios de advocacia.",
+    "stack": [
+      "Laravel 11",
+      "Filament 3",
+      "Multi-tenant"
+    ],
+    "cat": "saas"
+  },
+  {
+    "nome": "AdvocacIA",
+    "tag": "IA",
+    "texto": "Portal de IA jurídica: o usuário envia um documento, escolhe a área e recebe a análise gerada por um fluxo de IA dedicado, com créditos pré-pagos via Mercado Pago.",
+    "stack": [
+      "React",
+      "Vite",
+      "Node/Express",
+      "n8n"
+    ],
+    "cat": "automacao"
+  },
+  {
+    "nome": "Controle de prazos processuais",
+    "tag": "Extensão + painel",
+    "texto": "Extensão para o Chrome que identifica etiquetas na tela e um painel web que calcula o vencimento de prazos de 90 dias e envia alertas por e-mail, no lugar da planilha.",
+    "stack": [
+      "Chrome MV3",
+      "Laravel",
+      "Filament"
+    ],
+    "cat": "automacao"
+  },
+  {
+    "nome": "AuditaJud",
+    "tag": "API pública",
+    "texto": "Consulta a API pública do DataJud (CNJ), confere quais movimentos processuais existem em cada processo e exporta o resultado em Excel.",
+    "stack": [
+      "Laravel 12",
+      "Filament 5",
+      "Filas",
+      "Excel"
+    ],
+    "cat": "automacao"
+  },
+  {
+    "nome": "Pauta → Google Calendar",
+    "tag": "Automação",
+    "texto": "Lê PDFs de pauta de audiências e cria e atualiza os eventos correspondentes no Google Calendar, sem digitação manual.",
+    "stack": [
+      "Apps Script",
+      "Google Calendar",
+      "Drive"
+    ],
+    "cat": "automacao"
+  },
+  {
+    "nome": "Grade Horária",
+    "tag": "Algoritmos",
+    "texto": "Gera grades de aulas resolvendo um problema de satisfação de restrições: aloca professores, salas e horários respeitando regras obrigatórias e preferências.",
+    "stack": [
+      "Laravel 13",
+      "Livewire 4",
+      "Tailwind 4"
+    ],
+    "cat": "educacao"
+  },
+  {
+    "nome": "Gestão de horários de cursos",
+    "tag": "Front-end",
+    "texto": "Agenda turmas e professores, calcula o calendário letivo, bloqueia choque de horário e gera PDF por turma e por professor. Funciona só no navegador.",
+    "stack": [
+      "Vue 3",
+      "localStorage",
+      "PDF"
+    ],
+    "cat": "educacao"
+  },
+  {
+    "nome": "Laboratório de virtualização",
+    "tag": "Virtualização",
+    "texto": "Ambiente para aulas de manutenção e virtualização, com máquinas virtuais QEMU acessadas pelo navegador via noVNC.",
+    "stack": [
+      "QEMU",
+      "noVNC",
+      "Windows"
+    ],
+    "cat": "educacao"
   }
 ]
