@@ -28,8 +28,8 @@
   },
   {
     "nome": "Supermercado ERP + PDV",
-    "tag": "Varejo",
-    "texto": "Retaguarda e frente de caixa para supermercados. O PDV continua vendendo mesmo sem internet e emite NFC-e em contingência.",
+    "tag": "Varejo · em desenvolvimento",
+    "texto": "ERP e frente de caixa para supermercados, em desenvolvimento. O PDV é offline-first: vende sem internet e sincroniza depois, sem perder nem duplicar vendas. A emissão de NFC-e ainda está em levantamento.",
     "stack": [
       "Laravel 13",
       "PHP 8.3",
