@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <p class="meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | dataBR }}</time></p>
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+  <p class="back"><a href="/blog/">&larr; Todos os artigos</a></p>
+</article>

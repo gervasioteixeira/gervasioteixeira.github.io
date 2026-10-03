@@ -1,0 +1,26 @@
+---
+layout: base.njk
+titulo: Gervasio Teixeira — Dev web
+---
+<header class="hero">
+  <h1>Gervasio Teixeira</h1>
+  <p>Desenvolvedor web. Construo sistemas completos, do banco de dados à interface, com Laravel, Vue e automação com IA. Aqui estão alguns dos projetos que mantenho.</p>
+  <div class="stats">
+    <div class="stat"><b>20+</b><span>projetos construídos</span></div>
+    <div class="stat"><b>Laravel · Vue</b><span>stack principal</span></div>
+    <div class="stat"><b>Offline-first · Multi-tenant · IA</b><span>o que mais exploro</span></div>
+  </div>
+</header>
+{% for g in projetos %}
+<h2>{{ g.grupo }}</h2>
+<div class="grid">
+  {% for p in g.itens %}
+  <div class="card{% if p.destaque %} feat{% endif %}">
+    <span class="tag">{{ p.tag }}</span>
+    <h3>{{ p.nome }}</h3>
+    <p>{{ p.texto }}</p>
+    <div class="stack">{% for s in p.stack %}<span>{{ s }}</span>{% endfor %}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
