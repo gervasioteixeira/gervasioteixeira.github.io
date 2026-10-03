@@ -122,3 +122,8 @@ footer p{max-width:620px}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 @media (max-width:860px){.hero{grid-template-columns:1fr}.links a:not(.keep){display:none}}
+
+/* mídia nos artigos */
+.post figure{margin:26px 0}
+.post img,.post video{display:block;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.post figcaption{margin-top:8px;font-size:14px;color:var(--muted)}

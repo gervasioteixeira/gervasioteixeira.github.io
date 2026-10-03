@@ -39,3 +39,17 @@ O push na `main` dispara `.github/workflows/pages.yml`, que faz o build e public
 
 Sem tribunal, cargo ou local de trabalho. Sem "cliente", "contrate", preço, orçamento ou anúncios.
 Telas e exemplos sempre com dados fictícios. Contato apenas por e-mail pessoal ou Instagram.
+
+## Imagens e vídeos nos artigos
+
+Coloque os arquivos em `src/assets/blog/<slug-do-artigo>/` (imagens em WebP/PNG, vídeos curtos em MP4 H.264,
+até ~10 MB, `muted loop playsinline` para demonstrações). No Markdown:
+
+```html
+<figure><img src="/assets/blog/pdv-offline/tela-venda.webp" alt="Tela de venda do PDV" loading="lazy">
+<figcaption>Tela de venda (dados de demonstração).</figcaption></figure>
+<video src="/assets/blog/pdv-offline/offline.mp4" controls muted playsinline></video>
+```
+
+**Regra inegociável:** toda captura e vídeo usa dados fictícios (nomes, CPFs, valores, processos, lojas). Antes de
+publicar, revise a imagem inteira, inclusive barra de abas, URLs, notificações e miniaturas.

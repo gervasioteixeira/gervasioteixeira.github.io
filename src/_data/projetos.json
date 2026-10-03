@@ -8,7 +8,8 @@
       "YouTube",
       "Extensão Chrome",
       "n8n",
-      "Laravel"
+      "Laravel",
+      "Landing + funil"
     ],
     "cat": "automacao"
   },
@@ -158,5 +159,52 @@
       "Windows"
     ],
     "cat": "educacao"
+  },
+  {
+    "nome": "RespondeAí",
+    "tag": "Sala de aula",
+    "cat": "educacao",
+    "texto": "Quiz ao vivo no estilo Kahoot para sala de aula: o professor cria as perguntas e os alunos respondem pelo celular, na rede local, sem depender de internet nem de contas externas.",
+    "stack": [
+      "PHP",
+      "MySQL",
+      "Tempo real",
+      "Rede local"
+    ]
+  },
+  {
+    "nome": "Preenchimento automático para sistema acadêmico",
+    "tag": "Extensão Chrome",
+    "cat": "automacao",
+    "texto": "Extensão que automatiza o lançamento de frequência, notas e planejamento de aulas em um portal acadêmico, transformando horas de digitação em poucos cliques.",
+    "stack": [
+      "Chrome MV3",
+      "JavaScript",
+      "Automação de formulários"
+    ]
+  },
+  {
+    "nome": "Sites e landing pages",
+    "tag": "Web",
+    "cat": "sites",
+    "texto": "Sites institucionais e páginas de captação responsivas, com SEO, formulários de contato e variações de layout para teste A/B.",
+    "stack": [
+      "PHP",
+      "HTML/CSS/JS",
+      "SEO",
+      "Formulários"
+    ]
+  },
+  {
+    "nome": "Estudos em Java",
+    "tag": "Fundamentos",
+    "cat": "educacao",
+    "texto": "Projetos de estudo: acesso a banco com JDBC e padrão DAO, interface com JavaFX e um sistema de xadrez orientado a objetos.",
+    "stack": [
+      "Java",
+      "JavaFX",
+      "JDBC",
+      "POO"
+    ]
   }
 ]
