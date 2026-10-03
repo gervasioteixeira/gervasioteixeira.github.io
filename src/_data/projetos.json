@@ -140,8 +140,8 @@
   },
   {
     "nome": "Gestão de horários de cursos",
-    "tag": "Front-end",
-    "texto": "Agenda turmas e professores, calcula o calendário letivo, bloqueia choque de horário e gera PDF por turma e por professor. Funciona só no navegador.",
+    "tag": "Projeto piloto",
+    "texto": "Projeto piloto de agendamento de turmas e professores: calcula o calendário letivo, bloqueia choque de horário e gera PDF por turma e por professor. Funciona só no navegador.",
     "stack": [
       "Vue 3",
       "localStorage",
@@ -205,6 +205,30 @@
       "JavaFX",
       "JDBC",
       "POO"
+    ]
+  },
+  {
+    "nome": "Calculadora de selos de produtividade",
+    "tag": "Ferramenta web",
+    "cat": "sites",
+    "texto": "Simulador em página única: o usuário informa seus indicadores e vê, em tempo real, a pontuação estimada, a faixa alcançada e o que melhorar primeiro. Projeto pessoal e não oficial.",
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Pages"
+    ]
+  },
+  {
+    "nome": "Site institucional CloudSuport",
+    "tag": "Site estático",
+    "cat": "sites",
+    "texto": "Site institucional leve gerado por um pequeno gerador em Node: HTML, CSS e JS puros, páginas por serviço, formulário de contato, tema claro/escuro e apresentação em PDF gerada a partir dos mesmos dados.",
+    "stack": [
+      "Node",
+      "HTML/CSS/JS",
+      "SEO",
+      "PHP (formulário)"
     ]
   }
 ]
