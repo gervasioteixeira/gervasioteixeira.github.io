@@ -19,14 +19,16 @@
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem('tema')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 <link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"{{ site.nome }}","url":"{{ site.url }}","jobTitle":"Desenvolvedor web","sameAs":["https://instagram.com/{{ site.instagram }}"],"knowsAbout":["Laravel","Vue.js","Automação","Inteligência artificial"]}</script>
 </head>
 <body>
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="/"><span class="mono">GT</span>{{ site.nome }}</a>
+    <a class="brand" href="/"><span class="mono">GT</span><span class="bn">{{ site.nome }}</span></a>
     <nav class="links">
       <a href="/#projetos">Projetos</a>
       <a href="/blog/" class="keep">Blog</a>
+      <a href="/sobre/" class="keep">Sobre</a>
       <a href="https://instagram.com/{{ site.instagram }}" rel="me" class="keep">Instagram</a>
       <button class="theme" type="button" aria-label="Alternar tema">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>

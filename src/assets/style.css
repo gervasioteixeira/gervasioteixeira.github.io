@@ -140,3 +140,5 @@ footer p{max-width:620px}
 .card h3 a{text-decoration:none;color:inherit}
 .card h3 a::after{content:"";position:absolute;inset:0;border-radius:var(--r)}
 .more{margin-top:14px;font:600 13px var(--mono);color:var(--acc)}
+
+@media (max-width:520px){.bn{display:none}.links a{padding:8px 10px}.links{gap:2px}.nav{height:60px}}

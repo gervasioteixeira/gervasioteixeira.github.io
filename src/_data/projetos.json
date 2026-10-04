@@ -111,7 +111,13 @@
       "Inertia.js"
     ],
     "cat": "saas",
-    "slug": "flowdash"
+    "slug": "flowdash",
+    "detalhes": [
+      "Módulos integrados de gestão clínica, operacional e financeira.",
+      "Voltado a clínicas, estúdios de pilates e prestadores de serviço.",
+      "Arquitetura multi-tenant: cada cliente tem os seus dados isolados no mesmo sistema.",
+      "Interface em português do Brasil, construída com Vue 3 e Inertia.js sobre Laravel 12."
+    ]
   },
   {
     "nome": "LexUp",
@@ -123,7 +129,11 @@
       "Multi-tenant"
     ],
     "cat": "saas",
-    "slug": "lexup"
+    "slug": "lexup",
+    "detalhes": [
+      "Plataforma SaaS multi-tenant para escritórios de advocacia.",
+      "Construída em Laravel 11 com painel Filament 3."
+    ]
   },
   {
     "nome": "AdvocacIA",
@@ -136,7 +146,12 @@
       "n8n"
     ],
     "cat": "automacao",
-    "slug": "advocacia"
+    "slug": "advocacia",
+    "detalhes": [
+      "Interface em React, intermediada por um serviço em Node/Express que aciona fluxos do n8n, um por área jurídica.",
+      "MySQL guarda autenticação, créditos, pagamentos e auditoria.",
+      "Créditos pré-pagos com pagamento por Pix e cartão via Mercado Pago."
+    ]
   },
   {
     "nome": "Controle de prazos processuais",
@@ -148,7 +163,12 @@
       "Filament"
     ],
     "cat": "automacao",
-    "slug": "controle-de-prazos-processuais"
+    "slug": "controle-de-prazos-processuais",
+    "detalhes": [
+      "Extensão que detecta a etiqueta na tela, sem acessar API nem banco de dados.",
+      "Painel compartilhado que calcula o vencimento do prazo e envia alertas por e-mail.",
+      "Substitui o controle por planilha eletrônica."
+    ]
   },
   {
     "nome": "AuditaJud",
@@ -161,7 +181,12 @@
       "Excel"
     ],
     "cat": "automacao",
-    "slug": "auditajud"
+    "slug": "auditajud",
+    "detalhes": [
+      "Recebe uma lista de números de processo e de códigos de movimento da tabela processual unificada.",
+      "Consulta a API pública do DataJud e identifica quais movimentos estão presentes em cada processo.",
+      "Painel administrativo, processamento em fila e exportação dos resultados em Excel."
+    ]
   },
   {
     "nome": "Pauta → Google Calendar",
@@ -185,7 +210,12 @@
       "Tailwind 4"
     ],
     "cat": "educacao",
-    "slug": "grade-horaria"
+    "slug": "grade-horaria",
+    "detalhes": [
+      "Modela a alocação de aulas como problema de satisfação de restrições (CSP).",
+      "Restrições duras (obrigatórias) e suaves (preferências) para professores, salas e horários.",
+      "Interface reativa com Livewire e arrastar-e-soltar para ajustes manuais."
+    ]
   },
   {
     "nome": "Gestão de horários de cursos",
@@ -228,7 +258,12 @@
       "Tempo real",
       "Rede local"
     ],
-    "slug": "respondeai"
+    "slug": "respondeai",
+    "detalhes": [
+      "Alternativa local ao Kahoot para turmas de cerca de 20 a 30 alunos.",
+      "Roda 100% em PHP e MySQL, na rede local, sem depender de internet nem de contas externas.",
+      "Telas separadas para professor e aluno."
+    ]
   },
   {
     "nome": "Preenchimento automático para sistema acadêmico",
