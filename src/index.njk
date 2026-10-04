@@ -50,9 +50,10 @@ titulo: Gervasio Teixeira — Dev web
     <article class="card rv{% if p.destaque %} feat{% endif %}" data-cat="{{ p.cat }}">
       <div class="ico"><svg viewBox="0 0 24 24">{{ icones[p.cat] | safe }}</svg></div>
       <span class="tag">{{ p.tag }}</span>
-      <h3>{{ p.nome }}</h3>
+      <h3><a href="/projetos/{{ p.slug }}/">{{ p.nome }}</a></h3>
       <p>{{ p.texto }}</p>
       <div class="stack">{% for s in p.stack %}<span>{{ s }}</span>{% endfor %}</div>
+      <span class="more">Ver detalhes →</span>
     </article>
     {% endfor %}
   </div>

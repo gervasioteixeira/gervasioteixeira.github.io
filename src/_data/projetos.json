@@ -11,7 +11,14 @@
       "Laravel",
       "Landing + funil"
     ],
-    "cat": "automacao"
+    "cat": "automacao",
+    "slug": "descomplicapje",
+    "links": [
+      {
+        "rotulo": "Visitar o site",
+        "url": "https://descomplicapje.com.br"
+      }
+    ]
   },
   {
     "nome": "Colloquium",
@@ -24,7 +31,14 @@
       "n8n",
       "Evolution API"
     ],
-    "cat": "eventos"
+    "cat": "eventos",
+    "slug": "colloquium",
+    "detalhes": [
+      "Inscrições e pagamentos online.",
+      "Submissão, avaliação e acompanhamento de trabalhos científicos.",
+      "Emissão de certificados.",
+      "Mensagens de boas-vindas automáticas por WhatsApp, integradas com n8n e Evolution API."
+    ]
   },
   {
     "nome": "Supermercado ERP + PDV",
@@ -36,7 +50,28 @@
       "MySQL 8",
       "PDV offline-first"
     ],
-    "cat": "varejo"
+    "cat": "varejo",
+    "slug": "supermercado-erp-pdv",
+    "posts": [
+      "erp-pdv-primeiras-semanas",
+      "pdv-venda-sem-servidor"
+    ],
+    "detalhes": [
+      "Retaguarda web com produtos e preços por loja, lojas, usuários com perfis e alçadas, estoque com transferência entre lojas, turnos de caixa, promoções com vigência, relatórios e painel de saúde dos caixas.",
+      "PDV desktop com leitura de código de barras, venda por quantidade e peso, pagamento em dinheiro, PIX e cartão, desconto com autorização de supervisor, devolução e identificação do operador por PIN.",
+      "Sincronização por fila de eventos imutável com hash encadeado e envio idempotente, para não perder nem duplicar vendas.",
+      "Ainda em desenvolvimento: a emissão de NFC-e e os testes com hardware real estão em levantamento."
+    ],
+    "imagens": [
+      {
+        "src": "/assets/blog/erp-pdv-primeiras-semanas/retaguarda-produtos.jpg",
+        "alt": "Tela de produtos e preços da retaguarda, com dados de demonstração"
+      },
+      {
+        "src": "/assets/blog/pdv-vendendo-sem-servidor/06-refri.jpg",
+        "alt": "Tela de venda do PDV com quatro itens, em modo de demonstração"
+      }
+    ]
   },
   {
     "nome": "Delivery da Cidade",
@@ -47,7 +82,13 @@
       "Mercado Pago",
       "Split de pagamento"
     ],
-    "cat": "varejo"
+    "cat": "varejo",
+    "slug": "delivery-da-cidade",
+    "detalhes": [
+      "Cadastro de lojas e catálogo com preço e desconto.",
+      "Checkout com Mercado Pago e divisão automática da comissão.",
+      "Versão 1 100% web, sem cadastro de entregadores."
+    ]
   },
   {
     "nome": "Plataforma de Ingressos",
@@ -57,7 +98,8 @@
       "Multi-tenant",
       "Laravel"
     ],
-    "cat": "eventos"
+    "cat": "eventos",
+    "slug": "plataforma-de-ingressos"
   },
   {
     "nome": "FlowDash",
@@ -68,7 +110,8 @@
       "Vue 3",
       "Inertia.js"
     ],
-    "cat": "saas"
+    "cat": "saas",
+    "slug": "flowdash"
   },
   {
     "nome": "LexUp",
@@ -79,7 +122,8 @@
       "Filament 3",
       "Multi-tenant"
     ],
-    "cat": "saas"
+    "cat": "saas",
+    "slug": "lexup"
   },
   {
     "nome": "AdvocacIA",
@@ -91,7 +135,8 @@
       "Node/Express",
       "n8n"
     ],
-    "cat": "automacao"
+    "cat": "automacao",
+    "slug": "advocacia"
   },
   {
     "nome": "Controle de prazos processuais",
@@ -102,7 +147,8 @@
       "Laravel",
       "Filament"
     ],
-    "cat": "automacao"
+    "cat": "automacao",
+    "slug": "controle-de-prazos-processuais"
   },
   {
     "nome": "AuditaJud",
@@ -114,7 +160,8 @@
       "Filas",
       "Excel"
     ],
-    "cat": "automacao"
+    "cat": "automacao",
+    "slug": "auditajud"
   },
   {
     "nome": "Pauta → Google Calendar",
@@ -125,7 +172,8 @@
       "Google Calendar",
       "Drive"
     ],
-    "cat": "automacao"
+    "cat": "automacao",
+    "slug": "pauta-google-calendar"
   },
   {
     "nome": "Grade Horária",
@@ -136,7 +184,8 @@
       "Livewire 4",
       "Tailwind 4"
     ],
-    "cat": "educacao"
+    "cat": "educacao",
+    "slug": "grade-horaria"
   },
   {
     "nome": "Gestão de horários de cursos",
@@ -147,7 +196,14 @@
       "localStorage",
       "PDF"
     ],
-    "cat": "educacao"
+    "cat": "educacao",
+    "slug": "gestao-de-horarios-de-cursos",
+    "links": [
+      {
+        "rotulo": "Abrir o sistema",
+        "url": "https://gervasioteixeira.github.io/horarios-senac/"
+      }
+    ]
   },
   {
     "nome": "Laboratório de virtualização",
@@ -158,7 +214,8 @@
       "noVNC",
       "Windows"
     ],
-    "cat": "educacao"
+    "cat": "educacao",
+    "slug": "laboratorio-de-virtualizacao"
   },
   {
     "nome": "RespondeAí",
@@ -170,7 +227,8 @@
       "MySQL",
       "Tempo real",
       "Rede local"
-    ]
+    ],
+    "slug": "respondeai"
   },
   {
     "nome": "Preenchimento automático para sistema acadêmico",
@@ -181,7 +239,8 @@
       "Chrome MV3",
       "JavaScript",
       "Automação de formulários"
-    ]
+    ],
+    "slug": "preenchimento-automatico-para-sistema-academico"
   },
   {
     "nome": "Sites e landing pages",
@@ -193,7 +252,8 @@
       "HTML/CSS/JS",
       "SEO",
       "Formulários"
-    ]
+    ],
+    "slug": "sites-e-landing-pages"
   },
   {
     "nome": "Estudos em Java",
@@ -205,7 +265,8 @@
       "JavaFX",
       "JDBC",
       "POO"
-    ]
+    ],
+    "slug": "estudos-em-java"
   },
   {
     "nome": "Calculadora de selos de produtividade",
@@ -217,6 +278,13 @@
       "CSS",
       "JavaScript",
       "GitHub Pages"
+    ],
+    "slug": "calculadora-de-selos-de-produtividade",
+    "links": [
+      {
+        "rotulo": "Abrir a calculadora",
+        "url": "https://gervasioteixeira.github.io/selo2026/"
+      }
     ]
   },
   {
@@ -229,6 +297,38 @@
       "HTML/CSS/JS",
       "SEO",
       "PHP (formulário)"
+    ],
+    "slug": "site-institucional-cloudsuport",
+    "links": [
+      {
+        "rotulo": "Visitar o site",
+        "url": "https://cloudsuport.com.br"
+      }
+    ]
+  },
+  {
+    "nome": "Site institucional para clínica",
+    "tag": "Site · demonstração",
+    "cat": "sites",
+    "texto": "Site institucional de uma clínica de saúde e estética, com corpo clínico, serviços, cursos e coworking editáveis por painel administrativo. Esta é uma versão de demonstração, com nome, contatos e dados fictícios.",
+    "stack": [
+      "Laravel",
+      "Filament",
+      "Tailwind",
+      "Vite"
+    ],
+    "slug": "site-institucional-para-clinica",
+    "links": [
+      {
+        "rotulo": "Ver a demonstração (dados fictícios)",
+        "url": "/demos/instituto/"
+      }
+    ],
+    "detalhes": [
+      "Sete páginas: início, o instituto, corpo clínico, serviços, cursos, coworking e contato.",
+      "Conteúdo (profissionais, serviços e cursos) gerenciado por painel administrativo.",
+      "Layout responsivo, com contato direcionado ao WhatsApp.",
+      "A demonstração usa nome, contatos e textos fictícios e imagens de banco de imagens."
     ]
   }
 ]

@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
     "node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2": "assets/fonts/space-grotesk.woff2",
     "node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "assets/fonts/inter.woff2",
   });
+  eleventyConfig.addPassthroughCopy("src/demos");
   // CNAME do domínio próprio
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
 

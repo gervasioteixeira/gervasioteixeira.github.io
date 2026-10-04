@@ -1,0 +1,30 @@
+---
+layout: base.njk
+pagination:
+  data: projetos
+  size: 1
+  alias: p
+permalink: "/projetos/{{ p.slug }}/"
+eleventyComputed:
+  titulo: "{{ p.nome }} — Gervasio Teixeira"
+  descricao: "{{ p.texto }}"
+---
+<article class="proj">
+  <p class="back"><a href="/#projetos">← Todos os projetos</a></p>
+  <span class="kicker">{{ p.tag }}</span>
+  <h1>{{ p.nome }}</h1>
+  <p class="lead">{{ p.texto }}</p>
+  {% if p.links %}<div class="cta">{% for l in p.links %}<a class="btn primary" href="{{ l.url }}" {% if l.url.startsWith('http') %}target="_blank" rel="noopener"{% endif %}>{{ l.rotulo }} →</a>{% endfor %}</div>{% endif %}
+  {% if p.detalhes %}<h2>O que tem</h2><ul class="det">{% for d in p.detalhes %}<li>{{ d }}</li>{% endfor %}</ul>{% endif %}
+  {% if p.imagens %}<div class="shots">{% for i in p.imagens %}<figure><img src="{{ i.src }}" alt="{{ i.alt }}" loading="lazy"><figcaption>{{ i.alt }}</figcaption></figure>{% endfor %}</div>{% endif %}
+  <h2>Stack</h2>
+  <div class="stack">{% for s in p.stack %}<span>{{ s }}</span>{% endfor %}</div>
+  {% if p.posts %}
+  <h2>Artigos sobre este projeto</h2>
+  <ul class="posts">
+    {% for post in collections.posts %}{% if post.fileSlug in p.posts or (post.url | replace('/blog/', '') | replace('/', '')) in p.posts %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a> <span class="meta">{{ post.date | dataBR }}</span><p>{{ post.data.resumo }}</p></li>
+    {% endif %}{% endfor %}
+  </ul>
+  {% endif %}
+</article>

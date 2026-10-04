@@ -1,7 +1,7 @@
 ---
 title: "Uma venda no PDV sem servidor: a fila local em ação"
 resumo: Uma venda completa no meu PDV de demonstração, sem nuvem, e como o caixa guarda tudo para enviar depois.
-date: 2026-10-04
+date: 2026-10-03
 ---
 
 No [artigo anterior](/blog/erp-pdv-primeiras-semanas/) contei a ideia: o caixa grava a venda primeiro no próprio computador e só depois envia para a nuvem. Aqui está uma venda de verdade no modo de demonstração, **sem nenhum servidor conectado**. O caixa, o operador e os produtos são fictícios.
