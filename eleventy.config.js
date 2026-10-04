@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", (api) =>
     api
       .getFilteredByGlob("src/blog/posts/*.md")
-      .filter((p) => !p.data.draft)
+      .filter((p) => !p.data.draft && new Date(p.data.date) <= new Date())
       .sort((a, b) => b.date - a.date)
   );
 

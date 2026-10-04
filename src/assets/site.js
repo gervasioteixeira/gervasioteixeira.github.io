@@ -18,6 +18,13 @@
   function onScroll() { header.classList.toggle('scrolled', scrollY > 8); }
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
+  /* voltar ao topo */
+  var top = document.querySelector('.totop');
+  if (top) {
+    top.addEventListener('click', function () { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
+    addEventListener('scroll', function () { top.hidden = scrollY < 600; }, { passive: true });
+  }
+
   /* reveal */
   var els = document.querySelectorAll('.rv');
   if ('IntersectionObserver' in window && !reduce) {

@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'   # todo dia às 09h (Brasília): publica os artigos cuja data chegou
 
 permissions:
   contents: read

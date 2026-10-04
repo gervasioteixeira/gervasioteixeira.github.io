@@ -123,6 +123,8 @@ footer p{max-width:620px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 @media (max-width:860px){.hero{grid-template-columns:1fr}.links a:not(.keep){display:none}}
 
+.totop{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 24px -8px rgba(0,0,0,.5);z-index:40}.totop[hidden]{display:none}.totop:hover{border-color:var(--acc);color:var(--acc)}
+
 /* mídia nos artigos */
 .post figure{margin:26px 0}
 .post img,.post video{display:block;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
