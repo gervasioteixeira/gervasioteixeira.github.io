@@ -34,10 +34,21 @@
     "cat": "eventos",
     "slug": "colloquium",
     "detalhes": [
-      "Inscrições e pagamentos online.",
-      "Submissão, avaliação e acompanhamento de trabalhos científicos.",
-      "Emissão de certificados.",
-      "Mensagens de boas-vindas automáticas por WhatsApp, integradas com n8n e Evolution API."
+      "Inscrições com lotes de preço, vouchers e vendas em grupo, pagas por Pix ou cartão via Mercado Pago.",
+      "Módulo científico: submissão de artigos e TCC com versões e co-autores, aceite do orientador por link assinado e avaliação por critérios.",
+      "Distribuição de avaliadores com regras de conflito de interesse e carga equilibrada.",
+      "Certificados e crachás em PDF, validação por QR Code e check-in por QR.",
+      "Criação de evento por assistente guiado ou por planilha Excel, com revisão antes de confirmar.",
+      "Boas-vindas automáticas por WhatsApp, integradas com n8n e Evolution API."
+    ],
+    "posts": [
+      "colloquium-distribuicao-avaliadores"
+    ],
+    "imagens": [
+      {
+        "src": "/assets/blog/colloquium-avaliadores/painel-avaliador.jpg",
+        "alt": "Painel do avaliador, com trabalhos e dados de demonstração"
+      }
     ]
   },
   {
