@@ -144,3 +144,4 @@ footer p{max-width:620px}
 .more{margin-top:14px;font:600 13px var(--mono);color:var(--acc)}
 
 @media (max-width:520px){.bn{display:none}.links a{padding:8px 10px}.links{gap:2px}.nav{height:60px}}
+.sobre-top{display:flex;gap:28px;align-items:center;flex-wrap:wrap}.sobre-top img{width:160px;height:200px;object-fit:cover;object-position:50% 20%;border-radius:20px;border:1px solid var(--card)}.sobre-top>div{flex:1;min-width:260px}
