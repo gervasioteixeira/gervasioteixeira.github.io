@@ -54,7 +54,7 @@
   {
     "nome": "Supermercado ERP + PDV",
     "tag": "Varejo · em desenvolvimento",
-    "texto": "ERP e frente de caixa para supermercados, em desenvolvimento. O PDV é offline-first: vende sem internet e sincroniza depois, sem perder nem duplicar vendas. A retaguarda controla estoque com custo e margem, transferências entre lojas e avisos dos caixas com problema. A emissão de NFC-e ainda está em levantamento.",
+    "texto": "ERP e frente de caixa para supermercados, em desenvolvimento. O PDV é offline-first: vende sem internet e sincroniza depois, sem perder nem duplicar vendas. A retaguarda cobre estoque com custo e margem, compras (fornecedores, pedidos e sugestão pelo giro), transferências entre lojas e avisos dos caixas com problema. A emissão de NFC-e ainda está em levantamento.",
     "stack": [
       "Laravel 13",
       "PHP 8.3",
@@ -70,8 +70,9 @@
       "pdv-venda-sem-servidor"
     ],
     "detalhes": [
-      "Retaguarda web com produtos e preços por loja, promoções com vigência, usuários com perfis e alçadas, turnos de caixa e relatórios de vendas, faturamento e margem.",
+      "Retaguarda web com produtos e preços por loja, promoções com vigência, usuários com perfis e alçadas, turnos de caixa e relatórios de vendas, faturamento, margem e curva ABC.",
       "Estoque com livro-razão imutável: mínimo e alertas de reposição, contagem, transferência entre lojas (imediata ou com envio e recebimento, com perda em trânsito), custo médio ponderado e valorização.",
+      "Compras: fornecedores, pedido de compra com recebimento parcial que dá entrada no estoque já com o custo da nota, sugestão de compra pelo giro e curva ABC dos produtos.",
       "PDV desktop com leitura de código de barras e de etiqueta de balança, venda por quantidade e peso, pagamento em dinheiro, PIX e cartão, desconto por forma de pagamento e com autorização de supervisor, devolução e identificação do operador por PIN.",
       "Sincronização por fila de eventos imutável com hash encadeado e envio idempotente, para não perder nem duplicar vendas. O caixa troca o próprio token periodicamente sem ficar trancado para fora, mesmo se a rede falhar no meio.",
       "Painel de saúde dos caixas (fila, relógio, catálogo, modo fiscal) com aviso por e-mail e WhatsApp quando algo fica crítico.",
