@@ -248,7 +248,7 @@
     $$("#menu a").forEach(function (a) { a.classList.toggle("on", !!cur && a.getAttribute("href") === "#" + cur.menu); });
   }
   function initNav() {
-    var map = { historia: "historia", m1: "historia", m2: "historia", m3: "historia", m4: "historia", m5: "historia", fechamento: "historia", atividades: "atividades", atividade2: "atividades", atividade3: "atividades", prompts: "prompts", ferramentas: "ferramentas", praticar: "praticar", normas: "normas", declaracao: "declaracao", materiais: "materiais", sobre: "sobre", roteiro: "roteiro" };
+    var map = { historia: "historia", m1: "historia", m2: "historia", m3: "historia", m4: "historia", m5: "historia", fechamento: "historia", atividades: "atividades", atividade2: "atividades", atividade3: "atividades", prompts: "prompts", ferramentas: "ferramentas", praticar: "praticar", normas: "normas", declaracao: "declaracao", audio: "audio", materiais: "materiais", sobre: "sobre", roteiro: "roteiro" };
     navSecs = $$("main > section[id]").filter(function (s) { return map[s.id]; }).map(function (s) { return { el: s, menu: map[s.id] }; });
     window.addEventListener("scroll", updateNavOn, { passive: true });
   }
@@ -288,6 +288,15 @@
   }
   function toggleFull() { var d = document; if (d.fullscreenElement) d.exitFullscreen(); else if (d.documentElement.requestFullscreen) d.documentElement.requestFullscreen(); }
 
+  /* ---------- áudio de apoio ---------- */
+  function initAudio() {
+    var a = $("#pod"); if (!a) return; var chs = $$("#chaps .chap");
+    chs.forEach(function (b) { b.addEventListener("click", function () { a.currentTime = parseFloat(b.getAttribute("data-t")); a.play(); }); });
+    $("#podRate").addEventListener("change", function (e) { a.playbackRate = parseFloat(e.target.value); });
+    a.addEventListener("play", function () { a.playbackRate = parseFloat($("#podRate").value); });
+    a.addEventListener("timeupdate", function () { var t = a.currentTime, cur = -1; chs.forEach(function (b, i) { if (parseFloat(b.getAttribute("data-t")) <= t + 0.3) cur = i; }); chs.forEach(function (b, i) { b.classList.toggle("on", i === cur); }); });
+  }
+
   /* ---------- botão voltar ao topo ---------- */
   function initToTop() {
     var b = $("#toTop"); if (!b) return;
@@ -299,6 +308,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     initSave(); initCopy(); initBuilder(); initDecl(); initTokens(); initNext();
     initQuiz("quizRef", QREF, REF_OPTS, "scoreRef"); initQuiz("quizFal", QFAL, FAL_OPTS, "scoreFal"); initQuiz("quizDel", QDEL, DEL_OPTS, "scoreDel");
-    initRefs(); initSteps(); initSearch(); initNav(); initSchedule(); initAula(); initToTop();
+    initRefs(); initSteps(); initSearch(); initNav(); initSchedule(); initAula(); initToTop(); initAudio();
   });
 })();

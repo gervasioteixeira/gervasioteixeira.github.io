@@ -1,0 +1,206 @@
+ABERTURA
+
+Olá! Seja bem-vindo, seja bem-vinda. Este áudio acompanha o minicurso "Escrever com IA sem deixar de pensar", do Vigésimo Oitavo Seminário de Filosofia da Faculdade Católica da Paraíba. Ele foi narrado por uma voz sintética, e o conteúdo vem do texto de apoio, dos slides e da página do minicurso. Você pode ouvir antes, durante ou depois das aulas, como uma conversa de apoio.
+
+Vou falar como um professor que senta ao seu lado e explica, com calma, o que vamos ver. Não é preciso saber programar. Também não é preciso ser especialista em Filosofia, embora a Filosofia seja a nossa porta de entrada. Em cada parte do minicurso a gente faz o mesmo percurso: começa com uma ideia da tradição filosófica, explica o conceito de computação que corresponde a ela e termina, quando cabe, com uma prática no computador.
+
+Antes de tudo, a pergunta que guia o minicurso inteiro. Guarde-a: quando um texto é escrito com ajuda de uma máquina, o que nele ainda é meu?
+
+Repare que a pergunta não diz "pode ou não pode usar inteligência artificial". Ela pergunta pelo que é meu. Ela supõe que usar a máquina é uma realidade, que todo mundo já usa, e quer saber onde passa a fronteira entre o que a máquina faz bem e o que continua sendo responsabilidade de quem escreve. De um lado, a inteligência artificial organiza, reformula, resume, sugere objeções e acelera o rascunho. Do outro, continuam sendo seus a pergunta, o juízo, a verificação, a tese e a responsabilidade pelo que você assina.
+
+O tema do Seminário é "O humano em questão". E esta é exatamente a questão: o que é próprio do humano quando escrever, que parecia coisa só nossa, passa a ser feito também por máquinas?
+
+Antes das cinco partes, vamos fazer uma pequena parada para contar de onde vem a inteligência artificial e por que ela explodiu nos últimos anos. O minicurso tem cinco partes. A primeira trata de autoria. A segunda explica como uma inteligência artificial funciona por dentro. A terceira, de pesquisa e referências. A quarta usa a inteligência artificial como interlocutora, no estilo de Sócrates. E a quinta fala de estruturar, revisar, e responder pelo que se escreve. Há três atividades práticas, no computador, uma ao fim das partes três, quatro e cinco. Para elas você vai precisar de um computador com internet, uma conta gratuita em alguma inteligência artificial, como o ChatGPT, o Gemini, o Claude ou o Copilot, e de um tema seu. Um tema real, ainda que provisório: um trabalho de conclusão de curso, um artigo, um projeto.
+
+E um último combinado: cinco regras de ouro para tudo o que vem depois. Primeira: eu penso primeiro, depois peço ajuda. Segunda: nada que a inteligência artificial entrega vale como fonte antes de eu verificar. Terceira: não colo dados pessoais nem trabalhos sigilosos em ferramentas públicas. Quarta: registro o que fiz, porque isso é a minha declaração de uso. E quinta: se a inteligência artificial concordar demais comigo, peço que ela discorde. Vamos voltar a cada uma delas.
+
+ANTES DE TUDO: DE ONDE VEM A I A
+
+Antes de entrar no minicurso, uma pergunta: a inteligência artificial é coisa de hoje? Não é. E contar um pouco da história ajuda a entender por que ela parece ter surgido do nada.
+
+A ideia de mecanizar o raciocínio é bem antiga. No século dezessete, o filósofo Leibniz sonhava com um cálculo capaz de resolver disputas: em vez de brigar, as pessoas sentariam e calculariam. Já no século vinte, em mil novecentos e quarenta e três, McCulloch e Pitts propuseram um modelo matemático de neurônio. Em mil novecentos e cinquenta, Alan Turing trocou a pergunta "as máquinas podem pensar?" por um jogo de imitação, e vamos voltar a ele na parte dois. E em mil novecentos e cinquenta e seis, na proposta de um encontro de verão na universidade de Dartmouth, nos Estados Unidos, John McCarthy e colegas usaram pela primeira vez o nome "inteligência artificial". A aposta era que aprender e raciocinar poderiam ser descritos com tanta precisão que uma máquina seria capaz de simulá-los.
+
+Desde então, duas apostas disputaram o campo. A primeira, a inteligência artificial simbólica, tentava escrever à mão regras e lógica que representassem o conhecimento. A segunda, o conexionismo, apostava em redes neurais, que aprendem padrões a partir de exemplos. O Perceptron, de mil novecentos e cinquenta e oito, é um exemplo.
+
+Os resultados ficaram abaixo das promessas. Houve períodos de cortes de verba e de descrença, que ficaram conhecidos como os invernos da inteligência artificial, nos anos mil novecentos e setenta e, depois, do fim dos anos oitenta ao início dos noventa. Em mil novecentos e oitenta e seis, a retropropagação, popularizada por Rumelhart, Hinton e Williams, tornou viável treinar redes com várias camadas. Mas faltavam duas coisas: dados e poder de cálculo.
+
+A virada começou em dois mil e doze. Uma rede neural chamada AlexNet venceu um concurso de reconhecimento de imagens, o ImageNet, e foi treinada em GPUs, as placas gráficas. Era o começo do aprendizado profundo. Em dois mil e dezesseis, o AlphaGo, da DeepMind, venceu um campeão mundial de Go, um jogo que se achava fora do alcance das máquinas. Em dois mil e dezessete, um artigo chamado "Attention is all you need" apresentou o transformer, a arquitetura que permite treinar com enormes volumes de texto, em paralelo. Vamos abri-lo na parte dois. Em dois mil e vinte, o GPT-3 chegou a cento e setenta e cinco bilhões de parâmetros, e pesquisas sobre as chamadas leis de escala mostraram que mais dados, mais parâmetros e mais cálculo melhoravam o desempenho de modo previsível. E em dois mil e vinte e dois, o ajuste dos modelos com avaliações de pessoas, e o lançamento do ChatGPT, em trinta de novembro, levaram tudo isso ao grande público. Estimativas da época apontaram mais de cem milhões de usuários em cerca de dois meses.
+
+Então, por que ela explodiu há poucos anos? Por uma combinação de cinco ingredientes. Primeiro, dados: décadas de internet deixaram bilhões de textos, imagens e códigos para treinar os modelos. Segundo, cálculo: as GPUs e os grandes centros de dados permitem treinar redes enormes em semanas. Terceiro, arquitetura: o transformer aproveita esse hardware e capta relações entre palavras distantes. Quarto, escala: mais dados, mais parâmetros e mais cálculo trazem ganhos previsíveis. E quinto, conversa: o ajuste com feedback humano e um chat aberto a todos levaram a inteligência artificial do laboratório ao cotidiano.
+
+Repare no que não está nessa lista: uma nova teoria do pensamento. O que mudou foi a quantidade de dados, de cálculo e a forma de conversar com a máquina. Por isso, a pergunta que guia o minicurso continua de pé. E fica para você pensar: se o que mudou foi a escala e a interface, e não a ideia de pensar, o que muda na pergunta "o que, num texto escrito com ajuda de uma máquina, ainda é meu?"
+
+PARTE UM: AUTORIA NA ERA DA I A
+
+Vamos começar pelo mito. No diálogo Fedro, Platão conta uma história egípcia. O deus Theuth, inventor dos números, do cálculo e das letras, vai ao rei Thamus apresentar suas invenções. Quando chega às letras, à escrita, ele diz: isto vai tornar os egípcios mais sábios e dar-lhes melhor memória. Era, nas palavras dele, um remédio para a memória e para a sabedoria.
+
+Só que a palavra grega usada ali é "pharmakon", e ela significa, ao mesmo tempo, remédio e veneno. Thamus, o rei, responde que o inventor de uma arte nem sempre é o melhor juiz da utilidade dela. Segundo ele, a escrita vai produzir esquecimento: as pessoas passarão a confiar em marcas externas, escritas, em vez de exercitar a memória. E ela dará apenas, e essa expressão é importante, uma aparência de sabedoria. Quem lê muito sem aprender vai se julgar sábio sem ser.
+
+Mais adiante, no mesmo diálogo, Sócrates acrescenta uma imagem. O escrito é como uma pintura. As figuras do pintor parecem vivas, mas se você faz uma pergunta a elas, guardam um silêncio solene. Também o texto escrito, se interrogado, repete sempre a mesma coisa.
+
+Agora pense na inteligência artificial que escreve. Ela é um novo capítulo da mesma história, com uma diferença notável. O texto agora responde. Adapta-se. Reformula. A impressão de estar diante de um interlocutor é muito mais forte. E, por isso mesmo, o risco do veneno também é maior.
+
+Pierre Lévy e Walter Ong, estudiosos da comunicação, lembram que cada tecnologia da palavra reorganiza o modo de pensar de quem a usa. Foi assim com a escrita, depois com a imprensa, agora com as máquinas que geram texto. A pergunta, como em Platão, não é se a técnica é boa ou má. É: o que ela faz de nós, conforme o uso que lhe damos? Ela é remédio para quem já pensou e quer organizar e testar as suas ideias. E é veneno para quem ainda não pensou e, ao deixar a máquina pensar, deixa de aprender.
+
+O segundo autor é Kant, num texto de mil setecentos e oitenta e quatro: "Resposta à pergunta: que é esclarecimento?". Kant define o esclarecimento como a saída do ser humano da sua menoridade. E menoridade, para ele, é a incapacidade de servir-se do próprio entendimento sem a direção de outra pessoa. Note o detalhe: é uma menoridade por culpa própria. A causa não é falta de inteligência. É falta de decisão e de coragem.
+
+E Kant dá um exemplo célebre: como é cômodo ser menor! Se eu tenho um livro que entende por mim, um pastor que tem consciência por mim, um médico que decide a minha dieta, não preciso me esforçar eu mesmo. O lema do esclarecimento, tirado de Horácio, é "Sapere aude": tem a coragem de servir-te do teu próprio entendimento.
+
+A inteligência artificial entra nessa lista? Eu diria que Kant não condenaria os guias. O que ele condena é a comodidade de nunca deixar de precisar deles. Na área que estuda a relação entre pessoas e sistemas, chamada de fatores humanos, há até um nome para algo parecido: viés de automação, a tendência de confiar demais nas respostas de um sistema automático, só porque ele é automático. E a diferença entre a ferramenta que esclarece e a tutela que mantém na menoridade está no que fazemos com o resultado. Se aceito sem examinar, é tutela. Se examino, discordo e refaço, é ferramenta.
+
+Fica uma pergunta para você pensar: se eu peço à inteligência artificial o resumo de um texto, isso é o mesmo que delegar ao livro o entendimento? Em que ponto a ajuda vira tutela?
+
+O terceiro autor é Hannah Arendt. No prólogo de "A condição humana", ela propõe uma tarefa simples e exigente: pensar o que estamos fazendo. Não aceitar que as técnicas façam por nós aquilo que deveríamos examinar. Se a gente aplica isso à escrita, a proposta se desdobra em três perguntas, e eu peço que você guarde estas três.
+
+Primeira: quem pensou? A ideia central, o recorte, a tese, partiram de você ou do modelo? Segunda: quem decidiu? Cada escolha, o que entra, o que sai, qual fonte vale, passou pelo seu juízo? E terceira: quem responde? Se houver erro, plágio ou invenção, quem assume?
+
+Essa última é decisiva. Um sistema de inteligência artificial não assina, e não responde. A responsabilidade recai sobre pessoas e instituições. Na computação existe uma palavra para isso, "accountability", algo como a capacidade de prestar contas.
+
+Daí uma definição de trabalho que vamos usar até o fim do minicurso: autor é quem decide, responde e pode justificar o que escreveu. Usar inteligência artificial não retira a autoria, desde que essas três perguntas tenham resposta clara e honesta.
+
+Então faça o exercício: pegue um texto seu, em que você já usou, ou pretende usar, ajuda de inteligência artificial. Quem pensou? Quem decidiu? Quem responde? Em que ponto a ajuda virou tutela?
+
+PARTE DOIS: COMO UMA I A FUNCIONA
+
+Agora vamos abrir a máquina, sem matemática e com analogias filosóficas. Começo com duas perguntas clássicas.
+
+A primeira é de Alan Turing, em mil novecentos e cinquenta, no artigo "Computing machinery and intelligence". Turing acha que a pergunta "as máquinas podem pensar?" é vaga demais. Então ele a substitui por um jogo. Um interrogador conversa por escrito com uma pessoa e com uma máquina, sem saber qual é qual. Se ele não consegue distingui-las, a pergunta mudou de natureza. Os modelos de linguagem de hoje conversam de modo muito convincente. Mas repare no que o teste mede: comportamento, não compreensão.
+
+É aí que entra a segunda pergunta, de John Searle, em mil novecentos e oitenta, com o famoso quarto chinês. Imagine uma pessoa que não sabe chinês, trancada num quarto. Ela recebe símbolos por uma fresta, consulta um manual de regras e devolve outros símbolos. Visto de fora, parece que quem está lá dentro entende chinês. Mas a pessoa apenas manipula formas. A conclusão de Searle é que seguir regras sobre a forma dos símbolos, a sintaxe, não basta para compreender o que eles significam, a semântica.
+
+Cuidado, porém: aplicar esse argumento aos modelos de hoje é uma hipótese de leitura, não um veredicto. Searle criticava programas de manipulação de símbolos da época dele. Os modelos atuais são redes neurais estatísticas. E há objeções clássicas, por exemplo a de que o sistema como um todo, e não a pessoa isolada, é que compreenderia. O debate continua aberto. O que eu proponho é usar o quarto chinês como uma lente: diante de qualquer texto gerado, pergunte se há compreensão ou apenas forma convincente.
+
+Agora vamos ao funcionamento. Um modelo de linguagem de grande escala, em inglês "large language model", ou "L L M", é uma rede neural treinada em enormes volumes de texto para uma tarefa aparentemente simples: prever a próxima palavra. Tudo o que ele faz vem daí.
+
+O percurso de uma frase dentro do modelo tem cinco etapas. Primeiro, o texto que você escreve, o prompt, é dividido em tokens, que são pedaços de palavras, e cada token vira um número. Segundo, cada token é representado por um vetor, uma lista de números. É esse vetor que o modelo manipula. Terceiro, um mecanismo chamado atenção, ideia central da arquitetura "transformer", de dois mil e dezessete, pondera quais partes do texto anterior são mais relevantes para cada posição. Quarto, o modelo calcula a probabilidade de cada palavra possível vir a seguir e escolhe uma. Quinto, a palavra escolhida é acrescentada ao texto e todo o ciclo recomeça, palavra por palavra.
+
+Repare no que não existe nessas etapas: nenhuma delas consulta um banco de fatos. O que há são padrões numéricos aprendidos de muito texto. Quando o modelo escreve bem, é porque aprendeu muito bem como os textos costumam continuar. E quando erra, é pela mesma razão.
+
+Vou dar um exemplo com a frase "A filosofia nasce do". Qual seria a próxima palavra? "Espanto" é muito provável. "Ócio", "diálogo", "dúvida" e "medo" também aparecem, com chances menores. É assim que o modelo pensa: uma lista de possibilidades com probabilidades, e uma escolha.
+
+Por que palavras usadas em contextos parecidos recebem vetores parecidos? Porque o treinamento ajusta os números de modo que palavras que aparecem em situações semelhantes fiquem próximas. Isso lembra Wittgenstein, nas Investigações filosóficas, parágrafo quarenta e três: para uma grande classe de casos, o significado de uma palavra é o seu uso na linguagem. É uma analogia produtiva, mas só até certo ponto. O modelo capta padrões de uso nos textos, mas não participa de uma forma de vida em que as palavras servem para prometer, pedir, responsabilizar.
+
+Outro detalhe importante: o modelo não escolhe sempre a palavra mais provável. Existe um controle chamado temperatura. Com temperatura baixa, ele escolhe quase sempre as mais prováveis. Com temperatura alta, sorteia entre várias, com mais variedade e mais risco. É por isso que a mesma pergunta pode receber respostas diferentes, às vezes até contraditórias. Você pode testar isso: faça a mesma pergunta duas vezes e compare.
+
+Aristóteles, na Poética, capítulo nove, já distinguia o poeta do historiador. O poeta diz o que poderia acontecer, segundo o verossímil ou o necessário. O historiador diz o que aconteceu. O modelo de linguagem está mais perto do poeta: ele devolve o verossímil. E provável não é o mesmo que verdadeiro. Vale repetir: provável não é o mesmo que verdadeiro.
+
+De onde vem, então, o que o modelo sabe? Em um primeiro momento, o pré-treinamento: o modelo aprende a prever a próxima palavra em volumes enormes de texto. É aí que nascem o vocabulário, o estilo e também os vieses dos textos lidos. Depois vem o ajuste: o modelo é refinado com exemplos e com avaliações de pessoas, para responder de modo útil, educado e mais seguro. Por fim, no uso, o seu prompt entra como contexto e a resposta é gerada. Disso decorrem três consequências práticas. O modelo tem uma data de corte do que conhece. Ele não guarda as fontes como um catálogo, só padrões. E herda os vieses do que leu.
+
+Chegamos ao ponto mais importante para quem escreve na universidade: a alucinação. Chama-se alucinação o conteúdo gerado que não tem fundamento nos dados ou na realidade. Na escrita acadêmica, ela aparece como referências, autores, páginas e citações que não existem, entregues com total confiança.
+
+Há três maneiras complementares de compreender isso. A lente técnica: o modelo é treinado para produzir texto plausível, e não para verificar fatos. A lente filosófica: em analogia com o filósofo Harry Frankfurt, a mentira se opõe à verdade, enquanto a conversa fiada, o "bullshit", é simplesmente indiferente a ela. O texto gerado pode soar convincente sem ter nenhum compromisso com a verdade. Atenção: o modelo não tem intenção, por isso é só uma analogia. E a lente crítica: Emily Bender e colegas chamaram esses modelos de "papagaios estocásticos", porque recombinam formas linguísticas sem acesso ao sentido.
+
+Algumas ferramentas, como o Perplexity, combinam a geração de texto com busca na internet e mostram links. Isso ajuda, mas não elimina a necessidade de conferir a fonte.
+
+Aqui no minicurso há uma demonstração ao vivo, o teste das referências. A plateia sugere um tema, por exemplo "ética em Aristóteles". Pedimos à inteligência artificial cinco referências. Depois verificamos uma a uma e contamos: quantas são reais, quantas são reais com dados errados, quantas não existem. O resultado varia por ferramenta e por dia, e esse é exatamente o ponto. O texto soa convincente em qualquer caso. Só a verificação separa o real do inventado.
+
+Você pode fazer esse experimento em casa. Peça a uma inteligência artificial cinco referências sobre um tema filosófico, e tente encontrar cada uma em uma base confiável. Conte quantas são reais, quantas são reais com dados errados, quantas não existem. E pergunte-se: se a inteligência artificial escreve bem e erra pela mesma razão, o que isso exige de quem a usa?
+
+PARTE TRÊS: PESQUISA E REFERÊNCIAS
+
+Vamos agora à pesquisa. E ela começa, como a Filosofia, com o espanto. No Teeteto, Platão diz que o espanto é o princípio da filosofia, e Aristóteles repete a ideia na Metafísica. Em pesquisa, o espanto precisa ser lapidado até virar um problema que se possa investigar.
+
+Existe um caminho em quatro passos, do tema ao recorte, do recorte à pergunta, e da pergunta à hipótese. Veja um exemplo. O tema: inteligência artificial e autoria acadêmica. O recorte: texto gerado por inteligência artificial em trabalhos de graduação em Filosofia. A pergunta: em que sentido o texto escrito com inteligência artificial é de autoria de quem a aciona? A hipótese: autoria exige decisão e responsabilidade, e não apenas execução.
+
+A inteligência artificial pode ajudar a afinar o recorte e a testar a pergunta. Mas o espanto, isto é, a escolha do que merece ser investigado, é seu. Esse é um ponto central: a máquina não pode se espantar por você.
+
+Para pedir ajuda bem, é preciso saber pedir. E aqui entra um conceito da computação: o prompt é uma especificação. Como o modelo gera o texto a partir do contexto que recebe, quanto mais claro o contexto, mais útil a resposta. Um prompt bem construído tem cinco camadas.
+
+A primeira é o papel: quem a inteligência artificial deve ser. A segunda é o contexto: o seu tema e o seu nível. A terceira é a tarefa, dita com um verbo. A quarta é o formato: tabela, lista, parágrafo. E a quinta são as restrições: o que evitar.
+
+Um exemplo completo. Papel: você é um professor de Filosofia Antiga. Contexto: sou graduando e escrevo um trabalho de conclusão de curso sobre a noção de phronesis, a prudência, em Aristóteles. Tarefa: proponha três recortes de problema de pesquisa. Formato: tabela com o recorte, a pergunta e o que fica de fora. Restrições: não cite livros nem autores que você não possa indicar com certeza, e diga quando não souber.
+
+Essa restrição final não elimina a alucinação, mas reduz o risco de invenção. E nunca, nunca trate as referências sugeridas por uma inteligência artificial como se estivessem verificadas. Em termos filosóficos, isso também lembra Wittgenstein: o sentido depende do jogo de linguagem em que se fala. E dizer é também fazer: um prompt é um ato.
+
+Onde buscar, então? Separe sempre dois tipos de ferramenta. As bases são aquelas em que a fonte existe de fato: o Google Acadêmico, o SciELO, o Portal de Periódicos da CAPES, o PhilPapers, que é um índice especializado em Filosofia, e a Stanford Encyclopedia of Philosophy. Depois, as inteligências artificiais de apoio, que ajudam a localizar e a resumir, mas cujo resultado precisa ser conferido na base: além dos assistentes de conversa que já citamos, o Perplexity, o Consensus e o Elicit buscam literatura e mostram links. O NotebookLM conversa apenas com os seus próprios documentos. E o Zotero organiza referências. Os recursos gratuitos mudam sem aviso, mas o procedimento vale para ferramentas equivalentes.
+
+Uma dica técnica: as bases funcionam com lógica, e conhecer os operadores melhora a busca. Use aspas para a expressão exata. Use "AND" para exigir os dois termos. Use "OR" para aceitar qualquer um. E use "NOT", ou o sinal de menos no Google Acadêmico, para excluir um termo. Por exemplo: "inteligência artificial", AND, entre parênteses, autoria OR plágio, AND "ensino superior".
+
+Agora o coração dessa parte: a verificação, em quatro passos. Descartes, nas Meditações metafísicas, propõe duvidar do que não é certo para chegar a um fundamento seguro. Usamos aqui o espírito do método: nada que a inteligência artificial entregue vale como fonte antes de passar pela verificação.
+
+Primeiro passo: existe? Procure o título exato em uma base ou no catálogo de uma biblioteca. Segundo: os dados conferem? Autor, ano, veículo e, quando houver, o D O I, identificador permanente do documento. Terceiro: diz isso? Leia o trecho. O erro mais sutil é a obra existir, mas não dizer o que o modelo lhe atribui. Quarto: sustenta? A fonte serve ao seu argumento, ou apenas enfeita o texto?
+
+Os passos um e dois são mecânicos. Os passos três e quatro exigem leitura e juízo. E é a parte que não se delega.
+
+Um exemplo resolvido, só para fixar. O tema é a prudência em Aristóteles. Primeira referência: Aristóteles, Ética a Nicômaco, livro seis. Existe, os dados conferem, trata da prudência, sustenta o argumento: real. Segunda: um certo "Silva", "A prudência aristotélica na era digital", numa "Revista de Ética Aplicada", de dois mil e vinte e um. É uma referência inventada para o exemplo, e não se encontra em nenhuma base: inexistente. Terceira: Aristóteles, Ética a Nicômaco, livro dez, sobre a prudência. A obra existe, mas a prudência é tratada no livro seis. O dez trata do prazer e da felicidade. Real, mas com erro.
+
+Chegou a hora da primeira atividade: do espanto à referência verificada. Faça no computador, de preferência com um editor de texto aberto para registrar o que fizer. Ao final você terá duas coisas: um problema de pesquisa em uma frase e um quadro de referências verificadas.
+
+Os passos são estes. Um: escreva em duas linhas o seu espanto, o tema ou o incômodo filosófico que realmente lhe chama a atenção. Dois: monte um prompt com as cinco camadas e peça à inteligência artificial três recortes de problema de pesquisa. Escolha um, e escreva o seu problema em uma frase, em forma de pergunta. Três: peça à inteligência artificial três referências para o recorte escolhido. Quatro: verifique cada uma pelos quatro passos e monte um quadro com cinco colunas: a referência, existe, os dados conferem, diz isso, sustenta. Classifique cada uma como real, real com erro, ou inexistente. Cinco: troque o quadro com um colega e confira uma referência dele.
+
+PARTE QUATRO: A I A COMO INTERLOCUTORA SOCRÁTICA
+
+Chegamos à parte que, para mim, é a mais interessante. A maior utilidade filosófica de um modelo de linguagem não está em escrever por você. Está em conversar com você: obrigar você a definir termos, apresentar objeções, apontar saltos de raciocínio. Aqui a máquina trabalha a favor do pensamento, e não no lugar dele. E duas tradições da nossa disciplina ensinam como.
+
+A primeira é a maiêutica. No Teeteto, Platão mostra Sócrates descrevendo-se como parteiro. Filho de uma parteira, ele diz que é estéril de sabedoria. Não gera o saber no outro: ajuda a dar à luz, e depois examina se a criança é viável.
+
+O procedimento tem momentos reconhecíveis. Primeiro, a pergunta: o que é isto? Depois, uma definição provisória. Em seguida, a refutação, por um caso que a desmente, o "élenchos". Depois, a aporia, o impasse produtivo em que se reconhece que não se sabe. E, por fim, uma nova tentativa, uma definição refinada.
+
+Aplicado à inteligência artificial, o recurso é simples e poderoso. Peça que ela aja como Sócrates, que só pergunte e nunca responda. Cada pergunta dela obriga você a definir melhor o conceito antes de escrever.
+
+A segunda tradição é a "disputatio", o método das escolas medievais. Nas escolas medievais, o saber era organizado como debate. Nos artigos da Suma teológica, Tomás de Aquino segue sempre a mesma estrutura. Primeiro, a questão, a "quaestio". Depois, as objeções, os argumentos contrários. Em seguida, o "sed contra", uma autoridade em sentido oposto. Depois, a resposta do mestre, o "respondeo". E, por fim, a réplica a cada objeção.
+
+O valor disso para a escrita é grande: obriga a enfrentar as melhores objeções antes de afirmar. Na prática, seu problema de pesquisa é a questão. Peça à inteligência artificial as três objeções mais fortes. Cite uma fonte verificada como o "sed contra". A resposta, a sua tese, é escrita por você. E depois você responde a cada objeção, uma a uma.
+
+Há um paralelo na computação: antes de lançar um sistema, programadores fazem testes adversariais, tentando deliberadamente quebrá-lo. A "disputatio" faz o mesmo com argumentos: procura as falhas antes que o leitor as encontre.
+
+Há dois prompts prontos para isso. O socrático diz, mais ou menos: aja como Sócrates. Vou apresentar uma tese. Você só pode fazer perguntas, uma por vez, para me levar a definir melhor meus conceitos e a perceber contradições. Nunca dê a resposta. Comece perguntando o que eu entendo por cada termo central. O outro, o advogado do diabo: aja como um professor rigoroso da tradição oposta à minha. Apresente as três objeções mais fortes à minha tese, cada uma com a premissa em que ataca. Não ofereça soluções. Depois, indique qual objeção eu teria mais dificuldade de responder, e por quê.
+
+Um cuidado essencial: a bajulação. Modelos de linguagem tendem a concordar com o usuário. Em inglês, "sycophancy". Se a inteligência artificial elogiar demais a sua tese, escreva: "Discorde. Ataque o ponto mais frágil". No Górgias, Platão chama de adulação a fala que agrada sem compromisso com a verdade, e diz que a retórica sem filosofia seria um de seus ramos. Uma inteligência artificial que só concorda é adulação em forma de software.
+
+Falemos de falácias. Nas Refutações sofísticas, Aristóteles estuda os argumentos que parecem válidos sem o ser. A inteligência artificial pode ajudar a localizá-los no seu texto, mas também pode cometê-los, então peça sempre o trecho exato e confira. Quatro falácias frequentes. A petição de princípio: a conclusão já está dentro da premissa, como em "a inteligência artificial é confiável porque não erra". O falso dilema: só duas opções, como em "ou se proíbe a inteligência artificial, ou se aceita tudo". O apelo à autoridade: "disse o ChatGPT, então é verdade". E o ataque à pessoa, ou "ad hominem": "esse autor é leigo, logo está errado". Um prompt útil: leia o parágrafo abaixo e indique, se houver, falácias. Para cada uma, cite o trecho exato, dê o nome e justifique. Se não houver, diga que não encontrou.
+
+Então vem a segunda atividade: seu argumento no tribunal da inteligência artificial. O objetivo é testar uma tese sua contra perguntas e objeções fortes, reformulá-la, e conseguir explicá-la em um minuto, sem ler.
+
+Os passos: um, escreva sua tese em três a cinco linhas; pode ser a hipótese da atividade anterior. Dois, rode o prompt socrático por cinco ou seis rodadas e registre as perguntas da inteligência artificial. Responda com as suas palavras, e observe onde suas definições eram frágeis. Três, rode o advogado do diabo e escolha a objeção mais forte, aquela que você teria mais dificuldade de responder. Quatro, releia a tese procurando as quatro falácias. Cinco, reescreva a tese respondendo à objeção escolhida. Seis, explique a nova tese a uma colega ou a um colega, em um minuto, sem ler, e ouça: ela entendeu? Qual ponto ficou obscuro?
+
+PARTE CINCO: ESTRUTURAR, REVISAR E RESPONDER POR SI
+
+Última parte. Já pensamos o problema, verificamos fontes e testamos o argumento. Falta escrever, revisar, e responder pelo que se escreve.
+
+Depois de escrito o rascunho, a inteligência artificial pode funcionar como leitora crítica: ela pergunta e aponta, sem escrever no seu lugar. Aristóteles, na Poética, capítulo sete, observa que um todo bem composto tem começo, meio e fim, e que cada parte se liga às outras. A estrutura mínima de um artigo ou de um trabalho de conclusão de curso retoma essa ideia: a introdução, com o problema, a tese e o método; o desenvolvimento, com os argumentos apoiados em fontes; e a conclusão, que responde à pergunta da introdução.
+
+Para cada parte há uma boa pergunta à inteligência artificial. Na introdução: o problema está claro? Qual tese você entendeu? No desenvolvimento: qual passo do argumento está sem justificativa? Na conclusão: ela responde à pergunta da introdução? Uma técnica útil é o esboço reverso: peça a ideia principal de cada parágrafo em uma frase, e veja se a sequência é lógica. E mantenha o histórico de versões do seu editor de texto, porque ele ajuda a demonstrar a sua autoria.
+
+O prompt do leitor crítico é assim: leia a introdução abaixo como um orientador exigente. Responda: um, qual é o problema? Dois, qual é a tese? Três, qual é o método? Quatro, o que está vago? Não reescreva.
+
+Mas o que delegar, e o que não delegar? Há tarefas que podem ser entregues à máquina com pouco risco: corrigir ortografia e gramática, formatar referências, e conferi-las, sugerir sinônimos, gerar perguntas para revisão. Outras exigem cuidado: resumir textos, e aqui leia sempre o original; sugerir estruturas; reformular parágrafos seus; traduzir trechos, conferindo os termos técnicos, que se distorcem com facilidade. E há o que não se delega: escolher o problema e a tese, interpretar os autores, decidir o que é verdadeiro, assinar e responder pelo texto.
+
+O critério é aristotélico. Na Ética a Nicômaco, livro seis, Aristóteles distingue a técnica, a "poiesis", que produz algo, da prudência, a "phronesis", a capacidade de deliberar bem sobre o que fazer em situações concretas. A técnica pode ser transferida a ferramentas. A prudência, não: ninguém delibera por você.
+
+Vamos à ética. Luciano Floridi e Josh Cowls propõem cinco princípios para uma inteligência artificial socialmente benéfica. Beneficência: use a inteligência artificial para aprender mais, e não para aprender menos. Não maleficência: não prejudique outros, nada de plágio nem de dados pessoais em ferramentas públicas. Autonomia: preserve a sua capacidade de decidir e de pensar. Justiça: reconheça os vieses e as fontes que a inteligência artificial tende a omitir. E explicabilidade: saiba dizer como chegou ao texto, declarando o uso.
+
+Hans Jonas defende que a responsabilidade seja proporcional ao poder das técnicas: quanto mais poderosa a ferramenta, maior o dever de cuidado de quem a usa. E a UNESCO propõe, para o uso de inteligência artificial generativa na educação e na pesquisa, uma abordagem centrada no humano, que preserve a agência de estudantes e pesquisadores.
+
+Na prática, algumas coisas concretas. Não cole dados pessoais, nem trabalhos inéditos ou sigilosos de terceiros, em ferramentas públicas. A Lei Geral de Proteção de Dados Pessoais, a L G P D, de dois mil e dezoito, protege dados pessoais. Respeite os direitos autorais, citando e referenciando as fontes, como manda a Lei número nove mil seiscentos e dez, de mil novecentos e noventa e oito. E confira as regras da sua instituição, do seu orientador e do periódico sobre o uso de inteligência artificial, porque elas variam e podem exigir declaração.
+
+E o que dizem as normas brasileiras hoje? Em dois mil e vinte e seis, o Brasil ainda não tem uma lei geral sobre inteligência artificial. O projeto de lei número dois mil trezentos e trinta e oito, de dois mil e vinte e três, segue em tramitação. Mas já existem orientações e normas setoriais que pesam sobre quem escreve na universidade. Em comum, elas não proíbem o uso: exigem transparência, responsabilidade de quem assina e políticas próprias de cada instituição.
+
+O Conselho Nacional de Educação aprovou, em primeiro de setembro de dois mil e vinte e seis, o Parecer número quinze, de dois mil e vinte e seis, com as Diretrizes para a Utilização da Inteligência Artificial na Educação Brasileira. Para a educação superior, o texto determina que cada instituição estabeleça políticas próprias, com princípios de autoria, integridade acadêmica, transparência, responsabilidade intelectual e proteção de direitos, podendo prever formas de declaração de uso. Cabe ao estudante a responsabilidade intelectual pela seleção, verificação e veracidade das informações, e a transparência quanto ao uso. Na pesquisa, a inteligência artificial deve ser declarada sempre que sua contribuição for relevante, e ela não transfere a autoria nem a responsabilidade. O texto veda ainda a sanção acadêmica fundada exclusivamente em ferramenta de detecção de conteúdo gerado por inteligência artificial. Um aviso importante: a resolução que institui essas diretrizes ainda depende de homologação pelo Ministério da Educação e de publicação. Confira se isso já ocorreu.
+
+O C N P q, na Portaria número dois mil seiscentos e sessenta e quatro, de dois mil e vinte e seis, instituiu sua Política de Integridade na Atividade Científica. Na pesquisa apoiada pelo C N P q, como em bolsas, é preciso declarar o uso de ferramentas de inteligência artificial generativa em qualquer fase, especificando a ferramenta e a finalidade. É vedado apresentar conteúdo gerado por inteligência artificial como se fosse de autoria humana, e os autores respondem integralmente por plágios e imprecisões. O Ministério da Educação também divulgou, em dois mil e vinte e seis, um referencial para o uso responsável de inteligência artificial na educação, que destaca a supervisão humana efetiva, a transparência e a explicabilidade, e a proteção de dados e da privacidade de estudantes e docentes.
+
+Quanto às normas técnicas, valem as da A B N T para referências, citações e trabalhos acadêmicos. Até onde pudemos verificar, não há norma da A B N T específica para citar inteligência artificial generativa. Por isso a prática mais segura é a que este minicurso adota: não tratar a inteligência artificial como fonte de autoridade, citar apenas fontes verificadas e declarar o uso, dizendo a ferramenta, a finalidade e os limites. E, em todos os casos, a regra da sua instituição, do seu curso e do seu orientador vale mais do que qualquer guia genérico. Pergunte e registre.
+
+Isso nos leva à declaração de uso. Declarar o uso de inteligência artificial é o oposto do plágio: quem declara assume a responsabilidade pelo que escreveu. O modelo tem estes itens: o trabalho e o autor, a data, a ferramenta ou ferramentas usadas, a finalidade do uso, aquilo para que você não utilizou inteligência artificial, a verificação, e a responsabilidade. Por exemplo: finalidade, sugestão de recortes de tema, leitura crítica do parágrafo três, formatação de referências. Não utilizei para: formulação da tese, interpretação das obras, redação do texto final. Verificação: todas as referências foram conferidas nas fontes originais. Responsabilidade: assumo integralmente o conteúdo deste trabalho. E a assinatura. Um teste prático, de inspiração kantiana, a publicidade como critério: se você teria vergonha de declarar o uso, reveja-o.
+
+A terceira atividade junta tudo: do rascunho ao texto assinado. A regra de ouro: o primeiro parágrafo é escrito sem inteligência artificial. Ela só entra depois, como leitora crítica.
+
+Os passos: um, escreva, sem inteligência artificial, um parágrafo de seis a oito linhas com a sua tese, de preferência a da atividade anterior. Dois, cole o parágrafo na inteligência artificial com o prompt do leitor crítico e anote o que ela apontou. Três, reescreva o parágrafo por sua conta, decidindo o que aceitar e o que recusar, e justificando cada decisão para si mesmo. Quatro, troque o texto com um colega, e cada um lê o do outro com cinco perguntas: o problema está claro nas duas primeiras frases? A tese aparece de forma explícita? Cada afirmação importante tem fonte ou justificativa? Há alguma objeção reconhecida e respondida? O texto soa como a voz de quem o assina? Cinco, preencha a sua declaração de uso.
+
+FECHAMENTO: QUE É O HOMEM?
+
+Para terminar, volto a Kant. Ele resumiu as perguntas da Filosofia em três: o que posso saber? O que devo fazer? O que me é permitido esperar? E na Lógica acrescentou uma quarta, que contém as outras: o que é o homem?
+
+A inteligência artificial devolve essa pergunta com urgência nova. O que fazemos quando uma máquina faz o que julgávamos próprio do humano, escrever? A resposta que este minicurso propõe é modesta e exigente: usar a ferramenta sem abrir mão do que só pode ser nosso, a pergunta, o juízo e a responsabilidade.
+
+Vale ligar as quatro perguntas de Kant às duas lentes do minicurso, a da Filosofia e a da Ciência da Computação. Que posso saber? Para a Filosofia, os limites do conhecimento: só sabe quem examina. Para a computação, a diferença entre o verossímil que o modelo prevê e o verdadeiro que só a verificação confirma. Daí o compromisso: eu verifico tudo. Que devo fazer? Agir com autonomia e responsabilidade. E, no uso da inteligência artificial, isso quer dizer transparência, privacidade e integridade: declarar o uso e proteger dados. Daí dois compromissos: eu protejo dados, eu declaro e respondo. Que me é permitido esperar? Uma esperança sem ingenuidade: a técnica a serviço do esclarecimento, e não da tutela, com a inteligência artificial como interlocutora que testa nossos argumentos, em vez de pensar por nós. Daí o compromisso: eu testo meus argumentos. E, por fim, que é o homem? É o que a máquina não assume por nós: a pergunta, o juízo e a responsabilidade. Daí os dois primeiros compromissos: eu penso primeiro, eu pergunto melhor. Esta é uma leitura proposta para fins didáticos, e não uma tese de Kant sobre a inteligência artificial.
+
+Para levar, seis compromissos. Um: eu penso primeiro. Defino o problema e a tese antes de pedir ajuda. Dois: eu pergunto melhor, com prompts que têm papel, contexto, tarefa, formato e restrições. Três: eu verifico tudo. Nenhuma referência entra no texto sem os quatro passos. Quatro: eu testo meus argumentos, usando a inteligência artificial para encontrar objeções, e não para evitá-las. Cinco: eu protejo dados, sem expor dados pessoais nem trabalhos de terceiros. Seis: eu declaro e respondo. Informo o uso de inteligência artificial e assino o que escrevo.
+
+Escolha três desses compromissos e comece esta semana.
+
+E recorde a definição de autoria que construímos no começo: autor é quem decide, responde e pode justificar o que escreveu. Se você puder dizer isso do seu texto, a máquina ajudou, mas o texto continua sendo seu.
+
+Obrigado por ouvir. Todo o material do minicurso, com os textos, as atividades, os prompts, as ferramentas e as normas, está na página do evento, em gervasioteixeira ponto com ponto be erre, barra seminário. Bons estudos, e bom pensamento.
+

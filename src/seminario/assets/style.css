@@ -288,3 +288,11 @@ body.aula .help{display:block}
 .totop:hover,.totop:focus-visible{opacity:1;border-color:var(--gold2);color:var(--gold2)}
 @media print{.totop{display:none!important}}
 
+
+/* áudio de apoio */
+.player audio{width:100%;height:48px;border-radius:12px}
+.chaps{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.chap{display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;font:600 .88rem var(--font-ui);color:var(--ink);padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);cursor:pointer}
+.chap small{color:var(--gold2);font-variant-numeric:tabular-nums;font-weight:700}
+.chap:hover{border-color:var(--cyan)}
+.chap.on{border-color:var(--gold);background:rgba(200,162,74,.14)}
