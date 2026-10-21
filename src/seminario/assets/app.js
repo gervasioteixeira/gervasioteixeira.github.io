@@ -288,9 +288,17 @@
   }
   function toggleFull() { var d = document; if (d.fullscreenElement) d.exitFullscreen(); else if (d.documentElement.requestFullscreen) d.documentElement.requestFullscreen(); }
 
+  /* ---------- botão voltar ao topo ---------- */
+  function initToTop() {
+    var b = $("#toTop"); if (!b) return;
+    function up() { b.classList.toggle("show", window.scrollY > 700); }
+    window.addEventListener("scroll", up, { passive: true }); up();
+    b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initSave(); initCopy(); initBuilder(); initDecl(); initTokens(); initNext();
     initQuiz("quizRef", QREF, REF_OPTS, "scoreRef"); initQuiz("quizFal", QFAL, FAL_OPTS, "scoreFal"); initQuiz("quizDel", QDEL, DEL_OPTS, "scoreDel");
-    initRefs(); initSteps(); initSearch(); initNav(); initSchedule(); initAula();
+    initRefs(); initSteps(); initSearch(); initNav(); initSchedule(); initAula(); initToTop();
   });
 })();
