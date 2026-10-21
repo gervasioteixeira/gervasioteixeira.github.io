@@ -41,18 +41,6 @@ a:hover{color:var(--gold2)}
 .btn[aria-pressed="true"]{background:var(--gold);color:#111;border-color:var(--gold)}
 .btn.sm{padding:6px 12px;font-size:.75rem}
 
-/* ---------- barra do dia (status ao vivo) ---------- */
-.daybar{position:sticky;top:var(--nav-h);z-index:40;background:linear-gradient(90deg,#17110a,#0a1630 55%,#0b2a66);border-bottom:1px solid var(--line);display:none}
-.daybar.show{display:block}
-.daybar .wrap{display:flex;align-items:center;gap:16px;padding:8px 0;flex-wrap:wrap}
-.daybar .now{font-weight:800}
-.daybar .now small{font-weight:600;color:var(--gold2);letter-spacing:.1em;text-transform:uppercase;display:block;font-size:.66rem}
-.daybar .left{font-variant-numeric:tabular-nums;font-weight:800;font-size:1.35rem;color:var(--cyan)}
-.daybar .prog{flex:1;min-width:140px;height:8px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
-.daybar .prog i{display:block;height:100%;width:0;background:var(--grad)}
-.daybar .next{color:var(--muted);font-size:.8rem}
-.daybar .tools{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
-
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:calc(100svh - var(--nav-h));display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;background:url(hero.jpg) center 12%/cover;z-index:-2;transform:scale(1.04)}
@@ -113,7 +101,8 @@ h4{margin:0 0 6px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;
 .slot .t small{display:block;color:var(--muted);font-weight:600;font-size:.74rem}
 .slot .ti{font-weight:700;font-size:1.08rem}
 .slot .ti small{display:block;color:var(--muted);font-weight:500;font-size:.85rem;margin-top:2px}
-.slot .tag{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.slot .tag{cursor:pointer;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.slot .tag:hover{border-color:var(--gold2);color:var(--ink)}
 .slot.active .tag{background:var(--ok);border-color:var(--ok);color:#052313}
 .slot .body{padding:0 26px 22px;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .slot .body div{background:rgba(255,255,255,.04);border-radius:14px;padding:14px 16px;font-size:.92rem}
@@ -177,9 +166,6 @@ input[type=range]{width:100%;accent-color:var(--gold)}
 .prog-line i{display:block;height:100%;width:0;background:var(--grad);transition:width .4s}
 .deliver{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
 .deliver span{padding:6px 12px;border-radius:999px;background:rgba(79,209,139,.12);border:1px solid rgba(79,209,139,.4);font-size:.8rem}
-.timer{display:inline-flex;align-items:center;gap:10px;padding:6px 8px 6px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.25)}
-.timer output{font-weight:800;font-variant-numeric:tabular-nums;font-size:1.2rem;min-width:64px;text-align:center}
-.timer.end output{color:var(--bad)}
 label.f{display:block;font-size:.78rem;font-weight:700;color:var(--muted);margin:12px 0 5px;letter-spacing:.04em}
 input[type=text],textarea,select{width:100%;font:500 .95rem var(--font-ui);color:var(--ink);background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:12px;padding:11px 13px}
 textarea{min-height:92px;resize:vertical;line-height:1.5}
@@ -290,9 +276,6 @@ body.aula .help{display:block}
   .hero{min-height:auto}
   .hero .wrap{padding:70px 0 44px}
   section{padding:60px 0}
-  .daybar .wrap{gap:6px 12px;padding:8px 0}
-  .daybar .next,.daybar .aula-only{display:none!important}
-  .daybar .tools{margin-left:auto}
   .help{display:none!important}
   body.aula{--scale:1}
 }

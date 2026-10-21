@@ -11,22 +11,6 @@
     set: function (k, v) { try { localStorage.setItem(PFX + k, v); } catch (e) {} }
   };
 
-  /* ---------- relógio (com simulação ?hora=HH:MM) ---------- */
-  var EVENT_DAY = "2026-10-23";
-  var TZ = "-03:00";
-  var sim = null;
-  (function () {
-    var m = /[?&]hora=(\d{1,2}):(\d{2})/.exec(location.search);
-    if (m) { var target = Date.parse(EVENT_DAY + "T" + ("0" + m[1]).slice(-2) + ":" + m[2] + ":00" + TZ); sim = target - Date.now(); }
-  })();
-  function now() { return new Date(Date.now() + (sim || 0)); }
-  function at(hhmm) { return Date.parse(EVENT_DAY + "T" + hhmm + ":00" + TZ); }
-  function fmt(ms) {
-    var s = Math.max(0, Math.round(ms / 1000)), h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
-    var p = function (n) { return (n < 10 ? "0" : "") + n; };
-    return h ? h + ":" + p(m) + ":" + p(x) : p(m) + ":" + p(x);
-  }
-
   /* ---------- salvar campos ---------- */
   function initSave() {
     $$("[data-save]").forEach(function (el) {
@@ -214,27 +198,6 @@
     pl.forEach(function (b) { b.addEventListener("change", upP); }); upP();
   }
 
-  /* ---------- sons e cronômetros ---------- */
-  function beep() {
-    try { var C = window.AudioContext || window.webkitAudioContext, c = new C(), t = 0;
-      [880, 660, 880].forEach(function (f) { var o = c.createOscillator(), g = c.createGain(); o.frequency.value = f; o.connect(g); g.connect(c.destination); g.gain.setValueAtTime(.001, c.currentTime + t); g.gain.exponentialRampToValueAtTime(.25, c.currentTime + t + .02); g.gain.exponentialRampToValueAtTime(.001, c.currentTime + t + .3); o.start(c.currentTime + t); o.stop(c.currentTime + t + .32); t += .38; });
-    } catch (e) {}
-  }
-  function initTimers() {
-    $$(".timer").forEach(function (el) {
-      var out = $("output", el), go = $('[data-t="go"]', el), rs = $('[data-t="reset"]', el), total = parseFloat(el.getAttribute("data-min")) * 60, left = total, iv = null, endAt = 0;
-      function show() { out.textContent = fmt(left * 1000); el.classList.toggle("end", left <= 0); }
-      function stop() { clearInterval(iv); iv = null; go.textContent = left > 0 && left < total ? "Continuar" : "Iniciar"; }
-      go.addEventListener("click", function () {
-        if (iv) { stop(); return; }
-        if (left <= 0) left = total; endAt = Date.now() + left * 1000; go.textContent = "Pausar";
-        iv = setInterval(function () { left = Math.max(0, (endAt - Date.now()) / 1000); show(); if (left <= 0) { stop(); go.textContent = "Iniciar"; beep(); } }, 250);
-      });
-      rs.addEventListener("click", function () { stop(); left = total; go.textContent = "Iniciar"; show(); });
-      show();
-    });
-  }
-
   /* ---------- montador de busca ---------- */
   function initSearch() {
     var o = $("#sOut"); if (!o) return;
@@ -256,43 +219,31 @@
     $$("#s1,#s2,#s3,#s4").forEach(function (i) { i.addEventListener("input", build); }); build();
   }
 
-  /* ---------- roteiro ao vivo e barra do dia ---------- */
+  /* ---------- roteiro: marcação manual do bloco atual ---------- */
   var slots = [];
-  function initSchedule() {
-    slots = $$(".slot[data-s]").map(function (el) {
-      var t = el.querySelector(".ti"); return { el: el, id: el.getAttribute("data-id"), s: at(el.getAttribute("data-s")), e: at(el.getAttribute("data-e")), title: t.childNodes[0].textContent.trim() };
+  function markSlot(id) {
+    slots.forEach(function (s) {
+      var on = s.id === id; s.el.classList.toggle("active", on);
+      var tg = $(".tag", s.el); tg.textContent = on ? "Estamos aqui" : tg._o; tg.setAttribute("aria-pressed", on ? "true" : "false");
     });
-    tick(); setInterval(tick, 1000);
+    store.set("atual", id || "");
   }
-  var gtEnd = 0;
-  function tick() {
-    var n = now().getTime(), first = slots[0].s, last = slots[slots.length - 1].e, cur = null, idx = -1;
-    slots.forEach(function (s, i) { var on = n >= s.s && n < s.e; if (on) { cur = s; idx = i; } s.el.classList.toggle("active", on); s.el.classList.toggle("done", n >= s.e); var tg = $(".tag", s.el); if (tg && !tg._o) tg._o = tg.textContent; if (tg) tg.textContent = on ? "Agora" : tg._o; });
-    var live = $("#liveChip"), lt = $("#liveTxt"), bar = $("#daybar"), L = $("#dbLeft"), N = $("#dbNow"), LB = $("#dbLabel"), nx = $("#dbNext"), pr = $("#dbProg");
-    var aula = document.body.classList.contains("aula"), within = n > first - 30 * 60000 && n < last + 30 * 60000;
-    var status;
-    if (cur) {
-      status = "Ao vivo agora: " + cur.title; live.classList.add("on");
-      LB.textContent = "Agora · " + (cur.id === "intervalo" ? "pausa" : "em andamento"); N.textContent = cur.title; L.textContent = fmt(cur.e - n);
-      pr.style.width = ((n - cur.s) / (cur.e - cur.s) * 100) + "%"; var nxt = slots[idx + 1]; nx.textContent = nxt ? "A seguir: " + nxt.title + " (" + nxt.el.getAttribute("data-s").replace(":", "h") + ")" : "Último bloco do dia";
-    } else if (n < first) {
-      live.classList.remove("on"); var d = Math.ceil((first - n) / 86400000);
-      status = n > first - 86400000 ? "Começa hoje às 08h00" : "Faltam " + d + " dia" + (d > 1 ? "s" : "") + " · sexta, 23/10, 08h00";
-      LB.textContent = "Começa em"; N.textContent = "Abertura às 08h00"; L.textContent = fmt(first - n); pr.style.width = "0"; nx.textContent = "";
-    } else {
-      live.classList.remove("on"); status = "Minicurso encerrado. O material continua aqui."; LB.textContent = "Encerrado"; N.textContent = "Obrigado por participar!"; L.textContent = "✓"; pr.style.width = "100%"; nx.textContent = "";
-    }
-    $("#liveTxt").textContent = status;
-    var show = aula || within; bar.classList.toggle("show", show);
-    document.documentElement.style.setProperty("--bar-h", show ? bar.offsetHeight + "px" : "0px");
-    if (gtEnd) { var r = gtEnd - Date.now(); if (r <= 0) { gtEnd = 0; beep(); $("#dbLeft").style.color = ""; } else { L.textContent = "⏱ " + fmt(r); N.textContent = "Cronômetro da sala"; LB.textContent = "Tempo restante"; L.style.color = "var(--gold2)"; } } else { L.style.color = ""; }
-    updateNavOn();
+  function initSchedule() {
+    slots = $$(".slot[data-id]").map(function (el) {
+      var tg = $(".tag", el); tg._o = tg.textContent; tg.setAttribute("role", "button"); tg.setAttribute("tabindex", "0"); tg.setAttribute("aria-pressed", "false"); tg.title = "Marcar como o bloco atual";
+      var id = el.getAttribute("data-id");
+      var h = function (e) { e.preventDefault(); e.stopPropagation(); markSlot(el.classList.contains("active") ? "" : id); };
+      tg.addEventListener("click", h);
+      tg.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") h(e); });
+      return { el: el, id: id };
+    });
+    var saved = store.get("atual"); if (saved) { markSlot(saved); var a = $("details.slot.active"); if (a) a.open = true; }
   }
 
   /* ---------- menu ativo ---------- */
   var navSecs = [];
   function updateNavOn() {
-    var y = window.scrollY + 130 + (parseInt(getComputedStyle(document.documentElement).getPropertyValue("--bar-h")) || 0), cur = null;
+    var y = window.scrollY + 130, cur = null;
     navSecs.forEach(function (s) { if (s.el.offsetTop <= y) cur = s; });
     $$("#menu a").forEach(function (a) { a.classList.toggle("on", !!cur && a.getAttribute("href") === "#" + cur.menu); });
   }
@@ -304,11 +255,11 @@
 
   /* ---------- modo aula ---------- */
   function setAula(on) {
-    document.body.classList.toggle("aula", on); $("#btnAula").setAttribute("aria-pressed", on ? "true" : "false"); store.set("aula", on ? "1" : "0"); tick();
+    document.body.classList.toggle("aula", on); $("#btnAula").setAttribute("aria-pressed", on ? "true" : "false"); store.set("aula", on ? "1" : "0");
   }
   function goCurrent() {
-    var n = now().getTime(), cur = slots.filter(function (s) { return n >= s.s && n < s.e; })[0];
-    var id = cur ? cur.id : "roteiro"; if (id === "abertura" || id === "intervalo") id = "roteiro"; if (id === "fechamento") id = "fechamento";
+    var a = $(".slot.active"); if (!a) { var r = document.getElementById("roteiro"); if (r) r.scrollIntoView({ behavior: "smooth" }); return; }
+    var id = a.getAttribute("data-id"); if (id === "abertura" || id === "intervalo") id = "roteiro";
     var t = document.getElementById(id); if (t) t.scrollIntoView({ behavior: "smooth" });
   }
   function secStep(dir) {
@@ -316,15 +267,10 @@
     secs.forEach(function (s, k) { if (s.offsetTop <= y) i = k; });
     var j = Math.max(0, Math.min(secs.length - 1, i + dir)); secs[j].scrollIntoView({ behavior: "smooth" });
   }
-  function startGT(min) {
-    if (!min) { gtEnd = 0; return; } gtEnd = Date.now() + min * 60000;
-  }
   function initAula() {
     $("#btnAula").addEventListener("click", function () { setAula(!document.body.classList.contains("aula")); });
     $("#btnQR").addEventListener("click", function () { $("#qrOv").classList.add("show"); });
     $("#qrOv").addEventListener("click", function () { $("#qrOv").classList.remove("show"); });
-    $("#btnFull").addEventListener("click", toggleFull);
-    $$("[data-gt]").forEach(function (b) { b.addEventListener("click", function () { startGT(+b.getAttribute("data-gt")); }); });
     $("#helpBtn").addEventListener("click", function () { $("#helpPop").classList.toggle("show"); });
     $$('a[href^="#"]').forEach(function (a) { a.addEventListener("click", function () { setTimeout(updateNavOn, 400); }); });
     document.addEventListener("keydown", function (e) {
@@ -335,7 +281,6 @@
       else if (k === "q") $("#qrOv").classList.toggle("show");
       else if (k === "f") toggleFull();
       else if (k === "g") goCurrent();
-      else if (k === "t") startGT(10);
       else if (document.body.classList.contains("aula") && (k === "arrowright" || k === "j")) { e.preventDefault(); secStep(1); }
       else if (document.body.classList.contains("aula") && (k === "arrowleft" || k === "k")) { e.preventDefault(); secStep(-1); }
     });
@@ -343,12 +288,9 @@
   }
   function toggleFull() { var d = document; if (d.fullscreenElement) d.exitFullscreen(); else if (d.documentElement.requestFullscreen) d.documentElement.requestFullscreen(); }
 
-  /* ---------- abre o bloco ativo do roteiro ---------- */
-  function openActiveSlot() { var a = $("details.slot.active"); if (a) a.open = true; }
-
   document.addEventListener("DOMContentLoaded", function () {
     initSave(); initCopy(); initBuilder(); initDecl(); initTokens(); initNext();
     initQuiz("quizRef", QREF, REF_OPTS, "scoreRef"); initQuiz("quizFal", QFAL, FAL_OPTS, "scoreFal"); initQuiz("quizDel", QDEL, DEL_OPTS, "scoreDel");
-    initRefs(); initSteps(); initTimers(); initSearch(); initNav(); initSchedule(); initAula(); openActiveSlot();
+    initRefs(); initSteps(); initSearch(); initNav(); initSchedule(); initAula();
   });
 })();

@@ -33,29 +33,10 @@
       <li><a href="#materiais">Materiais</a></li>
       <li><a href="#sobre">Sobre</a></li>
     </ul>
+    <button class="btn sm gold" id="btnQR" type="button" title="Mostrar QR code em tela cheia (tecla Q)">QR</button>
     <button class="btn sm" id="btnAula" type="button" aria-pressed="false" title="Fonte maior, barra do dia e atalhos (tecla P)">Modo aula</button>
   </div>
 </header>
-
-<div class="daybar" id="daybar" role="status" aria-live="off">
-  <div class="wrap">
-    <div class="now"><small id="dbLabel">Agora</small><span id="dbNow">Roteiro do dia</span></div>
-    <div class="left" id="dbLeft">--:--</div>
-    <div class="prog" aria-hidden="true"><i id="dbProg"></i></div>
-    <div class="next" id="dbNext"></div>
-    <div class="tools">
-      <span class="aula-only" style="gap:6px;align-items:center" aria-label="Cronômetro da sala">
-        <button class="btn sm" data-gt="5" type="button">5′</button>
-        <button class="btn sm" data-gt="10" type="button">10′</button>
-        <button class="btn sm" data-gt="15" type="button">15′</button>
-        <button class="btn sm" data-gt="30" type="button">30′</button>
-        <button class="btn sm" data-gt="0" type="button" title="Parar cronômetro">■</button>
-      </span>
-      <button class="btn sm gold" id="btnQR" type="button" title="Mostrar QR code em tela cheia (tecla Q)">QR</button>
-      <button class="btn sm aula-only" id="btnFull" type="button" title="Tela cheia (tecla F)">Tela cheia</button>
-    </div>
-  </div>
-</div>
 
 <main id="conteudo">
 
@@ -70,7 +51,6 @@
       <span class="chip"><b>Sex, 23/10</b> · 08h às 12h</span>
       <span class="chip">Faculdade Católica da Paraíba · Cajazeiras-PB</span>
       <span class="chip">Prof. Me. <b>Gervásio Teixeira</b></span>
-      <span class="chip live" id="liveChip"><i></i><span id="liveTxt">Carregando…</span></span>
     </div>
     <div class="cta">
       <a class="btn primary" href="#roteiro">Ver o roteiro</a>
@@ -105,30 +85,30 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">Programação</span>
-      <h2>Roteiro das 4 horas</h2>
-      <p class="sub">Em cada módulo: uma ideia da Filosofia, um conceito da Computação e uma prática no computador. Abra um bloco para ver o que será feito e vá direto ao texto.</p>
+      <h2>Roteiro do minicurso</h2>
+      <p class="sub">Em cada módulo: uma ideia da Filosofia, um conceito da Computação e uma prática no computador. Os tempos são apenas sugestões: o professor ajusta o ritmo ao grupo. Abra um bloco para ver o que será feito e vá direto ao texto.</p>
     </div>
     <ol class="timeline" id="timeline">
-      <li class="slot" data-s="08:00" data-e="08:10" data-id="abertura"><div class="row"><div class="t">08h00<small>10 min</small></div><div class="ti">Abertura<small>Boas-vindas, a pergunta-guia e o acordo de trabalho</small></div><span class="tag">Abertura</span></div></li>
+      <li class="slot" data-id="abertura"><div class="row"><div class="t">10 min<small>sugestão</small></div><div class="ti">Abertura<small>Boas-vindas, a pergunta-guia e o acordo de trabalho</small></div><span class="tag">Abertura</span></div></li>
 
-      <li><details class="slot" data-s="08:10" data-e="08:30" data-id="m1"><summary><div class="t">08h10<small>20 min</small></div><div class="ti">Módulo 1 · Autoria na era da IA<small>Do mito de Theuth ao autor que assina o que não escreveu sozinho</small></div><span class="tag">Módulo 1</span></summary>
+      <li><details class="slot" data-id="m1"><summary><div class="t">20 min<small>sugestão</small></div><div class="ti">Módulo 1 · Autoria na era da IA<small>Do mito de Theuth ao autor que assina o que não escreveu sozinho</small></div><span class="tag">Módulo 1</span></summary>
         <div class="body"><div><h4>Filosofia</h4>Platão (Fedro): a escrita como <em>pharmakon</em>. Kant: menoridade e esclarecimento. Arendt: pensar o que estamos fazendo.</div><div><h4>Computação</h4>Viés de automação e <em>accountability</em>: a máquina não assina nem responde.</div><div><h4>Prática</h4>As três perguntas: quem pensou? quem decidiu? quem responde?</div><a class="go" href="#m1">Ir ao texto do Módulo 1 →</a></div></details></li>
 
-      <li><details class="slot" data-s="08:30" data-e="09:10" data-id="m2"><summary><div class="t">08h30<small>40 min</small></div><div class="ti">Módulo 2 · Como uma IA funciona<small>Do jogo da imitação à previsão da próxima palavra</small></div><span class="tag">Módulo 2</span></summary>
+      <li><details class="slot" data-id="m2"><summary><div class="t">40 min<small>sugestão</small></div><div class="ti">Módulo 2 · Como uma IA funciona<small>Do jogo da imitação à previsão da próxima palavra</small></div><span class="tag">Módulo 2</span></summary>
         <div class="body"><div><h4>Filosofia</h4>Turing e o jogo da imitação. Searle e o quarto chinês. Wittgenstein: significado como uso. Aristóteles: o verossímil e o verdadeiro. Frankfurt: conversa fiada.</div><div><h4>Computação</h4>Tokens, vetores, atenção, probabilidade, temperatura, alucinação.</div><div><h4>Prática</h4>Demonstração ao vivo: o teste das referências.</div><a class="go" href="#m2">Ir ao texto do Módulo 2 →</a></div></details></li>
 
-      <li><details class="slot" data-s="09:10" data-e="10:00" data-id="m3"><summary><div class="t">09h10<small>50 min</small></div><div class="ti">Módulo 3 · Pesquisa e referências<small>Do espanto ao problema de pesquisa, e da sugestão da IA à fonte verificada</small></div><span class="tag">Módulo 3</span></summary>
+      <li><details class="slot" data-id="m3"><summary><div class="t">50 min<small>sugestão</small></div><div class="ti">Módulo 3 · Pesquisa e referências<small>Do espanto ao problema de pesquisa, e da sugestão da IA à fonte verificada</small></div><span class="tag">Módulo 3</span></summary>
         <div class="body"><div><h4>Filosofia</h4>Platão e Aristóteles: o espanto. Descartes: a dúvida metódica.</div><div><h4>Computação</h4>Prompt como especificação (5 camadas). Bases de dados e operadores lógicos de busca.</div><div><h4>Prática</h4><b>Atividade 1</b> (30 min): do espanto à referência verificada.</div><a class="go" href="#m3">Ir ao texto do Módulo 3 →</a></div></details></li>
 
-      <li class="slot break" data-s="10:00" data-e="10:15" data-id="intervalo"><div class="row"><div class="t">10h00<small>15 min</small></div><div class="ti">Intervalo<small>Salve a sua tabela de referências. Voltamos às 10h15.</small></div><span class="tag">Pausa</span></div></li>
+      <li class="slot break" data-id="intervalo"><div class="row"><div class="t">15 min<small>sugestão</small></div><div class="ti">Intervalo<small>Salve a sua tabela de referências. Voltamos em seguida.</small></div><span class="tag">Pausa</span></div></li>
 
-      <li><details class="slot" data-s="10:15" data-e="11:05" data-id="m4"><summary><div class="t">10h15<small>50 min</small></div><div class="ti">Módulo 4 · A IA como interlocutora socrática<small>Maiêutica e disputatio aplicadas ao prompt</small></div><span class="tag">Módulo 4</span></summary>
+      <li><details class="slot" data-id="m4"><summary><div class="t">50 min<small>sugestão</small></div><div class="ti">Módulo 4 · A IA como interlocutora socrática<small>Maiêutica e disputatio aplicadas ao prompt</small></div><span class="tag">Módulo 4</span></summary>
         <div class="body"><div><h4>Filosofia</h4>Maiêutica (Teeteto). <em>Disputatio</em> (Tomás de Aquino). Falácias (Aristóteles). Adulação (Górgias).</div><div><h4>Computação</h4>Teste adversarial e bajulação (<em>sycophancy</em>).</div><div><h4>Prática</h4><b>Atividade 2</b> (30 min): seu argumento no tribunal da IA.</div><a class="go" href="#m4">Ir ao texto do Módulo 4 →</a></div></details></li>
 
-      <li><details class="slot" data-s="11:05" data-e="11:50" data-id="m5"><summary><div class="t">11h05<small>45 min</small></div><div class="ti">Módulo 5 · Estruturar, revisar e responder por si<small>O que delegar, o que não, e como declarar o uso</small></div><span class="tag">Módulo 5</span></summary>
+      <li><details class="slot" data-id="m5"><summary><div class="t">45 min<small>sugestão</small></div><div class="ti">Módulo 5 · Estruturar, revisar e responder por si<small>O que delegar, o que não, e como declarar o uso</small></div><span class="tag">Módulo 5</span></summary>
         <div class="body"><div><h4>Filosofia</h4>Aristóteles: técnica (<em>poiesis</em>) e prudência (<em>phronesis</em>). Floridi e Cowls. Jonas. Kant.</div><div><h4>Computação</h4>Normas e transparência: LGPD, CNE, CNPq, MEC, ABNT.</div><div><h4>Prática</h4><b>Atividade 3</b> (25 min): do rascunho ao texto assinado.</div><a class="go" href="#m5">Ir ao texto do Módulo 5 →</a></div></details></li>
 
-      <li class="slot" data-s="11:50" data-e="12:00" data-id="fechamento"><div class="row"><div class="t">11h50<small>10 min</small></div><div class="ti">Fechamento · Que é o homem?<small>Seis compromissos para levar</small></div><span class="tag">Fechamento</span></div></li>
+      <li class="slot" data-id="fechamento"><div class="row"><div class="t">10 min<small>sugestão</small></div><div class="ti">Fechamento · Que é o homem?<small>Seis compromissos para levar</small></div><span class="tag">Fechamento</span></div></li>
     </ol>
     <p class="note">À noite, às 19h, o professor também participa da <b>mesa-redonda interdisciplinar “Pensar com Máquinas”</b> (19h às 22h), com a Profª. Drª. Maria Vanice Lacerda (UFCG) e o Prof. Dr. Lucrécio Araújo de Sá (UFCG).</p>
   </div>
@@ -137,7 +117,7 @@
 <!-- ======================= MÓDULO 1 ======================= -->
 <section class="module" id="m1" data-nav="Módulo 1">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">1</div><div><span class="kicker">08h10 · 20 min</span><h2>Autoria na era da IA</h2></div></div>
+    <div class="mod-head"><div class="mod-n">1</div><div><span class="kicker">20 min (sugestão)</span><h2>Autoria na era da IA</h2></div></div>
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>Platão, Kant e Arendt: remédio e veneno, menoridade, responsabilidade.</div>
       <div><b>Conceito da Computação</b>Viés de automação e accountability.</div>
@@ -187,7 +167,7 @@
 <!-- ======================= MÓDULO 2 ======================= -->
 <section class="module" id="m2" data-nav="Módulo 2">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">2</div><div><span class="kicker">08h30 · 40 min</span><h2>Como uma IA funciona</h2></div></div>
+    <div class="mod-head"><div class="mod-n">2</div><div><span class="kicker">40 min (sugestão)</span><h2>Como uma IA funciona</h2></div></div>
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>Turing, Searle, Wittgenstein, Aristóteles, Frankfurt.</div>
       <div><b>Conceito da Computação</b>Modelos de linguagem: tokens, vetores, atenção, temperatura, alucinação.</div>
@@ -266,7 +246,7 @@
 <!-- ======================= MÓDULO 3 ======================= -->
 <section class="module" id="m3" data-nav="Módulo 3">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">3</div><div><span class="kicker">09h10 · 50 min</span><h2>Pesquisa e referências</h2></div></div>
+    <div class="mod-head"><div class="mod-n">3</div><div><span class="kicker">50 min (sugestão)</span><h2>Pesquisa e referências</h2></div></div>
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>O espanto (Platão, Aristóteles) e a dúvida metódica (Descartes).</div>
       <div><b>Conceito da Computação</b>Prompt como especificação; bases de dados e operadores lógicos.</div>
@@ -318,7 +298,7 @@
 <!-- ======================= MÓDULO 4 ======================= -->
 <section class="module" id="m4" data-nav="Módulo 4">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">4</div><div><span class="kicker">10h15 · 50 min</span><h2>A IA como interlocutora socrática</h2></div></div>
+    <div class="mod-head"><div class="mod-n">4</div><div><span class="kicker">50 min (sugestão)</span><h2>A IA como interlocutora socrática</h2></div></div>
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>Maiêutica, <em>disputatio</em>, falácias, adulação.</div>
       <div><b>Conceito da Computação</b>Teste adversarial e bajulação (<em>sycophancy</em>).</div>
@@ -366,7 +346,7 @@
 <!-- ======================= MÓDULO 5 ======================= -->
 <section class="module" id="m5" data-nav="Módulo 5">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">5</div><div><span class="kicker">11h05 · 45 min</span><h2>Estruturar, revisar e responder por si</h2></div></div>
+    <div class="mod-head"><div class="mod-n">5</div><div><span class="kicker">45 min (sugestão)</span><h2>Estruturar, revisar e responder por si</h2></div></div>
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>Técnica e prudência (Aristóteles); responsabilidade (Jonas); ética.</div>
       <div><b>Conceito da Computação</b>Princípios de IA ética; privacidade, LGPD e transparência.</div>
@@ -409,7 +389,7 @@
 <!-- ======================= FECHAMENTO ======================= -->
 <section class="module" id="fechamento" data-nav="Fechamento">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">∞</div><div><span class="kicker">11h50 · 10 min</span><h2>Que é o homem?</h2></div></div>
+    <div class="mod-head"><div class="mod-n">∞</div><div><span class="kicker">10 min (sugestão)</span><h2>Que é o homem?</h2></div></div>
     <article class="read">
       <p>Kant resumiu as perguntas da filosofia em três: <em>que posso saber? que devo fazer? que me é permitido esperar?</em> (<em>Crítica da razão pura</em>, A805/B833). Na <em>Lógica</em> acrescenta uma quarta, que as contém: <strong>que é o homem?</strong> A inteligência artificial devolve essa pergunta com urgência nova: o que fazemos quando uma máquina faz o que julgávamos próprio do humano, escrever? A resposta que este minicurso propõe é modesta e exigente: usar a ferramenta sem abrir mão do que só pode ser nosso, a pergunta, o juízo e a responsabilidade.</p>
     </article>
@@ -433,13 +413,12 @@
     <div class="sec-head">
       <span class="kicker">Mão na massa</span>
       <h2>As três atividades</h2>
-      <p class="sub">Marque cada passo ao concluir, use o cronômetro e registre o que fizer: o que você escrever aqui fica salvo só neste navegador e não é enviado a ninguém. Se preferir papel, use as <a href="downloads/Fichas_das_atividades.pdf">fichas em PDF</a>.</p>
+      <p class="sub">Marque cada passo ao concluir e registre o que fizer: o que você escrever aqui fica salvo só neste navegador e não é enviado a ninguém. Se preferir papel, use as <a href="downloads/Fichas_das_atividades.pdf">fichas em PDF</a>.</p>
     </div>
 
     <!-- Atividade 1 -->
     <div class="act" id="atv1" data-act="a1">
-      <div class="act-top"><div><span class="kicker">Módulo 3 · <span class="time">30 min</span></span><h3>Atividade 1 · Do espanto à referência verificada</h3></div>
-        <div class="timer" data-min="30"><output>30:00</output><button class="btn sm" data-t="go" type="button">Iniciar</button><button class="btn sm" data-t="reset" type="button">Zerar</button></div></div>
+      <div class="act-top"><div><span class="kicker">Módulo 3 · <span class="time">30 min</span></span><h3>Atividade 1 · Do espanto à referência verificada</h3></div></div>
       <p>Faça no computador, de preferência com um editor de texto aberto para registrar o que fizer. O produto final são duas coisas: <b>um problema de pesquisa em uma frase</b> e <b>um quadro de referências verificadas</b>.</p>
       <ol class="steps">
         <li><input type="checkbox" data-save="a1s1"><span>Escreva em duas linhas o seu <b>espanto</b>: o tema ou o incômodo filosófico que realmente lhe chama a atenção.</span></li>
@@ -459,8 +438,7 @@
 
     <!-- Atividade 2 -->
     <div class="act" id="atv2" data-act="a2">
-      <div class="act-top"><div><span class="kicker">Módulo 4 · <span class="time">30 min</span></span><h3>Atividade 2 · Seu argumento no tribunal da IA</h3></div>
-        <div class="timer" data-min="30"><output>30:00</output><button class="btn sm" data-t="go" type="button">Iniciar</button><button class="btn sm" data-t="reset" type="button">Zerar</button></div></div>
+      <div class="act-top"><div><span class="kicker">Módulo 4 · <span class="time">30 min</span></span><h3>Atividade 2 · Seu argumento no tribunal da IA</h3></div></div>
       <p>O objetivo é testar uma tese sua contra perguntas e objeções fortes, reformulá-la e conseguir explicá-la em um minuto, sem ler.</p>
       <ol class="steps">
         <li><input type="checkbox" data-save="a2s1"><span>Escreva sua <b>tese</b> em 3 a 5 linhas (pode ser a hipótese da Atividade 1).</span></li>
@@ -482,8 +460,7 @@
 
     <!-- Atividade 3 -->
     <div class="act" id="atv3" data-act="a3">
-      <div class="act-top"><div><span class="kicker">Módulo 5 · <span class="time">25 min</span></span><h3>Atividade 3 · Do rascunho ao texto assinado</h3></div>
-        <div class="timer" data-min="25"><output>25:00</output><button class="btn sm" data-t="go" type="button">Iniciar</button><button class="btn sm" data-t="reset" type="button">Zerar</button></div></div>
+      <div class="act-top"><div><span class="kicker">Módulo 5 · <span class="time">25 min</span></span><h3>Atividade 3 · Do rascunho ao texto assinado</h3></div></div>
       <p>É a atividade de síntese: junta tese, escrita, revisão e declaração. <b>Regra de ouro: o primeiro parágrafo é escrito sem IA.</b> Ela só entra depois, como leitora crítica.</p>
       <ol class="steps">
         <li><input type="checkbox" data-save="a3s1"><span>Escreva, <b>sem IA</b>, um parágrafo de seis a oito linhas com a sua tese (a da Atividade 2, de preferência). <em>(10 min)</em></span></li>
@@ -752,8 +729,7 @@
 </div>
 
 <div class="help"><button class="btn sm" id="helpBtn" type="button">Atalhos</button>
-  <div class="pop" id="helpPop"><p><span class="kbd">P</span> modo aula</p><p><span class="kbd">←</span> <span class="kbd">→</span> ou <span class="kbd">J</span> <span class="kbd">K</span> seção anterior / próxima</p><p><span class="kbd">G</span> ir ao módulo atual</p><p><span class="kbd">Q</span> QR code</p><p><span class="kbd">F</span> tela cheia</p><p><span class="kbd">T</span> cronômetro 10 min</p><p><span class="kbd">Esc</span> fecha</p>
-  <p style="color:var(--muted)">Ensaio: acrescente <span class="kbd">?hora=09:30</span> ao endereço para simular um horário do dia.</p></div></div>
+  <div class="pop" id="helpPop"><p><span class="kbd">P</span> modo aula</p><p><span class="kbd">←</span> <span class="kbd">→</span> ou <span class="kbd">J</span> <span class="kbd">K</span> seção anterior / próxima</p><p><span class="kbd">G</span> ir ao bloco marcado como atual</p><p><span class="kbd">Q</span> QR code</p><p><span class="kbd">F</span> tela cheia</p><p><span class="kbd">Esc</span> fecha</p></div></div>
 
 <script src="assets/app.js"></script>
 </body>
