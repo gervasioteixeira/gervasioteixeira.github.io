@@ -287,3 +287,4 @@ body.aula .help{display:block}
 .totop.show{opacity:.82;transform:none;pointer-events:auto}
 .totop:hover,.totop:focus-visible{opacity:1;border-color:var(--gold2);color:var(--gold2)}
 @media print{.totop{display:none!important}}
+
