@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Escrever com IA sem deixar de pensar · XXVIII Seminário de Filosofia</title>
+<meta name="description" content="Página do minicurso 'Escrever com IA sem deixar de pensar' (XXVIII Seminário de Filosofia, Faculdade Católica da Paraíba, 23/10/2026): roteiro, textos de apoio, atividades, prompts, ferramentas e normas.">
+<meta name="theme-color" content="#060d20">
+<meta property="og:title" content="Escrever com IA sem deixar de pensar">
+<meta property="og:description" content="Minicurso do XXVIII Seminário de Filosofia · 23/10/2026 · Faculdade Católica da Paraíba. Textos, atividades, prompts e ferramentas.">
+<meta property="og:image" content="https://gervasioteixeira.com.br/seminario/assets/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+<link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1B3A'/%3E%3Cpath d='M12 50h40M16 46V24M26 46V24M38 46V24M48 46V24M10 24h44L32 10z' stroke='%23C8A24A' stroke-width='4' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="nav" id="topo">
+  <div class="wrap">
+    <a class="brand" href="#inicio">XXVIII <b>Seminário</b> de Filosofia</a>
+    <ul id="menu">
+      <li><a href="#roteiro">Roteiro</a></li>
+      <li><a href="#m1">Textos</a></li>
+      <li><a href="#atividades">Atividades</a></li>
+      <li><a href="#prompts">Prompts</a></li>
+      <li><a href="#ferramentas">Ferramentas</a></li>
+      <li><a href="#praticar">Praticar</a></li>
+      <li><a href="#normas">Normas</a></li>
+      <li><a href="#declaracao">Declaração</a></li>
+      <li><a href="#materiais">Materiais</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+    </ul>
+    <button class="btn sm" id="btnAula" type="button" aria-pressed="false" title="Fonte maior, barra do dia e atalhos (tecla P)">Modo aula</button>
+  </div>
+</header>
+
+<div class="daybar" id="daybar" role="status" aria-live="off">
+  <div class="wrap">
+    <div class="now"><small id="dbLabel">Agora</small><span id="dbNow">Roteiro do dia</span></div>
+    <div class="left" id="dbLeft">--:--</div>
+    <div class="prog" aria-hidden="true"><i id="dbProg"></i></div>
+    <div class="next" id="dbNext"></div>
+    <div class="tools">
+      <span class="aula-only" style="gap:6px;align-items:center" aria-label="Cronômetro da sala">
+        <button class="btn sm" data-gt="5" type="button">5′</button>
+        <button class="btn sm" data-gt="10" type="button">10′</button>
+        <button class="btn sm" data-gt="15" type="button">15′</button>
+        <button class="btn sm" data-gt="30" type="button">30′</button>
+        <button class="btn sm" data-gt="0" type="button" title="Parar cronômetro">■</button>
+      </span>
+      <button class="btn sm gold" id="btnQR" type="button" title="Mostrar QR code em tela cheia (tecla Q)">QR</button>
+      <button class="btn sm aula-only" id="btnFull" type="button" title="Tela cheia (tecla F)">Tela cheia</button>
+    </div>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="inicio" data-nav="Início">
+  <div class="wrap">
+    <span class="eyebrow">XXVIII Seminário de Filosofia · 20 a 23 de outubro de 2026</span>
+    <h1>Escrever com <em>IA</em> sem deixar de pensar</h1>
+    <p class="lede">Uso crítico e ético da inteligência artificial na escrita acadêmica: o que a máquina faz por dentro e o que continua sendo tarefa humana.</p>
+    <div class="guide"><small>Pergunta-guia</small><p>Quando um texto é escrito com ajuda de uma máquina, o que nele ainda é meu?</p></div>
+    <div class="chips">
+      <span class="chip"><b>Sex, 23/10</b> · 08h às 12h</span>
+      <span class="chip">Faculdade Católica da Paraíba · Cajazeiras-PB</span>
+      <span class="chip">Prof. Me. <b>Gervásio Teixeira</b></span>
+      <span class="chip live" id="liveChip"><i></i><span id="liveTxt">Carregando…</span></span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#roteiro">Ver o roteiro</a>
+      <a class="btn" href="#m1">Ler os textos</a>
+      <a class="btn" href="#atividades">Atividades</a>
+      <a class="btn" href="#materiais">Baixar materiais</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= COMO USAR ======================= -->
+<section id="regras" data-nav="Regras de ouro">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Antes de começar</span>
+      <h2>Cinco regras de ouro</h2>
+      <p class="sub">Valem para este minicurso e para tudo o que você escrever com ajuda de uma máquina.</p>
+    </div>
+    <div class="grid g3 rules">
+      <div class="card"><span class="num">1</span><b>Eu penso primeiro; depois peço ajuda.</b><span>O problema e a tese nascem de você.</span></div>
+      <div class="card"><span class="num">2</span><b>Nada que a IA entrega vale como fonte antes de eu verificar.</b><span>Existe? Dados conferem? Diz isso? Sustenta?</span></div>
+      <div class="card"><span class="num">3</span><b>Não colo dados pessoais nem trabalhos sigilosos em ferramentas públicas.</b><span>LGPD e direito autoral valem também aqui.</span></div>
+      <div class="card"><span class="num">4</span><b>Registro o que fiz: é a minha declaração de uso.</b><span>Ferramenta, finalidade e limites.</span></div>
+      <div class="card"><span class="num">5</span><b>Se a IA concordar demais comigo, peço que discorde.</b><span>Bajulação não é interlocução.</span></div>
+      <div class="card gold"><b>O que você precisa hoje</b><span>Computador com internet, uma conta em alguma IA gratuita (ChatGPT, Gemini, Claude ou Copilot) e <b style="display:inline">um tema seu</b>, real ainda que provisório: um TCC, um artigo, um projeto.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ROTEIRO ======================= -->
+<section class="alt" id="roteiro" data-nav="Roteiro">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Programação</span>
+      <h2>Roteiro das 4 horas</h2>
+      <p class="sub">Em cada módulo: uma ideia da Filosofia, um conceito da Computação e uma prática no computador. Abra um bloco para ver o que será feito e vá direto ao texto.</p>
+    </div>
+    <ol class="timeline" id="timeline">
+      <li class="slot" data-s="08:00" data-e="08:10" data-id="abertura"><div class="row"><div class="t">08h00<small>10 min</small></div><div class="ti">Abertura<small>Boas-vindas, a pergunta-guia e o acordo de trabalho</small></div><span class="tag">Abertura</span></div></li>
+
+      <li><details class="slot" data-s="08:10" data-e="08:30" data-id="m1"><summary><div class="t">08h10<small>20 min</small></div><div class="ti">Módulo 1 · Autoria na era da IA<small>Do mito de Theuth ao autor que assina o que não escreveu sozinho</small></div><span class="tag">Módulo 1</span></summary>
+        <div class="body"><div><h4>Filosofia</h4>Platão (Fedro): a escrita como <em>pharmakon</em>. Kant: menoridade e esclarecimento. Arendt: pensar o que estamos fazendo.</div><div><h4>Computação</h4>Viés de automação e <em>accountability</em>: a máquina não assina nem responde.</div><div><h4>Prática</h4>As três perguntas: quem pensou? quem decidiu? quem responde?</div><a class="go" href="#m1">Ir ao texto do Módulo 1 →</a></div></details></li>
+
+      <li><details class="slot" data-s="08:30" data-e="09:10" data-id="m2"><summary><div class="t">08h30<small>40 min</small></div><div class="ti">Módulo 2 · Como uma IA funciona<small>Do jogo da imitação à previsão da próxima palavra</small></div><span class="tag">Módulo 2</span></summary>
+        <div class="body"><div><h4>Filosofia</h4>Turing e o jogo da imitação. Searle e o quarto chinês. Wittgenstein: significado como uso. Aristóteles: o verossímil e o verdadeiro. Frankfurt: conversa fiada.</div><div><h4>Computação</h4>Tokens, vetores, atenção, probabilidade, temperatura, alucinação.</div><div><h4>Prática</h4>Demonstração ao vivo: o teste das referências.</div><a class="go" href="#m2">Ir ao texto do Módulo 2 →</a></div></details></li>
+
+      <li><details class="slot" data-s="09:10" data-e="10:00" data-id="m3"><summary><div class="t">09h10<small>50 min</small></div><div class="ti">Módulo 3 · Pesquisa e referências<small>Do espanto ao problema de pesquisa, e da sugestão da IA à fonte verificada</small></div><span class="tag">Módulo 3</span></summary>
+        <div class="body"><div><h4>Filosofia</h4>Platão e Aristóteles: o espanto. Descartes: a dúvida metódica.</div><div><h4>Computação</h4>Prompt como especificação (5 camadas). Bases de dados e operadores lógicos de busca.</div><div><h4>Prática</h4><b>Atividade 1</b> (30 min): do espanto à referência verificada.</div><a class="go" href="#m3">Ir ao texto do Módulo 3 →</a></div></details></li>
+
+      <li class="slot break" data-s="10:00" data-e="10:15" data-id="intervalo"><div class="row"><div class="t">10h00<small>15 min</small></div><div class="ti">Intervalo<small>Salve a sua tabela de referências. Voltamos às 10h15.</small></div><span class="tag">Pausa</span></div></li>
+
+      <li><details class="slot" data-s="10:15" data-e="11:05" data-id="m4"><summary><div class="t">10h15<small>50 min</small></div><div class="ti">Módulo 4 · A IA como interlocutora socrática<small>Maiêutica e disputatio aplicadas ao prompt</small></div><span class="tag">Módulo 4</span></summary>
+        <div class="body"><div><h4>Filosofia</h4>Maiêutica (Teeteto). <em>Disputatio</em> (Tomás de Aquino). Falácias (Aristóteles). Adulação (Górgias).</div><div><h4>Computação</h4>Teste adversarial e bajulação (<em>sycophancy</em>).</div><div><h4>Prática</h4><b>Atividade 2</b> (30 min): seu argumento no tribunal da IA.</div><a class="go" href="#m4">Ir ao texto do Módulo 4 →</a></div></details></li>
+
+      <li><details class="slot" data-s="11:05" data-e="11:50" data-id="m5"><summary><div class="t">11h05<small>45 min</small></div><div class="ti">Módulo 5 · Estruturar, revisar e responder por si<small>O que delegar, o que não, e como declarar o uso</small></div><span class="tag">Módulo 5</span></summary>
+        <div class="body"><div><h4>Filosofia</h4>Aristóteles: técnica (<em>poiesis</em>) e prudência (<em>phronesis</em>). Floridi e Cowls. Jonas. Kant.</div><div><h4>Computação</h4>Normas e transparência: LGPD, CNE, CNPq, MEC, ABNT.</div><div><h4>Prática</h4><b>Atividade 3</b> (25 min): do rascunho ao texto assinado.</div><a class="go" href="#m5">Ir ao texto do Módulo 5 →</a></div></details></li>
+
+      <li class="slot" data-s="11:50" data-e="12:00" data-id="fechamento"><div class="row"><div class="t">11h50<small>10 min</small></div><div class="ti">Fechamento · Que é o homem?<small>Seis compromissos para levar</small></div><span class="tag">Fechamento</span></div></li>
+    </ol>
+    <p class="note">À noite, às 19h, o professor também participa da <b>mesa-redonda interdisciplinar “Pensar com Máquinas”</b> (19h às 22h), com a Profª. Drª. Maria Vanice Lacerda (UFCG) e o Prof. Dr. Lucrécio Araújo de Sá (UFCG).</p>
+  </div>
+</section>
+
+<!-- ======================= MÓDULO 1 ======================= -->
+<section class="module" id="m1" data-nav="Módulo 1">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">1</div><div><span class="kicker">08h10 · 20 min</span><h2>Autoria na era da IA</h2></div></div>
+    <div class="meta3">
+      <div><b>Ideia da Filosofia</b>Platão, Kant e Arendt: remédio e veneno, menoridade, responsabilidade.</div>
+      <div><b>Conceito da Computação</b>Viés de automação e accountability.</div>
+      <div><b>Prática</b>Responder, para um texto seu, às três perguntas da autoria.</div>
+    </div>
+    <article class="read">
+      <h3>Remédio e veneno</h3>
+      <p>No <em>Fedro</em>, Platão (2011, 274c-275b) conta um mito egípcio. O deus Theuth, inventor dos números, do cálculo e das letras, apresenta ao rei Thamus a escrita como um <em>pharmakon</em>, palavra grega que significa ao mesmo tempo remédio e veneno. Seria, diz Theuth, um remédio para a memória e para a sabedoria. Thamus discorda: a escrita produzirá esquecimento, porque os homens passarão a confiar em marcas externas em vez de exercitar a memória, e dará apenas uma “aparência de sabedoria”.</p>
+      <details class="src"><summary><span>Leia o trecho: Theuth e Thamus<small>Platão, Fedro, 274e-275b e 275d · tradução livre a partir da versão inglesa de B. Jowett (domínio público)</small></span></summary>
+        <div class="in">
+          <span class="lang">Português</span>
+          <blockquote>Theuth disse: “Esta invenção tornará os egípcios mais sábios e lhes dará melhor memória; é um específico para a memória e para a sabedoria.” Thamus respondeu: “Engenhosíssimo Theuth, quem inventa uma arte nem sempre é o melhor juiz da utilidade ou da inutilidade dela para quem vai usá-la. Tu, que és o pai das letras, por amor paterno atribuíste a elas uma qualidade que não podem ter: esta tua descoberta criará esquecimento na alma dos que aprendem, porque deixarão de exercitar a memória; confiando nos caracteres escritos, que lhes são externos, não se lembrarão por si mesmos. O específico que descobriste serve não à memória, mas à reminiscência, e dás aos teus discípulos não a verdade, mas só a aparência da verdade: ouvirão muitas coisas e nada terão aprendido; parecerão oniscientes e em geral nada saberão; serão companhia enfadonha, tendo a aparência da sabedoria sem a realidade.”</blockquote>
+          <blockquote>“Sinto, Fedro, que a escrita é infelizmente semelhante à pintura: as criações do pintor têm a atitude da vida e, no entanto, se lhes fazes uma pergunta, guardam um silêncio solene. O mesmo vale para os discursos escritos: imaginarias que têm inteligência, mas, se queres saber algo e lhes pões uma questão, dão sempre uma única resposta invariável.”</blockquote>
+          <span class="lang">English (Jowett)</span>
+          <blockquote class="orig">“[…] this discovery of yours will create forgetfulness in the learners' souls, because they will not use their memories; they will trust to the external written characters and not remember of themselves. The specific which you have discovered is an aid not to memory, but to reminiscence, and you give your disciples not truth, but only the semblance of truth; they will be hearers of many things and will have learned nothing; they will appear to be omniscient and will generally know nothing; they will be tiresome company, having the show of wisdom without the reality.”<br><br>“I cannot help feeling, Phaedrus, that writing is unfortunately like painting; for the creations of the painter have the attitude of life, and yet if you ask them a question they preserve a solemn silence. […] the speaker always gives one unvarying answer.”</blockquote>
+          <p class="cap">Texto integral em <a href="https://classics.mit.edu/Plato/phaedrus.html" target="_blank" rel="noopener">classics.mit.edu</a>. Jowett traduz <em>pharmakon</em> por “specific”. Na edição brasileira (Carlos Alberto Nunes, UFPA, 2011), confira a passagem.</p>
+        </div></details>
+      <p>Mais adiante (275d-e), Sócrates acrescenta que o escrito é como uma pintura: parece falar, mas, interrogado, repete sempre a mesma coisa. A inteligência artificial que escreve é um novo capítulo da mesma história, com uma diferença notável: agora o texto responde, adapta-se, reformula. A impressão de estar diante de um interlocutor é muito mais forte, e por isso o risco do “veneno” também. Lévy (1993) e Ong (1998) lembram que cada tecnologia da palavra reorganiza o modo de pensar de quem a usa. A pergunta, como em Platão, não é se a técnica é boa ou má, mas o que ela faz de nós conforme o uso que lhe damos: remédio para quem já pensou e quer organizar e testar suas ideias, veneno para quem ainda não pensou e deixa de aprender.</p>
+
+      <h3>Menoridade e esclarecimento</h3>
+      <p>Kant (2005 [1784]) define o esclarecimento como a saída do ser humano de sua menoridade, isto é, da incapacidade de servir-se do próprio entendimento sem a direção de outrem. A menoridade é “por culpa própria”: sua causa não é falta de entendimento, mas de decisão e de coragem. Ele a ilustra com um exemplo célebre: como é cômodo ser menor! Se tenho um livro que entende por mim, um pastor que tem consciência por mim, um médico que decide minha dieta, não preciso esforçar-me eu mesmo. Seu lema, tomado de Horácio, é <em>Sapere aude!</em>: tem a coragem de servir-te do teu próprio entendimento.</p>
+      <details class="src"><summary><span>Leia o trecho: “Sapere aude!”<small>Kant, Resposta à pergunta: que é esclarecimento? (1784) · original alemão e tradução livre</small></span></summary>
+        <div class="in">
+          <span class="lang">Português (tradução livre)</span>
+          <blockquote>Esclarecimento é a saída do ser humano de sua menoridade, da qual ele próprio é culpado. Menoridade é a incapacidade de servir-se do próprio entendimento sem a direção de outro. É por culpa própria quando a causa dela não está na falta de entendimento, mas na falta de decisão e de coragem para servir-se dele sem a direção de outro. <em>Sapere aude!</em> Tem coragem de servir-te do teu próprio entendimento!</blockquote>
+          <blockquote>É tão cômodo ser menor! Se tenho um livro que tem entendimento por mim, um pastor que tem consciência por mim, um médico que julga por mim a dieta, e assim por diante, não preciso me esforçar eu mesmo. Não preciso pensar, desde que possa pagar; outros assumirão por mim a tarefa aborrecida.</blockquote>
+          <span class="lang">Deutsch (1784)</span>
+          <blockquote class="orig">„Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit. Unmündigkeit ist das Unvermögen, sich seines Verstandes ohne Leitung eines anderen zu bedienen. […] Sapere aude! Habe Muth dich deines eigenen Verstandes zu bedienen!“<br><br>„Habe ich ein Buch, das für mich Verstand hat, einen Seelsorger, der für mich Gewissen hat, einen Arzt der für mich die Diät beurtheilt, u. s. w. so brauche ich mich ja nicht selbst zu bemühen.“</blockquote>
+          <p class="cap">Original (ortografia da <i>Berlinische Monatsschrift</i>) em <a href="https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufklärung%3F" target="_blank" rel="noopener">Wikisource</a>. Edição brasileira: Kant, <em>Textos seletos</em> (Vozes, 2005).</p>
+        </div></details>
+      <p>A IA entra nessa lista? Kant não condenaria os guias; condena a comodidade de nunca deixar de precisar deles. Na área de fatores humanos, descreve-se algo parecido com o nome de <strong>viés de automação</strong>: a tendência a confiar excessivamente nas respostas de um sistema automático. A diferença entre a ferramenta que esclarece e a tutela que mantém na menoridade está no que fazemos com o resultado: se o aceitamos sem exame, é tutela; se o examinamos, discordamos e refazemos, é ferramenta.</p>
+
+      <h3>Quem é o autor?</h3>
+      <p>Arendt (2007), no prólogo de <em>A condição humana</em>, propõe “pensar o que estamos fazendo”: não aceitar que as técnicas façam por nós o que deveríamos examinar. Aplicada à escrita, a proposta se desdobra em três perguntas.</p>
+      <div class="grid g3" style="font-family:var(--font-ui);margin:18px 0">
+        <div class="card"><span class="num">1</span><h3>Quem pensou?</h3><p>A ideia central, o recorte e a tese partiram de você ou do modelo?</p></div>
+        <div class="card"><span class="num">2</span><h3>Quem decidiu?</h3><p>Cada escolha (o que entra, o que sai, qual fonte vale) passou pelo seu juízo?</p></div>
+        <div class="card"><span class="num">3</span><h3>Quem responde?</h3><p>Se houver erro, plágio ou invenção, quem assume? A máquina não assina nem responde.</p></div>
+      </div>
+      <p>A última é decisiva: um sistema de inteligência artificial não assina nem responde; a responsabilidade recai sobre pessoas e instituições (em computação, fala-se em <em>accountability</em>). Daí uma definição de trabalho que usaremos até o fim: <strong>autor é quem decide, responde e pode justificar o que escreveu.</strong> Usar IA não retira a autoria, desde que as três perguntas tenham resposta clara e honesta.</p>
+      <div class="think"><b>Para pensar</b>Em um texto seu em que você já usou, ou pretende usar, ajuda de IA: quem pensou, quem decidiu e quem responde? Em que ponto a ajuda virou tutela?
+        <label class="f" for="n1">Suas anotações (ficam só neste navegador)</label><textarea id="n1" data-save="m1-pensar" placeholder="Escreva aqui…"></textarea></div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= MÓDULO 2 ======================= -->
+<section class="module" id="m2" data-nav="Módulo 2">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">2</div><div><span class="kicker">08h30 · 40 min</span><h2>Como uma IA funciona</h2></div></div>
+    <div class="meta3">
+      <div><b>Ideia da Filosofia</b>Turing, Searle, Wittgenstein, Aristóteles, Frankfurt.</div>
+      <div><b>Conceito da Computação</b>Modelos de linguagem: tokens, vetores, atenção, temperatura, alucinação.</div>
+      <div><b>Prática</b>Demonstração ao vivo e experimento das cinco referências.</div>
+    </div>
+    <article class="read">
+      <h3>Duas perguntas clássicas</h3>
+      <p>Em <em>Computing machinery and intelligence</em>, Turing (1950) julga a pergunta “as máquinas podem pensar?” vaga demais e a substitui por um jogo: um interrogador conversa por escrito com uma pessoa e com uma máquina, sem saber qual é qual; se não consegue distingui-las, a pergunta mudou de natureza. Os modelos de linguagem atuais conversam de modo convincente, mas o teste mede comportamento, não compreensão.</p>
+      <details class="src"><summary><span>Leia o trecho: a pergunta de Turing<small>Turing, Computing machinery and intelligence, 1950, §1 · tradução livre</small></span></summary>
+        <div class="in">
+          <span class="lang">Português (tradução livre)</span>
+          <blockquote>Proponho considerar a questão: “As máquinas podem pensar?” […] Em vez de tentar tal definição, substituirei a questão por outra, intimamente relacionada com ela e expressa em palavras relativamente inequívocas.</blockquote>
+          <span class="lang">English</span>
+          <blockquote class="orig">“I propose to consider the question, ‘Can machines think?’ […] Instead of attempting such a definition I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words.”</blockquote>
+          <p class="cap">Artigo completo: <a href="https://doi.org/10.1093/mind/LIX.236.433" target="_blank" rel="noopener">Mind 59 (236), 433-460</a>.</p>
+        </div></details>
+      <p>É aí que entra Searle (1980) com o <strong>quarto chinês</strong>: uma pessoa que não sabe chinês, trancada num quarto, recebe símbolos, consulta um manual de regras e devolve outros símbolos; de fora, parece entender chinês, mas apenas manipula formas. A conclusão de Searle é que seguir regras sobre a forma dos símbolos (sintaxe) não basta para compreender o que significam (semântica).</p>
+      <p>Aplicar o argumento aos modelos atuais é uma hipótese de leitura, não um veredicto: Searle criticava programas de manipulação simbólica da sua época, os modelos de hoje são redes neurais estatísticas, e há objeções clássicas (a de que o sistema como um todo compreenderia, por exemplo). Use o quarto chinês como lente: diante de qualquer texto gerado, pergunte se há compreensão ou apenas forma convincente. Para ler mais: <a href="https://plato.stanford.edu/entries/chinese-room/" target="_blank" rel="noopener">verbete “The Chinese Room Argument”</a> na Stanford Encyclopedia of Philosophy.</p>
+
+      <h3>O percurso de uma frase</h3>
+      <p>Um modelo de linguagem de grande escala (LLM, do inglês <em>large language model</em>) é uma rede neural treinada em enormes volumes de texto para uma tarefa aparentemente simples: <strong>prever a próxima palavra</strong>. Tudo o que ele faz vem daí. O percurso de uma frase dentro do modelo tem cinco etapas:</p>
+      <div class="diagram" aria-label="Etapas: texto, tokens, vetores, atenção, probabilidades, próxima palavra"><span>Texto (prompt)</span><i>→</i><span>Tokens</span><i>→</i><span>Vetores</span><i>→</i><span>Atenção</span><i>→</i><span>Probabilidades</span><i>→</i><span>Próxima palavra</span><i>↺</i></div>
+      <p>Primeiro, o texto que você escreve (o <em>prompt</em>) é dividido em <strong>tokens</strong>, pedaços de palavras, e cada token vira um número. Depois, cada token é representado por um <strong>vetor</strong>, uma lista de números; é esse vetor que o modelo manipula. Em seguida, um mecanismo de <strong>atenção</strong>, ideia central da arquitetura <em>transformer</em> (Vaswani et al., 2017), pondera quais partes do texto anterior são mais relevantes para cada posição. Com isso, o modelo calcula a probabilidade de cada palavra possível vir a seguir e escolhe uma. Por fim, a palavra escolhida é acrescentada ao texto e todo o ciclo recomeça, palavra por palavra.</p>
+      <p>Repare no que não há nessas etapas: nenhuma delas consulta um banco de fatos. O que há são padrões numéricos aprendidos de muito texto. Quando o modelo escreve bem, é porque aprendeu muito bem como os textos costumam continuar; quando erra, é pela mesma razão.</p>
+
+      <div class="demo"><h4>Experimente · Tokens (ilustrativo)</h4>
+        <label class="f" for="tokIn">Digite uma frase</label>
+        <input type="text" id="tokIn" value="A filosofia nasce do espanto">
+        <div class="diagram" id="tokOut" style="margin-bottom:0"></div>
+        <p class="note">Divisão ilustrativa: os modelos reais usam vocabulários de tokens próprios, e os números aqui são inventados.</p>
+      </div>
+
+      <h3>Significado como uso, verossimilhança e temperatura</h3>
+      <p>Por que tokens usados em contextos parecidos recebem vetores parecidos? Porque o treinamento ajusta os números de modo que palavras que aparecem em situações semelhantes fiquem próximas. Isso lembra Wittgenstein (1953, §43): para uma grande classe de casos, o significado de uma palavra é o seu uso na linguagem. É uma analogia produtiva, mas só até certo ponto: o modelo capta padrões de uso em textos; não participa de uma forma de vida em que as palavras servem para prometer, pedir, responsabilizar.</p>
+      <p>O modelo não escolhe sempre a palavra mais provável. A <strong>temperatura</strong> controla o quanto ele arrisca: com temperatura baixa, escolhe quase sempre as mais prováveis; com temperatura alta, sorteia entre várias, com mais variedade e mais risco. Por isso a mesma pergunta pode receber respostas diferentes, às vezes até contraditórias.</p>
+
+      <div class="demo"><h4>Experimente · A próxima palavra é uma aposta</h4>
+        <div class="pick">A filosofia nasce do <mark id="pickW">…</mark></div>
+        <div class="bars" id="bars" aria-live="polite"></div>
+        <div class="row2"><label for="temp" style="font-weight:700">Temperatura: <output id="tempV">1,0</output></label><input type="range" id="temp" min="0.2" max="2.5" step="0.1" value="1" style="flex:1;min-width:160px"><button class="btn sm" id="draw" type="button">Sortear a próxima palavra</button></div>
+        <p class="note" id="tally">Valores ilustrativos. Sorteie várias vezes e compare: provável não é o mesmo que verdadeiro.</p>
+      </div>
+
+      <p>Aristóteles (<em>Poética</em>, cap. 9) já distinguia o poeta do historiador: o primeiro diz o que poderia acontecer segundo o verossímil ou o necessário; o segundo, o que aconteceu. O modelo está mais perto do poeta: devolve o verossímil. <strong>Provável não é o mesmo que verdadeiro.</strong></p>
+      <details class="src"><summary><span>Leia o trecho: o poeta e o historiador<small>Aristóteles, Poética, cap. 9 · tradução livre a partir da versão inglesa de S. H. Butcher (domínio público)</small></span></summary>
+        <div class="in">
+          <span class="lang">Português (tradução livre)</span>
+          <blockquote>Fica evidente, pelo que foi dito, que não é função do poeta relatar o que aconteceu, mas o que poderia acontecer: o que é possível segundo a lei da probabilidade ou da necessidade. O poeta e o historiador não diferem por escrever em verso ou em prosa. […] A verdadeira diferença é que um relata o que aconteceu, o outro o que poderia acontecer. Por isso a poesia é algo mais filosófico e mais elevado que a história: a poesia tende a exprimir o universal; a história, o particular.</blockquote>
+          <span class="lang">English (Butcher)</span>
+          <blockquote class="orig">“[…] it is not the function of the poet to relate what has happened, but what may happen — what is possible according to the law of probability or necessity. […] The true difference is that one relates what has happened, the other what may happen. Poetry, therefore, is a more philosophical and a higher thing than history: for poetry tends to express the universal, history the particular.”</blockquote>
+          <p class="cap">Texto integral em <a href="https://classics.mit.edu/Aristotle/poetics.html" target="_blank" rel="noopener">classics.mit.edu</a>.</p>
+        </div></details>
+
+      <h3>De onde vem o que o modelo “sabe”</h3>
+      <div class="grid g3" style="font-family:var(--font-ui);margin:14px 0">
+        <div class="card"><h3>Pré-treinamento</h3><p>Prever a próxima palavra em volumes enormes de texto. Aqui nascem o vocabulário, o estilo e também os vieses dos textos lidos.</p></div>
+        <div class="card"><h3>Ajuste</h3><p>Refinamento com exemplos e com avaliações de pessoas, para que responda de modo útil, educado e mais seguro.</p></div>
+        <div class="card"><h3>Uso</h3><p>O seu prompt entra como contexto e a resposta é gerada, palavra por palavra.</p></div>
+      </div>
+      <p>Três consequências práticas: o modelo tem uma <strong>data de corte</strong> do que conhece; <strong>não guarda as fontes como um catálogo</strong>, apenas padrões; e <strong>herda os vieses</strong> do que leu.</p>
+
+      <h3>Alucinação</h3>
+      <p>Chama-se alucinação o conteúdo gerado que não tem fundamento nos dados ou na realidade (Ji et al., 2023). Na escrita acadêmica, ela aparece como referências, autores, páginas e citações que não existem, entregues com total confiança. Há três maneiras complementares de compreendê-la:</p>
+      <div class="grid g3" style="font-family:var(--font-ui);margin:14px 0">
+        <div class="card"><h3>Lente técnica</h3><p>O modelo é treinado para produzir texto plausível, e não para verificar fatos.</p></div>
+        <div class="card"><h3>Lente filosófica</h3><p>Em analogia com Frankfurt (2005), a mentira se opõe à verdade, ao passo que a conversa fiada (<em>bullshit</em>) é simplesmente indiferente a ela. O modelo não tem intenção, e por isso a comparação é só uma analogia.</p></div>
+        <div class="card"><h3>Lente crítica</h3><p>Bender et al. (2021) chamam os modelos de “papagaios estocásticos”: recombinam formas linguísticas sem acesso ao sentido.</p></div>
+      </div>
+      <p>Algumas ferramentas, como Perplexity, combinam a geração de texto com busca na internet e mostram links; isso ajuda, mas não elimina a necessidade de conferir a fonte.</p>
+      <div class="think"><b>Para pensar</b>Se a IA escreve bem e erra pela mesma razão, o que isso exige de quem a usa?<br><br><b>Experimento sugerido</b>Peça a uma IA cinco referências sobre um tema filosófico e tente encontrar cada uma em uma base confiável. Conte quantas são reais, quantas são reais com dados errados e quantas não existem.
+        <label class="f" for="n2">Seu placar: reais / com erro / inexistentes</label><textarea id="n2" data-save="m2-placar" placeholder="Ex.: 2 reais, 1 com erro, 2 inexistentes"></textarea></div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= MÓDULO 3 ======================= -->
+<section class="module" id="m3" data-nav="Módulo 3">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">3</div><div><span class="kicker">09h10 · 50 min</span><h2>Pesquisa e referências</h2></div></div>
+    <div class="meta3">
+      <div><b>Ideia da Filosofia</b>O espanto (Platão, Aristóteles) e a dúvida metódica (Descartes).</div>
+      <div><b>Conceito da Computação</b>Prompt como especificação; bases de dados e operadores lógicos.</div>
+      <div><b>Prática</b><a href="#atv1">Atividade 1</a>: do espanto à referência verificada.</div>
+    </div>
+    <article class="read">
+      <h3>Do espanto ao problema</h3>
+      <p>No <em>Teeteto</em> (155d), Platão (2001) diz que o espanto é o princípio da filosofia, e Aristóteles repete a ideia na <em>Metafísica</em> (A, 2). Em pesquisa, o espanto precisa ser lapidado até virar um problema que se possa investigar.</p>
+      <details class="src"><summary><span>Leia o trecho: o espanto<small>Platão, Teeteto, 155d · tradução livre a partir da versão inglesa de B. Jowett (domínio público)</small></span></summary>
+        <div class="in">
+          <blockquote>“[…] pois o espanto é o sentimento do filósofo, e a filosofia começa no espanto.”</blockquote>
+          <blockquote class="orig">“[…] for wonder is the feeling of a philosopher, and philosophy begins in wonder.”</blockquote>
+          <p class="cap">Texto integral em <a href="https://classics.mit.edu/Plato/theatu.html" target="_blank" rel="noopener">classics.mit.edu</a>. O mesmo diálogo traz a imagem de Sócrates como parteiro (148e-151d), que retomamos no Módulo 4.</p>
+        </div></details>
+      <p>Um caminho em quatro passos vai do tema ao recorte, deste à pergunta e dela à hipótese:</p>
+      <div class="grid g2" style="font-family:var(--font-ui);margin:14px 0">
+        <div class="card"><h4>Tema</h4>IA e autoria acadêmica</div>
+        <div class="card"><h4>Recorte</h4>Texto gerado por IA em trabalhos de graduação em Filosofia</div>
+        <div class="card"><h4>Pergunta</h4>Em que sentido o texto escrito com IA é de autoria de quem a aciona?</div>
+        <div class="card"><h4>Hipótese</h4>Autoria exige decisão e responsabilidade, e não apenas execução.</div>
+      </div>
+      <p>A IA pode ajudar a afinar o recorte e a testar a pergunta; mas o espanto, isto é, a escolha do que merece ser investigado, é seu.</p>
+
+      <h3>O prompt em cinco camadas</h3>
+      <p>Como o modelo gera o texto a partir do contexto que recebe, quanto mais claro o contexto, mais útil a resposta. Um prompt bem construído tem cinco camadas: o <strong>papel</strong> (quem a IA deve ser), o <strong>contexto</strong> (seu tema e seu nível), a <strong>tarefa</strong> (em um verbo), o <strong>formato</strong> (tabela, lista) e as <strong>restrições</strong> (o que evitar). Em computação, o prompt é uma especificação, e especificar bem é metade do trabalho; em termos filosóficos, lembra que o sentido depende do jogo de linguagem em que se fala (Wittgenstein), e que dizer é também fazer.</p>
+      <p>A restrição final não elimina a alucinação, mas reduz o risco de invenção. Nunca trate as referências sugeridas pela IA como verificadas. <a href="#prompts">Monte o seu prompt na seção Prompts →</a></p>
+
+      <h3>Onde buscar</h3>
+      <p>Separe sempre dois tipos de ferramenta. <strong>As bases</strong> são aquelas em que a fonte existe de fato. <strong>As IAs de apoio</strong> ajudam a localizar e resumir, mas seu resultado precisa ser conferido na base. Os recursos gratuitos mudam sem aviso, mas o procedimento vale para ferramentas equivalentes. <a href="#ferramentas">Veja a lista e o montador de buscas →</a></p>
+      <p>Uma dica técnica: as bases funcionam com lógica, e conhecer seus operadores melhora a busca. Use aspas para a expressão exata, <code>AND</code> para exigir os dois termos, <code>OR</code> para aceitar qualquer um e <code>NOT</code> (ou o sinal de menos, no Google Acadêmico) para excluir um termo, como em <code>"inteligência artificial" AND (autoria OR plágio) AND "ensino superior"</code>.</p>
+
+      <h3>A verificação em quatro passos</h3>
+      <p>Descartes, nas <em>Meditações metafísicas</em>, propõe duvidar do que não é certo para chegar a um fundamento seguro. Usamos aqui o espírito do método: <strong>nada que a IA entregue vale como fonte antes de passar pela verificação.</strong></p>
+      <div class="grid g2" style="font-family:var(--font-ui);margin:14px 0">
+        <div class="card"><span class="num">1</span><h3>Existe?</h3><p>Procure o título exato em uma base ou no catálogo de uma biblioteca.</p></div>
+        <div class="card"><span class="num">2</span><h3>Os dados conferem?</h3><p>Autor, ano, veículo e, quando houver, o DOI, identificador permanente do documento.</p></div>
+        <div class="card"><span class="num">3</span><h3>Diz isso?</h3><p>Leia o trecho: o erro mais sutil é a obra existir, mas não dizer o que o modelo lhe atribui.</p></div>
+        <div class="card"><span class="num">4</span><h3>Sustenta?</h3><p>A fonte serve ao seu argumento ou apenas enfeita o texto?</p></div>
+      </div>
+      <p>Os passos 1 e 2 são mecânicos; os passos 3 e 4 exigem leitura e juízo, e é a parte que não se delega.</p>
+      <div class="think"><b>Exemplo resolvido (didático)</b>Tema: a prudência (<em>phronesis</em>) em Aristóteles.<br>
+        • “ARISTÓTELES. <em>Ética a Nicômaco</em>, livro VI”: existe, os dados conferem, trata da prudência e sustenta o argumento, logo <b style="display:inline;color:var(--ok)">real</b>.<br>
+        • “SILVA, M. A prudência aristotélica na era digital. <em>Revista de Ética Aplicada</em>, 2021” (referência inventada para este exemplo): não se encontra em nenhuma base, logo <b style="display:inline;color:var(--bad)">inexistente</b>.<br>
+        • “ARISTÓTELES. <em>Ética a Nicômaco</em>, livro X, sobre a prudência”: a obra existe, mas a prudência é tratada no livro VI (o X trata do prazer e da felicidade), logo <b style="display:inline;color:var(--warn)">real com erro</b>.<br><br><a href="#praticar">Teste-se na seção Praticar →</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= MÓDULO 4 ======================= -->
+<section class="module" id="m4" data-nav="Módulo 4">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">4</div><div><span class="kicker">10h15 · 50 min</span><h2>A IA como interlocutora socrática</h2></div></div>
+    <div class="meta3">
+      <div><b>Ideia da Filosofia</b>Maiêutica, <em>disputatio</em>, falácias, adulação.</div>
+      <div><b>Conceito da Computação</b>Teste adversarial e bajulação (<em>sycophancy</em>).</div>
+      <div><b>Prática</b><a href="#atv2">Atividade 2</a>: seu argumento no tribunal da IA.</div>
+    </div>
+    <article class="read">
+      <p>A maior utilidade filosófica de um modelo de linguagem não está em escrever por você, mas em <strong>conversar com você</strong>: obrigar a definir termos, apresentar objeções e apontar saltos de raciocínio. Aqui a máquina trabalha a favor do pensamento, e não no lugar dele. Duas tradições da nossa disciplina ensinam como.</p>
+
+      <h3>Maiêutica</h3>
+      <p>No <em>Teeteto</em> (148e-151d), Platão (2001) mostra Sócrates descrevendo-se como parteiro: filho de uma parteira, diz-se estéril de sabedoria; não gera o saber no outro, ajuda a dar à luz e examina se a criança é viável. O procedimento tem momentos reconhecíveis:</p>
+      <div class="diagram"><span>1 · Pergunta<br><small style="font-weight:500">“O que é X?”</small></span><i>→</i><span>2 · Definição<br><small style="font-weight:500">provisória</small></span><i>→</i><span>3 · Refutação<br><small style="font-weight:500">pelo caso que a desmente (<em>élenchos</em>)</small></span><i>→</i><span>4 · Aporia<br><small style="font-weight:500">impasse produtivo</small></span><i>→</i><span>5 · Nova tentativa</span></div>
+      <p>Aplicado à IA, o recurso é simples e poderoso: peça que ela aja como Sócrates, só pergunte e nunca responda. Cada pergunta dela obriga você a definir melhor o conceito antes de escrever.</p>
+
+      <h3>Disputatio</h3>
+      <p>Nas escolas medievais, a <em>disputatio</em> organizava o saber como debate. Nos artigos da <em>Suma teológica</em>, Tomás de Aquino segue uma estrutura constante. O valor para a escrita é grande: obriga a enfrentar as melhores objeções antes de afirmar.</p>
+      <div class="tbl-wrap" style="font-family:var(--font-ui)"><table style="min-width:520px"><thead><tr><th>No artigo de Tomás</th><th>Na sua escrita com IA</th></tr></thead><tbody>
+        <tr><td><em>Quaestio</em> (utrum… · a questão)</td><td>Seu problema de pesquisa</td></tr>
+        <tr><td><em>Objectiones</em> (argumentos contrários)</td><td>Peça à IA as 3 objeções mais fortes</td></tr>
+        <tr><td><em>Sed contra</em> (autoridade a favor)</td><td>Cite uma fonte verificada</td></tr>
+        <tr><td><em>Respondeo</em> (a resposta do mestre)</td><td>A sua tese, escrita por você</td></tr>
+        <tr><td><em>Ad objectiones</em> (réplica a cada objeção)</td><td>Responda a cada objeção, uma a uma</td></tr></tbody></table></div>
+      <p>Há um paralelo na computação: antes de lançar um sistema, programadores aplicam <strong>testes adversariais</strong>, tentando deliberadamente quebrá-lo. A <em>disputatio</em> faz o mesmo com argumentos: procura as falhas antes que o leitor as encontre. Veja o formato dos artigos no <a href="https://www.newadvent.org/summa/" target="_blank" rel="noopener">texto da <em>Suma</em></a> (tradução inglesa dos Padres Dominicanos, domínio público).</p>
+
+      <h3>Cuidado com a bajulação</h3>
+      <p>Modelos de linguagem tendem a concordar com o usuário, fenômeno conhecido como <strong>bajulação</strong> (<em>sycophancy</em>). Se a IA elogiar demais a sua tese, escreva: <em>“Discorde. Ataque o ponto mais frágil.”</em> No <em>Górgias</em> (463a-b), Platão chama de adulação (<em>kolakeia</em>) a fala que agrada sem compromisso com a verdade, e a retórica sem filosofia seria um de seus ramos. Uma IA que apenas concorda é adulação em forma de software.</p>
+      <details class="src"><summary><span>Leia o trecho: a retórica como adulação<small>Platão, Górgias, 463a-b · tradução livre a partir da versão inglesa de B. Jowett (domínio público)</small></span></summary>
+        <div class="in">
+          <blockquote>“Em minha opinião, Górgias, o todo do qual a retórica é parte não é de modo algum uma arte, mas o hábito de um espírito ousado e ágil, que sabe lidar com os homens: resumo esse hábito sob a palavra ‘adulação’ […].”</blockquote>
+          <blockquote class="orig">“[…] the whole of which rhetoric is a part is not an art at all, but the habit of a bold and ready wit, which knows how to manage mankind: this habit I sum up under the word ‘flattery’ […]”</blockquote>
+          <p class="cap">Texto integral em <a href="https://classics.mit.edu/Plato/gorgias.html" target="_blank" rel="noopener">classics.mit.edu</a>.</p>
+        </div></details>
+
+      <h3>Caçando falácias</h3>
+      <p>Nas <em>Refutações sofísticas</em>, Aristóteles estuda os argumentos que parecem válidos sem o ser; a petição de princípio é tratada nos <em>Analíticos anteriores</em> (II, 16). A IA pode ajudar a localizá-los no seu texto, mas também pode cometê-los: peça sempre o trecho exato e confira.</p>
+      <div class="tbl-wrap" style="font-family:var(--font-ui)"><table style="min-width:560px"><thead><tr><th>Falácia</th><th>Exemplo</th><th>Pergunta-teste</th></tr></thead><tbody>
+        <tr><td><b>Petição de princípio</b></td><td>“A IA é confiável porque não erra.”</td><td>A conclusão já está dentro da premissa?</td></tr>
+        <tr><td><b>Falso dilema</b></td><td>“Ou se proíbe a IA, ou se aceita tudo.”</td><td>Há alternativas que ficaram fora?</td></tr>
+        <tr><td><b>Apelo à autoridade</b></td><td>“Disse o ChatGPT, então é verdade.”</td><td>A autoridade é competente e verificável?</td></tr>
+        <tr><td><b>Ad hominem</b></td><td>“Esse autor é leigo, logo está errado.”</td><td>Ataca o argumento ou a pessoa?</td></tr></tbody></table></div>
+      <p><a href="#praticar">Treine reconhecer falácias na seção Praticar →</a> · <a href="#prompts">Prompts prontos de Sócrates, advogado do diabo e caça-falácias →</a></p>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= MÓDULO 5 ======================= -->
+<section class="module" id="m5" data-nav="Módulo 5">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">5</div><div><span class="kicker">11h05 · 45 min</span><h2>Estruturar, revisar e responder por si</h2></div></div>
+    <div class="meta3">
+      <div><b>Ideia da Filosofia</b>Técnica e prudência (Aristóteles); responsabilidade (Jonas); ética.</div>
+      <div><b>Conceito da Computação</b>Princípios de IA ética; privacidade, LGPD e transparência.</div>
+      <div><b>Prática</b><a href="#atv3">Atividade 3</a>: do rascunho ao texto assinado.</div>
+    </div>
+    <article class="read">
+      <h3>A IA como leitora crítica</h3>
+      <p>Depois de escrito o rascunho, a IA pode funcionar como leitora crítica: pergunta e aponta, sem escrever no seu lugar. Aristóteles (<em>Poética</em>, cap. 7) observa que um todo bem composto tem começo, meio e fim, e que cada parte se liga às outras; a estrutura mínima de um artigo ou TCC retoma a ideia: introdução (problema, tese, método), desenvolvimento (argumentos apoiados em fontes) e conclusão (que responde à pergunta da introdução).</p>
+      <div class="grid g3" style="font-family:var(--font-ui);margin:14px 0">
+        <div class="card"><h3>Introdução</h3><p><em>“O problema está claro? Qual é a tese que você entendeu?”</em></p></div>
+        <div class="card"><h3>Desenvolvimento</h3><p><em>“Qual passo do argumento está sem justificativa?”</em></p></div>
+        <div class="card"><h3>Conclusão</h3><p><em>“A conclusão responde à pergunta da introdução?”</em></p></div>
+      </div>
+      <p>Uma técnica útil é o <strong>esboço reverso</strong>: peça a ideia principal de cada parágrafo em uma frase e veja se a sequência é lógica. Mantenha o histórico de versões do seu editor de texto: ele ajuda a demonstrar a autoria.</p>
+
+      <h3>O que delegar e o que não delegar</h3>
+      <p>Algumas tarefas podem ser entregues à máquina com pouco risco; outras exigem cuidado; e há o que não se delega. O critério é aristotélico. Na <em>Ética a Nicômaco</em> (livro VI), Aristóteles distingue a <strong>técnica</strong> (<em>poiesis</em>), que produz algo, da <strong>prudência</strong> (<em>phronesis</em>), a capacidade de deliberar bem sobre o que fazer em situações concretas. A técnica pode ser transferida a ferramentas; a prudência, não: ninguém delibera por você.</p>
+      <div class="grid g3" style="font-family:var(--font-ui);margin:14px 0">
+        <div class="card" style="border-color:var(--ok)"><h3 style="color:var(--ok)">Pode delegar</h3><p>Corrigir ortografia e gramática<br>Formatar referências (e conferi-las)<br>Sugerir sinônimos e variações de frase<br>Gerar listas de perguntas para revisão</p></div>
+        <div class="card" style="border-color:var(--warn)"><h3 style="color:var(--warn)">Com cuidado</h3><p>Resumir textos (leia sempre o original)<br>Sugerir estrutura de seções<br>Reformular parágrafos seus<br>Traduzir trechos (confira os termos técnicos)</p></div>
+        <div class="card" style="border-color:var(--bad)"><h3 style="color:var(--bad)">Não delegue</h3><p>Escolher o problema e a tese<br>Interpretar os autores<br>Decidir o que é verdadeiro<br>Assinar e responder pelo texto</p></div>
+      </div>
+      <p><a href="#praticar">Classifique você mesmo as tarefas na seção Praticar →</a></p>
+
+      <h3>Ética, privacidade e lei</h3>
+      <p>Floridi e Cowls (2019) propõem cinco princípios para uma IA socialmente benéfica: beneficência, não maleficência, autonomia, justiça e explicabilidade. Traduzidos para a escrita:</p>
+      <div class="tbl-wrap" style="font-family:var(--font-ui)"><table style="min-width:520px"><tbody>
+        <tr><th>Beneficência</th><td>Use a IA para aprender mais, e não para aprender menos.</td></tr>
+        <tr><th>Não maleficência</th><td>Não prejudique outros: nada de plágio nem de dados pessoais em ferramentas públicas.</td></tr>
+        <tr><th>Autonomia</th><td>Preserve sua capacidade de decidir e de pensar.</td></tr>
+        <tr><th>Justiça</th><td>Reconheça os vieses e as fontes que a IA tende a omitir.</td></tr>
+        <tr><th>Explicabilidade</th><td>Saiba dizer como chegou ao texto, declarando o uso.</td></tr></tbody></table></div>
+      <p>Jonas (2006) defende que a responsabilidade seja proporcional ao poder das técnicas: quanto mais poderosa a ferramenta, maior o dever de cuidado de quem a usa. A UNESCO (Miao e Holmes, 2023) propõe, para o uso de IA generativa na educação e na pesquisa, uma abordagem centrada no humano, que preserve a agência de estudantes e pesquisadores.</p>
+      <p><strong>Na prática:</strong> não cole dados pessoais, nem trabalhos inéditos ou sigilosos de terceiros, em ferramentas públicas (a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Lei nº 13.709/2018, a LGPD</a>, protege dados pessoais); respeite os direitos autorais (<a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei nº 9.610/1998</a>), citando e referenciando as fontes; e confira as regras de sua instituição, de seu orientador e do periódico sobre o uso de IA, que variam e podem exigir declaração. <a href="#normas">Veja o que dizem as normas brasileiras →</a></p>
+      <div class="think"><b>Para pensar · teste da publicidade (inspiração kantiana)</b>Se você teria vergonha de declarar o uso, reveja-o. <a href="#declaracao">Gere a sua declaração →</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= FECHAMENTO ======================= -->
+<section class="module" id="fechamento" data-nav="Fechamento">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">∞</div><div><span class="kicker">11h50 · 10 min</span><h2>Que é o homem?</h2></div></div>
+    <article class="read">
+      <p>Kant resumiu as perguntas da filosofia em três: <em>que posso saber? que devo fazer? que me é permitido esperar?</em> (<em>Crítica da razão pura</em>, A805/B833). Na <em>Lógica</em> acrescenta uma quarta, que as contém: <strong>que é o homem?</strong> A inteligência artificial devolve essa pergunta com urgência nova: o que fazemos quando uma máquina faz o que julgávamos próprio do humano, escrever? A resposta que este minicurso propõe é modesta e exigente: usar a ferramenta sem abrir mão do que só pode ser nosso, a pergunta, o juízo e a responsabilidade.</p>
+    </article>
+    <h3 style="margin-top:30px">Código de boas práticas: seis compromissos</h3>
+    <p class="sub">Escolha três e comece esta semana. Sua escolha fica salva neste navegador.</p>
+    <div class="grid g3 pledge" id="pledge" style="margin-top:18px">
+      <div class="card"><label><input type="checkbox" data-save="pl1"><span><b>1 · Eu penso primeiro</b><br>Defino o problema e a tese antes de pedir ajuda.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl2"><span><b>2 · Eu pergunto melhor</b><br>Uso prompts com papel, contexto, tarefa, formato e restrições.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl3"><span><b>3 · Eu verifico tudo</b><br>Nenhuma referência entra no texto sem os quatro passos.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl4"><span><b>4 · Eu testo meus argumentos</b><br>Uso a IA para encontrar objeções, e não para evitá-las.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl5"><span><b>5 · Eu protejo dados</b><br>Não exponho dados pessoais nem trabalhos de terceiros.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl6"><span><b>6 · Eu declaro e respondo</b><br>Informo o uso de IA e assino o que escrevo.</span></label></div>
+    </div>
+    <p class="note" id="pledgeN"></p>
+  </div>
+</section>
+
+<!-- ======================= ATIVIDADES ======================= -->
+<section class="alt" id="atividades" data-nav="Atividades">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Mão na massa</span>
+      <h2>As três atividades</h2>
+      <p class="sub">Marque cada passo ao concluir, use o cronômetro e registre o que fizer: o que você escrever aqui fica salvo só neste navegador e não é enviado a ninguém. Se preferir papel, use as <a href="downloads/Fichas_das_atividades.pdf">fichas em PDF</a>.</p>
+    </div>
+
+    <!-- Atividade 1 -->
+    <div class="act" id="atv1" data-act="a1">
+      <div class="act-top"><div><span class="kicker">Módulo 3 · <span class="time">30 min</span></span><h3>Atividade 1 · Do espanto à referência verificada</h3></div>
+        <div class="timer" data-min="30"><output>30:00</output><button class="btn sm" data-t="go" type="button">Iniciar</button><button class="btn sm" data-t="reset" type="button">Zerar</button></div></div>
+      <p>Faça no computador, de preferência com um editor de texto aberto para registrar o que fizer. O produto final são duas coisas: <b>um problema de pesquisa em uma frase</b> e <b>um quadro de referências verificadas</b>.</p>
+      <ol class="steps">
+        <li><input type="checkbox" data-save="a1s1"><span>Escreva em duas linhas o seu <b>espanto</b>: o tema ou o incômodo filosófico que realmente lhe chama a atenção.</span></li>
+        <li><input type="checkbox" data-save="a1s2"><span>Monte um prompt com as <b>cinco camadas</b> (use o <a href="#prompts">montador</a>) e peça à IA três recortes de problema de pesquisa. Escolha um e escreva seu problema em uma frase, em forma de pergunta.</span></li>
+        <li><input type="checkbox" data-save="a1s3"><span>Peça à IA <b>três referências</b> para o recorte escolhido.</span></li>
+        <li><input type="checkbox" data-save="a1s4"><span>Verifique cada uma pelos <b>quatro passos</b> e monte o quadro abaixo; classifique cada uma como <i>real</i>, <i>real com erro</i> (autor, ano, título ou livro trocados) ou <i>inexistente</i>.</span></li>
+        <li><input type="checkbox" data-save="a1s5"><span><b>Troque o quadro com um colega</b> e confira uma referência dele pelos quatro passos.</span></li>
+      </ol>
+      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
+      <label class="f" for="a1esp">1 · Meu espanto (2 linhas)</label><textarea id="a1esp" data-save="a1-espanto"></textarea>
+      <label class="f" for="a1prob">2 · Meu problema de pesquisa (uma frase, em forma de pergunta)</label><input type="text" id="a1prob" data-save="a1-problema">
+      <label class="f">4 · Quadro de referências verificadas</label>
+      <div class="tbl-wrap"><table id="refTable"><thead><tr><th>Referência (como a IA deu)</th><th>Existe?</th><th>Dados conferem?</th><th>Diz isso?</th><th>Sustenta?</th><th>Classificação</th><th></th></tr></thead><tbody></tbody></table></div>
+      <div class="row2"><button class="btn sm" id="addRef" type="button">+ Adicionar referência</button><button class="btn sm copy-table" type="button">Copiar quadro</button><span class="saved" id="savedA1">Salvo</span></div>
+      <p class="note">Dica: guarde o quadro antes do intervalo (copie para o seu editor de texto). Nada é enviado a servidor algum; limpar os dados do navegador apaga o que está aqui.</p>
+    </div>
+
+    <!-- Atividade 2 -->
+    <div class="act" id="atv2" data-act="a2">
+      <div class="act-top"><div><span class="kicker">Módulo 4 · <span class="time">30 min</span></span><h3>Atividade 2 · Seu argumento no tribunal da IA</h3></div>
+        <div class="timer" data-min="30"><output>30:00</output><button class="btn sm" data-t="go" type="button">Iniciar</button><button class="btn sm" data-t="reset" type="button">Zerar</button></div></div>
+      <p>O objetivo é testar uma tese sua contra perguntas e objeções fortes, reformulá-la e conseguir explicá-la em um minuto, sem ler.</p>
+      <ol class="steps">
+        <li><input type="checkbox" data-save="a2s1"><span>Escreva sua <b>tese</b> em 3 a 5 linhas (pode ser a hipótese da Atividade 1).</span></li>
+        <li><input type="checkbox" data-save="a2s2"><span>Rode o <a href="#p-socrates">prompt socrático</a> por cinco ou seis rodadas e registre as perguntas da IA. Responda com as suas palavras; observe onde suas definições eram frágeis.</span></li>
+        <li><input type="checkbox" data-save="a2s3"><span>Rode o <a href="#p-diabo">advogado do diabo</a> e escolha a objeção mais forte, aquela que você teria mais dificuldade de responder.</span></li>
+        <li><input type="checkbox" data-save="a2s4"><span>Releia a tese procurando as <b>quatro falácias</b> (petição de princípio, falso dilema, apelo à autoridade, ad hominem).</span></li>
+        <li><input type="checkbox" data-save="a2s5"><span>Reescreva a tese respondendo à objeção escolhida.</span></li>
+        <li><input type="checkbox" data-save="a2s6"><span>Explique a nova tese à sua dupla em <b>um minuto, sem ler</b>, e ouça: ela entendeu? Qual ponto ficou obscuro?</span></li>
+      </ol>
+      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
+      <div class="grid g2">
+        <div><label class="f" for="a2t">Tese inicial</label><textarea id="a2t" data-save="a2-tese"></textarea></div>
+        <div><label class="f" for="a2o">Objeção mais forte</label><textarea id="a2o" data-save="a2-objecao"></textarea></div>
+        <div><label class="f" for="a2r">Tese reformulada</label><textarea id="a2r" data-save="a2-reformulada"></textarea></div>
+        <div><label class="f" for="a2p">A pergunta da IA que mais me fez pensar</label><textarea id="a2p" data-save="a2-pergunta"></textarea></div>
+      </div>
+      <div class="row2" style="margin-top:12px"><button class="btn sm copy-act" data-fields="a2t,a2o,a2r,a2p" data-labels="Tese inicial|Objeção mais forte|Tese reformulada|Pergunta que mais fez pensar" type="button">Copiar registro</button></div>
+    </div>
+
+    <!-- Atividade 3 -->
+    <div class="act" id="atv3" data-act="a3">
+      <div class="act-top"><div><span class="kicker">Módulo 5 · <span class="time">25 min</span></span><h3>Atividade 3 · Do rascunho ao texto assinado</h3></div>
+        <div class="timer" data-min="25"><output>25:00</output><button class="btn sm" data-t="go" type="button">Iniciar</button><button class="btn sm" data-t="reset" type="button">Zerar</button></div></div>
+      <p>É a atividade de síntese: junta tese, escrita, revisão e declaração. <b>Regra de ouro: o primeiro parágrafo é escrito sem IA.</b> Ela só entra depois, como leitora crítica.</p>
+      <ol class="steps">
+        <li><input type="checkbox" data-save="a3s1"><span>Escreva, <b>sem IA</b>, um parágrafo de seis a oito linhas com a sua tese (a da Atividade 2, de preferência). <em>(10 min)</em></span></li>
+        <li><input type="checkbox" data-save="a3s2"><span>Cole o parágrafo na IA com o <a href="#p-leitor">prompt do leitor crítico</a> e anote o que ela apontou. <em>(5 min)</em></span></li>
+        <li><input type="checkbox" data-save="a3s3"><span>Reescreva o parágrafo por sua conta, decidindo o que aceitar e o que recusar da leitura da IA, e justificando cada decisão para si mesmo(a). <em>(4 min)</em></span></li>
+        <li><input type="checkbox" data-save="a3s4"><span>Troque o texto com um colega. Cada um lê o do outro com a <b>lista de cinco perguntas</b> abaixo. <em>(4 min)</em></span></li>
+        <li><input type="checkbox" data-save="a3s5"><span>Preencha a <a href="#declaracao">declaração de uso de IA</a> do seu trabalho. <em>(2 min)</em></span></li>
+      </ol>
+      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
+      <div class="card" style="margin:14px 0"><h4>Lista de verificação do colega</h4>
+        <label style="display:block;margin:6px 0"><input type="checkbox" data-save="a3c1"> O problema está claro nas duas primeiras frases?</label>
+        <label style="display:block;margin:6px 0"><input type="checkbox" data-save="a3c2"> A tese aparece de forma explícita?</label>
+        <label style="display:block;margin:6px 0"><input type="checkbox" data-save="a3c3"> Cada afirmação importante tem fonte ou justificativa?</label>
+        <label style="display:block;margin:6px 0"><input type="checkbox" data-save="a3c4"> Há alguma objeção reconhecida e respondida?</label>
+        <label style="display:block;margin:6px 0"><input type="checkbox" data-save="a3c5"> O texto soa como a voz de quem o assina?</label></div>
+      <div class="grid g2">
+        <div><label class="f" for="a3a">Parágrafo (rascunho, escrito sem IA)</label><textarea id="a3a" data-save="a3-rascunho" style="min-height:140px"></textarea></div>
+        <div><label class="f" for="a3b">O que a IA apontou · o que aceitei, o que recusei e por quê</label><textarea id="a3b" data-save="a3-decisoes" style="min-height:140px"></textarea></div>
+      </div>
+      <label class="f" for="a3c">Parágrafo final (reescrito por mim)</label><textarea id="a3c" data-save="a3-final" style="min-height:140px"></textarea>
+      <div class="row2" style="margin-top:12px"><button class="btn sm copy-act" data-fields="a3a,a3b,a3c" data-labels="Rascunho|Decisões sobre a leitura da IA|Parágrafo final" type="button">Copiar registro</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROMPTS ======================= -->
+<section id="prompts" data-nav="Prompts">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Biblioteca</span>
+      <h2>Prompts prontos e montador</h2>
+      <p class="sub">Copie, cole na IA de sua preferência e troque o que estiver entre [colchetes]. Nenhum prompt elimina a necessidade de verificar a resposta.</p>
+    </div>
+
+    <h3>Montador de prompt em cinco camadas</h3>
+    <div class="builder" style="margin:14px 0 40px">
+      <div>
+        <div class="layer"><label class="f" for="b1">1 · Papel (quem a IA deve ser)</label><input type="text" id="b1" data-save="b1" value="Você é um professor de Filosofia Antiga."></div>
+        <div class="layer"><label class="f" for="b2">2 · Contexto (seu tema e seu nível)</label><input type="text" id="b2" data-save="b2" value="Sou graduando e escrevo um TCC sobre a noção de phronesis em Aristóteles."></div>
+        <div class="layer"><label class="f" for="b3">3 · Tarefa (em um verbo)</label><input type="text" id="b3" data-save="b3" value="Proponha 3 recortes de problema de pesquisa."></div>
+        <div class="layer"><label class="f" for="b4">4 · Formato (tabela, lista…)</label><input type="text" id="b4" data-save="b4" value="Tabela com recorte, pergunta e o que fica de fora."></div>
+        <div class="layer"><label class="f" for="b5">5 · Restrições (o que evitar)</label><input type="text" id="b5" data-save="b5" value="Não cite livros nem autores que você não possa indicar com certeza. Diga quando não souber."></div>
+      </div>
+      <div class="card prompt"><div class="head"><h4>Seu prompt</h4><button class="btn sm copy" type="button" data-copy="#builderOut">Copiar</button></div><pre id="builderOut"></pre>
+        <p class="note">A restrição final não elimina a alucinação, mas reduz o risco de invenção. Nunca trate as referências sugeridas como verificadas.</p></div>
+    </div>
+
+    <h3>Para pensar melhor</h3>
+    <div class="grid g2" style="margin:14px 0 30px">
+      <div class="card prompt" id="p-socrates"><div class="head"><div><h3>Prompt socrático</h3><p>Módulo 4 · Atividade 2. A IA só pergunta.</p></div><button class="btn sm copy" type="button" data-copy="#ps">Copiar</button></div>
+<pre id="ps">Aja como Sócrates. Vou apresentar uma tese. Você só pode fazer perguntas, uma por vez, para me levar a definir melhor meus conceitos e a perceber contradições. Nunca dê a resposta. Comece perguntando o que eu entendo por cada termo central. Minha tese: [cole aqui]</pre></div>
+      <div class="card prompt" id="p-diabo"><div class="head"><div><h3>Advogado do diabo</h3><p>Módulo 4 · Atividade 2. As três objeções mais fortes.</p></div><button class="btn sm copy" type="button" data-copy="#pd">Copiar</button></div>
+<pre id="pd">Aja como um professor rigoroso da tradição oposta à minha. Apresente as 3 objeções mais fortes à minha tese, cada uma com a premissa em que ataca. Não ofereça soluções. Depois, indique qual objeção eu teria mais dificuldade de responder e por quê. Minha tese: [cole aqui]</pre></div>
+      <div class="card prompt"><div class="head"><div><h3>Discorde de mim</h3><p>Antídoto contra a bajulação.</p></div><button class="btn sm copy" type="button" data-copy="#pb">Copiar</button></div>
+<pre id="pb">Discorde. Ataque o ponto mais frágil da minha tese e diga por que um leitor exigente não ficaria convencido. Não elogie.</pre></div>
+      <div class="card prompt"><div class="head"><div><h3>Caça-falácias</h3><p>Peça sempre o trecho exato e confira.</p></div><button class="btn sm copy" type="button" data-copy="#pf">Copiar</button></div>
+<pre id="pf">Leia o parágrafo abaixo e indique, se houver, falácias. Para cada uma, cite o trecho exato, dê o nome e justifique. Se não houver, diga que não encontrou. Parágrafo: [cole aqui]</pre></div>
+    </div>
+
+    <h3>Para escrever e revisar</h3>
+    <div class="grid g2" style="margin:14px 0 30px">
+      <div class="card prompt" id="p-leitor"><div class="head"><div><h3>Leitor crítico</h3><p>Módulo 5 · Atividade 3. Ela lê, não reescreve.</p></div><button class="btn sm copy" type="button" data-copy="#pl">Copiar</button></div>
+<pre id="pl">Leia a introdução abaixo como um orientador exigente. Responda: (1) qual é o problema? (2) qual é a tese? (3) qual é o método? (4) o que está vago? Não reescreva. Texto: [cole aqui o seu parágrafo]</pre></div>
+      <div class="card prompt"><div class="head"><div><h3>Esboço reverso</h3><p>Teste a lógica da sequência.</p></div><button class="btn sm copy" type="button" data-copy="#pe">Copiar</button></div>
+<pre id="pe">Para cada parágrafo do texto abaixo, escreva em uma frase a ideia principal. Depois diga se a sequência de ideias é lógica e onde há saltos. Não reescreva nada. Texto: [cole aqui]</pre></div>
+      <div class="card prompt"><div class="head"><div><h3>Recortes de problema</h3><p>Módulo 3. Para afinar o tema.</p></div><button class="btn sm copy" type="button" data-copy="#pr">Copiar</button></div>
+<pre id="pr">Aponte 3 recortes possíveis para este tema e diga o que cada um deixa de fora. Não cite livros nem autores que você não possa indicar com certeza. Tema: [cole aqui]</pre></div>
+      <div class="card prompt"><div class="head"><div><h3>Verificação de referência</h3><p>Ajuda a localizar; a conferência é sua.</p></div><button class="btn sm copy" type="button" data-copy="#pv">Copiar</button></div>
+<pre id="pv">Para cada referência abaixo, diga se você tem certeza de que ela existe, e indique em que base eu poderia conferi-la (título exato, autor, ano, veículo). Se não tiver certeza, diga claramente. Referências: [cole aqui]</pre></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FERRAMENTAS ======================= -->
+<section class="alt" id="ferramentas" data-nav="Ferramentas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Módulo 3</span>
+      <h2>Onde buscar: bases e IAs de apoio</h2>
+      <p class="sub">As bases são aquelas em que a fonte existe de fato. As IAs de apoio ajudam a localizar e resumir, mas seu resultado precisa ser conferido na base. Versões gratuitas estão sujeitas a mudança; o procedimento vale para ferramentas equivalentes.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card gold"><h3>Bases (a fonte existe)</h3>
+        <div class="tool"><div>Google Acadêmico<small>busca ampla</small></div><a href="https://scholar.google.com.br/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>SciELO<small>periódicos abertos</small></div><a href="https://www.scielo.org/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Portal de Periódicos CAPES<small>acesso via instituição</small></div><a href="https://www.periodicos.capes.gov.br/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>PhilPapers<small>índice especializado em Filosofia</small></div><a href="https://philpapers.org/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Stanford Encyclopedia of Philosophy<small>verbetes revisados</small></div><a href="https://plato.stanford.edu/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Semantic Scholar<small>artigos e citações</small></div><a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">Abrir ↗</a></div>
+      </div>
+      <div class="card"><h3>IAs de apoio (conferir sempre)</h3>
+        <div class="tool"><div>ChatGPT<small>conversar, reformular, testar ideias</small></div><a href="https://chatgpt.com/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Gemini<small>conversar, reformular, testar ideias</small></div><a href="https://gemini.google.com/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Claude<small>conversar, reformular, testar ideias</small></div><a href="https://claude.ai/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Copilot<small>conversar, reformular, testar ideias</small></div><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Perplexity · Consensus · Elicit<small>buscar e resumir com links para as fontes</small></div><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity ↗</a></div>
+        <div class="tool"><div>NotebookLM<small>conversa apenas com os seus próprios documentos</small></div><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Abrir ↗</a></div>
+        <div class="tool"><div>Zotero<small>organizar e formatar referências</small></div><a href="https://www.zotero.org/" target="_blank" rel="noopener">Abrir ↗</a></div>
+      </div>
+    </div>
+
+    <div class="demo" style="margin-top:30px"><h4>Montador de busca com operadores</h4>
+      <p class="sub" style="margin-bottom:10px">Preencha o que souber. A busca combina os termos com <code>AND</code>, <code>OR</code>, aspas e <code>NOT</code>, e você a abre direto em uma base.</p>
+      <div class="grid g2">
+        <div><label class="f" for="s1">Expressão exata (aspas)</label><input type="text" id="s1" placeholder="inteligência artificial"></div>
+        <div><label class="f" for="s2">Todos estes termos (AND), separados por vírgula</label><input type="text" id="s2" placeholder="ensino superior"></div>
+        <div><label class="f" for="s3">Qualquer um destes (OR), separados por vírgula</label><input type="text" id="s3" placeholder="autoria, plágio"></div>
+        <div><label class="f" for="s4">Excluir (NOT), separados por vírgula</label><input type="text" id="s4" placeholder="marketing"></div>
+      </div>
+      <div class="q-out" id="sOut" aria-live="polite"></div>
+      <div class="row2"><button class="btn sm copy" type="button" data-copy="#sOut">Copiar busca</button>
+        <a class="btn sm" id="sGS" href="#" target="_blank" rel="noopener">Google Acadêmico ↗</a>
+        <a class="btn sm" id="sSC" href="#" target="_blank" rel="noopener">SciELO ↗</a>
+        <a class="btn sm" id="sPP" href="#" target="_blank" rel="noopener">PhilPapers ↗</a></div>
+      <p class="note">No Google Acadêmico, o NOT costuma funcionar como sinal de menos (<code>-termo</code>); o montador usa <code>NOT</code>, aceito pela SciELO. Cada base tem suas particularidades.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRATICAR ======================= -->
+<section id="praticar" data-nav="Praticar">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Exercite o juízo</span>
+      <h2>Praticar</h2>
+      <p class="sub">Três jogos rápidos para usar em sala ou em casa. Quem decide a resposta é você; depois a página explica.</p>
+    </div>
+    <h3>1 · Real, real com erro ou inexistente?</h3>
+    <p class="sub">Referências geradas para este exercício (algumas são invenções didáticas). Aplique os quatro passos mentalmente.</p>
+    <div class="quiz" id="quizRef" style="margin:14px 0 8px"></div>
+    <p class="score" id="scoreRef"></p>
+
+    <h3 style="margin-top:34px">2 · Que falácia é esta?</h3>
+    <div class="quiz" id="quizFal" style="margin:14px 0 8px"></div>
+    <p class="score" id="scoreFal"></p>
+
+    <h3 style="margin-top:34px">3 · Delegar ou não delegar?</h3>
+    <p class="sub">Critério aristotélico: a técnica pode ir para a ferramenta; a prudência, não.</p>
+    <div class="quiz" id="quizDel" style="margin:14px 0 8px"></div>
+    <p class="score" id="scoreDel"></p>
+  </div>
+</section>
+
+<!-- ======================= NORMAS ======================= -->
+<section class="alt" id="normas" data-nav="Normas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Módulo 5</span>
+      <h2>O que dizem as normas brasileiras hoje</h2>
+      <p class="sub">Em 2026, o Brasil ainda não tem uma lei geral sobre inteligência artificial (o PL 2338/2023 segue em tramitação), mas já existem orientações e normas setoriais que pesam sobre quem escreve na universidade. Em comum, elas não proíbem o uso: exigem transparência, responsabilidade de quem assina e políticas próprias de cada instituição.</p>
+    </div>
+    <div class="grid g2 norm">
+      <div class="card gold"><span class="tagline">CNE · Educação</span><h3>Parecer CNE/CP nº 15/2026</h3>
+        <p>Aprovado em 1º de setembro de 2026, traz as <em>Diretrizes para a Utilização da Inteligência Artificial na Educação Brasileira</em>. Na educação superior, cada instituição estabelece políticas próprias para o uso de IA no ensino, na pesquisa e na extensão, com princípios de autoria, integridade acadêmica, transparência, responsabilidade intelectual e proteção de direitos, podendo prever formas de declaração de uso.</p>
+        <p>Cabe ao estudante a responsabilidade intelectual pela seleção, verificação e veracidade das informações, e a transparência quanto ao uso da IA. Na pesquisa, a IA deve ser declarada sempre que sua contribuição for relevante para a elaboração de textos, a análise de dados, a revisão bibliográfica ou a programação, e ela não transfere a autoria nem a responsabilidade. O texto veda a sanção acadêmica fundada exclusivamente em ferramenta de detecção de conteúdo gerado por IA e o uso de conteúdos produzidos por estudantes para treinar modelos de terceiros sem autorização específica.</p>
+        <p class="note"><b>Atenção ao status:</b> a resolução que institui essas diretrizes ainda depende de homologação pelo MEC e de publicação; confira se isso já ocorreu.</p></div>
+      <div class="card gold"><span class="tagline">CNPq · Pesquisa</span><h3>Portaria CNPq nº 2.664/2026</h3>
+        <p>Publicada no DOU de 11/03/2026, instituiu a Política de Integridade na Atividade Científica. Na pesquisa apoiada pelo CNPq (por exemplo, com bolsas), é preciso <b>declarar o uso de ferramentas de IA generativa em qualquer fase</b> (concepção, redação, análise de dados, submissão), especificando a ferramenta e a finalidade; é vedado apresentar conteúdo gerado por IA como se fosse de autoria humana, e os autores respondem integralmente por plágios e imprecisões.</p></div>
+      <div class="card"><span class="tagline">MEC · Educação</span><h3>Referencial de IA na Educação (2026)</h3>
+        <p>O MEC divulgou em 2026 o <em>Referencial para o Uso e Desenvolvimento Responsáveis de IA na Educação</em>, que destaca a supervisão humana efetiva, a transparência e a explicabilidade, e a proteção de dados e da privacidade de estudantes e docentes.</p></div>
+      <div class="card"><span class="tagline">ABNT e leis</span><h3>Normas técnicas e legislação</h3>
+        <p>Valem a ABNT NBR 6023:2025 (referências), a NBR 10520:2023 (citações) e a NBR 14724:2024 (trabalhos acadêmicos); até onde pudemos verificar, não há norma da ABNT específica para citar IA generativa. Se sua instituição ainda adotar a edição de 2018 da NBR 6023, siga a orientação dela.</p>
+        <p>LGPD (<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Lei nº 13.709/2018</a>) e direitos autorais (<a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei nº 9.610/1998</a>).</p></div>
+    </div>
+    <div class="alert"><b>Na prática.</b> Por isso a prática mais segura é a que este minicurso adota: não tratar a IA como fonte de autoridade, citar apenas fontes verificadas e declarar o uso (ferramenta, finalidade e limites). Em todos os casos, a regra da sua instituição, do seu curso e do seu orientador vale mais do que qualquer guia genérico: <b>pergunte e registre.</b> Normas e status mudam: confira as fontes oficiais (gov.br/mec, Diário Oficial da União) antes de citar em trabalhos.</div>
+  </div>
+</section>
+
+<!-- ======================= DECLARAÇÃO ======================= -->
+<section id="declaracao" data-nav="Declaração">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Atividade 3 · passo 5</span>
+      <h2>Declaração de uso de inteligência artificial</h2>
+      <p class="sub">Declarar o uso de IA é o oposto do plágio: quem declara assume a responsabilidade pelo que escreveu. O modelo pode ser adaptado e anexado ao trabalho quando a instituição ou o orientador pedirem. Um teste prático, de inspiração kantiana (a publicidade como critério): se você teria vergonha de declarar o uso, reveja-o.</p>
+    </div>
+    <div class="builder">
+      <div>
+        <label class="f" for="d1">Título do trabalho</label><input type="text" id="d1" data-save="d1" placeholder="Título">
+        <label class="f" for="d2">Autor(a)</label><input type="text" id="d2" data-save="d2" placeholder="Seu nome">
+        <label class="f" for="d3">Data</label><input type="text" id="d3" data-save="d3" placeholder="__/__/____">
+        <label class="f" for="d4">Ferramenta(s)</label><input type="text" id="d4" data-save="d4" placeholder="ex.: ChatGPT, Gemini ou Claude, versão gratuita">
+        <label class="f" for="d5">Finalidade do uso</label><textarea id="d5" data-save="d5" placeholder="ex.: sugestão de recortes de tema; leitura crítica do parágrafo 3; formatação de referências" style="min-height:70px"></textarea>
+        <label class="f" for="d6">Não utilizei IA para</label><textarea id="d6" data-save="d6" placeholder="ex.: formulação da tese, interpretação das obras, redação do texto final" style="min-height:70px"></textarea>
+        <label style="display:flex;gap:10px;margin-top:14px;align-items:flex-start"><input type="checkbox" id="d7" data-save="d7" style="margin-top:4px"> <span>Todas as referências foram conferidas nas fontes originais.</span></label>
+      </div>
+      <div class="card prompt"><div class="head"><h4>Sua declaração</h4><div class="row2"><button class="btn sm copy" type="button" data-copy="#decOut">Copiar</button><button class="btn sm" id="decDl" type="button">Baixar .txt</button><button class="btn sm" id="decPrint" type="button">Imprimir</button></div></div><pre id="decOut" style="font-family:var(--font-ui);font-size:.92rem"></pre></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MATERIAIS ======================= -->
+<section class="alt" id="materiais" data-nav="Materiais">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Para levar</span>
+      <h2>Materiais para baixar</h2>
+      <p class="sub">Sem imprimir: use no computador ou no celular. Se quiser papel, a recomendação é A4, frente e verso, preto e branco.</p>
+    </div>
+    <div class="grid g3">
+      <a class="card dl" href="downloads/Texto_de_apoio_Escrever_com_IA.pdf" download><span class="ic">PDF</span><span><b>Texto de apoio</b><span>Leitura completa do minicurso, com os conceitos e o roteiro das atividades.</span></span></a>
+      <a class="card dl" href="downloads/Fichas_das_atividades.pdf" download><span class="ic">PDF</span><span><b>Fichas das atividades</b><span>Campos para preencher (digitalmente ou à mão).</span></span></a>
+      <a class="card dl" href="downloads/Slides_Escrever_com_IA.pdf" download><span class="ic">PDF</span><span><b>Slides do minicurso</b><span>Os slides apresentados em sala.</span></span></a>
+    </div>
+
+    <h3 style="margin-top:50px">Referências</h3>
+    <div class="refs" style="margin-top:14px">
+      <p>ARENDT, Hannah. <em>A condição humana</em>. 10. ed. Rio de Janeiro: Forense Universitária, 2007.</p>
+      <p>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 6023:2025; NBR 10520:2023; NBR 14724:2024. Rio de Janeiro: ABNT.</p>
+      <p>BENDER, Emily M. et al. On the dangers of stochastic parrots: can language models be too big? In: ACM CONFERENCE ON FAIRNESS, ACCOUNTABILITY, AND TRANSPARENCY, 2021. <em>Proceedings</em> […]. New York: ACM, 2021. p. 610-623. <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank" rel="noopener">doi.org/10.1145/3442188.3445922</a></p>
+      <p>BRASIL. Ministério da Educação. Conselho Nacional de Educação. <em>Parecer CNE/CP nº 15/2026</em>: Diretrizes para a Utilização da Inteligência Artificial na Educação Brasileira. Aprovado em 1º set. 2026.</p>
+      <p>BRASIL. Conselho Nacional de Desenvolvimento Científico e Tecnológico. <em>Portaria CNPq nº 2.664, de 6 de março de 2026</em>: Política de Integridade na Atividade Científica. Diário Oficial da União, 11 mar. 2026.</p>
+      <p>BRASIL. Lei nº 9.610/1998 (direitos autorais); Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais); Projeto de Lei nº 2.338/2023 (marco legal da IA, em tramitação).</p>
+      <p>BRASIL. Ministério da Educação. <em>Referencial para o Uso e Desenvolvimento Responsáveis de Inteligência Artificial na Educação</em>. 2026.</p>
+      <p>BROWN, Tom B. et al. Language models are few-shot learners. <em>Advances in Neural Information Processing Systems</em>, v. 33, 2020.</p>
+      <p>FLORIDI, Luciano; COWLS, Josh. A unified framework of five principles for AI in society. <em>Harvard Data Science Review</em>, v. 1, n. 1, 2019. <a href="https://hdsr.mitpress.mit.edu/pub/l0jsh9d1" target="_blank" rel="noopener">hdsr.mitpress.mit.edu</a></p>
+      <p>FRANKFURT, Harry G. <em>On bullshit</em>. Princeton: Princeton University Press, 2005.</p>
+      <p>JI, Ziwei et al. Survey of hallucination in natural language generation. <em>ACM Computing Surveys</em>, v. 55, n. 12, art. 248, p. 1-38, 2023. <a href="https://arxiv.org/abs/2202.03629" target="_blank" rel="noopener">arXiv:2202.03629</a></p>
+      <p>JONAS, Hans. <em>O princípio responsabilidade</em>. Rio de Janeiro: Contraponto; Ed. PUC-Rio, 2006.</p>
+      <p>KANT, Immanuel. Resposta à pergunta: que é esclarecimento? In: <em>Textos seletos</em>. Petrópolis: Vozes, 2005.</p>
+      <p>LÉVY, Pierre. <em>As tecnologias da inteligência</em>. Rio de Janeiro: Editora 34, 1993.</p>
+      <p>MIAO, Fengchun; HOLMES, Wayne. <em>Guidance for generative AI in education and research</em>. Paris: UNESCO, 2023. <a href="https://unesdoc.unesco.org/ark:/48223/pf0000386693" target="_blank" rel="noopener">unesdoc.unesco.org</a></p>
+      <p>ONG, Walter J. <em>Oralidade e cultura escrita</em>. Campinas: Papirus, 1998.</p>
+      <p>PLATÃO. <em>Fedro</em>. Trad. Carlos Alberto Nunes. Belém: Ed. UFPA, 2011. <em>Teeteto-Crátilo</em>. Belém: Ed. UFPA, 2001.</p>
+      <p>SEARLE, John R. Minds, brains, and programs. <em>Behavioral and Brain Sciences</em>, v. 3, n. 3, p. 417-424, 1980.</p>
+      <p>TURING, Alan M. Computing machinery and intelligence. <em>Mind</em>, v. 59, n. 236, p. 433-460, 1950. <a href="https://doi.org/10.1093/mind/LIX.236.433" target="_blank" rel="noopener">doi.org/10.1093/mind/LIX.236.433</a></p>
+      <p>VASWANI, Ashish et al. Attention is all you need. <em>Advances in Neural Information Processing Systems</em>, v. 30, 2017. <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">arXiv:1706.03762</a></p>
+      <p>WITTGENSTEIN, Ludwig. <em>Philosophical investigations</em>. Oxford: Blackwell, 1953.</p>
+      <p><em>Clássicos citados por obra e passagem</em> (use a edição de sua preferência): ARISTÓTELES, Ética a Nicômaco (VI), Poética (7 e 9), Metafísica (A, 2), Refutações sofísticas, Analíticos anteriores (II, 16); PLATÃO, Górgias (463a-b); TOMÁS DE AQUINO, Suma teológica; DESCARTES, Meditações metafísicas; KANT, Crítica da razão pura (A805/B833), Lógica.</p>
+    </div>
+    <p class="note" style="margin-top:20px">Trechos em inglês e traduções livres ao longo da página: Platão (Fedro, Teeteto, Górgias), traduções inglesas de B. Jowett; Aristóteles (Poética), tradução inglesa de S. H. Butcher; Kant (1784), original alemão. São textos de domínio público; as traduções para o português são livres e de responsabilidade do organizador, e não substituem a leitura das edições citadas.</p>
+  </div>
+</section>
+
+<!-- ======================= SOBRE ======================= -->
+<section id="sobre" data-nav="Sobre">
+  <div class="wrap">
+    <div class="about">
+      <img src="assets/gervasio.jpg" alt="Retrato de Gervásio Teixeira" width="520" height="520" loading="lazy">
+      <div>
+        <span class="kicker">O ministrante</span>
+        <h2>Gervásio Teixeira</h2>
+        <p>Graduado em Filosofia (FAFIC) e mestre em Ciência da Computação pela UFPE, Gervásio Teixeira atua na interseção entre as duas áreas: usa conceitos da computação para explicar o que a inteligência artificial faz por dentro e a tradição filosófica para perguntar o que continua sendo tarefa humana.</p>
+        <p>No XXVIII Seminário de Filosofia, ministra este minicurso (23/10, das 08h às 12h) e participa, às 19h, da mesa-redonda interdisciplinar <em>Pensar com Máquinas</em>.</p>
+        <div class="row2" style="margin-top:14px"><a class="btn" href="http://lattes.cnpq.br/2699568863777450" target="_blank" rel="noopener">Currículo Lattes ↗</a><a class="btn" href="https://gervasioteixeira.com.br/" target="_blank" rel="noopener">gervasioteixeira.com.br ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--ink)">XXVIII Seminário de Filosofia</b> · <em>O humano em questão: Filosofia, inteligência artificial e os desafios do futuro</em><br>20 a 23 de outubro de 2026 · Faculdade Católica da Paraíba · Cajazeiras-PB<br><span style="font-size:.78rem">Esta página não usa cookies, não coleta dados e não envia o que você digita a nenhum servidor: as anotações ficam apenas no seu navegador.</span></div>
+    <img src="assets/logos.png" alt="Faculdade Católica da Paraíba e Curso de Filosofia, 50 anos de credenciamento" width="210" height="100" loading="lazy">
+  </div>
+</footer>
+
+<div class="qr-ov" id="qrOv" role="dialog" aria-modal="true" aria-label="QR code da página do minicurso">
+  <div>
+    <h2>Acesse o material do minicurso</h2>
+    <div class="box" style="margin:18px auto 0"><img src="assets/qr.svg" alt="QR code para gervasioteixeira.com.br/seminario" style="width:100%"></div>
+    <p>gervasioteixeira.com.br/seminario</p>
+    <p style="color:var(--muted);font-size:.9rem;font-weight:500">Toque ou pressione Esc para fechar</p>
+  </div>
+</div>
+
+<div class="help"><button class="btn sm" id="helpBtn" type="button">Atalhos</button>
+  <div class="pop" id="helpPop"><p><span class="kbd">P</span> modo aula</p><p><span class="kbd">←</span> <span class="kbd">→</span> ou <span class="kbd">J</span> <span class="kbd">K</span> seção anterior / próxima</p><p><span class="kbd">G</span> ir ao módulo atual</p><p><span class="kbd">Q</span> QR code</p><p><span class="kbd">F</span> tela cheia</p><p><span class="kbd">T</span> cronômetro 10 min</p><p><span class="kbd">Esc</span> fecha</p>
+  <p style="color:var(--muted)">Ensaio: acrescente <span class="kbd">?hora=09:30</span> ao endereço para simular um horário do dia.</p></div></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
