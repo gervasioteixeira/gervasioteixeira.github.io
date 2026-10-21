@@ -248,7 +248,7 @@
     $$("#menu a").forEach(function (a) { a.classList.toggle("on", !!cur && a.getAttribute("href") === "#" + cur.menu); });
   }
   function initNav() {
-    var map = { m1: "m1", m2: "m1", m3: "m1", m4: "m1", m5: "m1", fechamento: "m1", atividades: "atividades", prompts: "prompts", ferramentas: "ferramentas", praticar: "praticar", normas: "normas", declaracao: "declaracao", materiais: "materiais", sobre: "sobre", roteiro: "roteiro" };
+    var map = { m1: "m1", m2: "m1", m3: "m1", m4: "m1", m5: "m1", fechamento: "m1", atividades: "atividades", atividade2: "atividades", atividade3: "atividades", prompts: "prompts", ferramentas: "ferramentas", praticar: "praticar", normas: "normas", declaracao: "declaracao", materiais: "materiais", sobre: "sobre", roteiro: "roteiro" };
     navSecs = $$("main > section[id]").filter(function (s) { return map[s.id]; }).map(function (s) { return { el: s, menu: map[s.id] }; });
     window.addEventListener("scroll", updateNavOn, { passive: true });
   }

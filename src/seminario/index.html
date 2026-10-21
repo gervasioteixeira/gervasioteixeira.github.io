@@ -25,11 +25,11 @@
       <li><a href="#roteiro">Roteiro</a></li>
       <li><a href="#m1">Textos</a></li>
       <li><a href="#atividades">Atividades</a></li>
+      <li><a href="#normas">Normas</a></li>
+      <li><a href="#declaracao">Declaração</a></li>
       <li><a href="#prompts">Prompts</a></li>
       <li><a href="#ferramentas">Ferramentas</a></li>
       <li><a href="#praticar">Praticar</a></li>
-      <li><a href="#normas">Normas</a></li>
-      <li><a href="#declaracao">Declaração</a></li>
       <li><a href="#materiais">Materiais</a></li>
       <li><a href="#sobre">Sobre</a></li>
     </ul>
@@ -64,6 +64,11 @@
 <!-- ======================= COMO USAR ======================= -->
 <section id="regras" data-nav="Regras de ouro">
   <div class="wrap">
+    <div class="sec-head"><span class="kicker">Pergunta-guia</span><h2>O humano em questão</h2><p class="sub">Quando um texto é escrito com ajuda de uma máquina, o que nele ainda é meu?</p></div>
+    <div class="grid g2" style="margin-bottom:56px">
+      <div class="card"><h3>O que a IA faz bem</h3><p>Organiza, reformula, resume, sugere objeções e acelera o rascunho.</p></div>
+      <div class="card gold"><h3>O que continua sendo seu</h3><p>A pergunta, o juízo, a verificação, a tese e a responsabilidade pelo que se assina.</p></div>
+    </div>
     <div class="sec-head">
       <span class="kicker">Antes de começar</span>
       <h2>Cinco regras de ouro</h2>
@@ -250,7 +255,7 @@
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>O espanto (Platão, Aristóteles) e a dúvida metódica (Descartes).</div>
       <div><b>Conceito da Computação</b>Prompt como especificação; bases de dados e operadores lógicos.</div>
-      <div><b>Prática</b><a href="#atv1">Atividade 1</a>: do espanto à referência verificada.</div>
+      <div><b>Prática</b><a href="#atividades">Atividade 1</a>: do espanto à referência verificada.</div>
     </div>
     <article class="read">
       <h3>Do espanto ao problema</h3>
@@ -295,6 +300,37 @@
   </div>
 </section>
 
+<!-- ======================= ATIVIDADE 1 ======================= -->
+<section class="alt" id="atividades" data-nav="Atividade 1">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Mão na massa</span>
+      <h2>As três atividades</h2>
+      <p class="sub">Marque cada passo ao concluir e registre o que fizer: o que você escrever aqui fica salvo só neste navegador e não é enviado a ninguém. Se preferir papel, use as <a href="downloads/Fichas_das_atividades.pdf">fichas em PDF</a>.</p>
+    </div>
+
+    <!-- Atividade 1 -->
+    <div class="act" id="atv1" data-act="a1">
+      <div class="act-top"><div><span class="kicker">Módulo 3 · <span class="time">30 min</span></span><h3>Atividade 1 · Do espanto à referência verificada</h3></div></div>
+      <p>Faça no computador, de preferência com um editor de texto aberto para registrar o que fizer. O produto final são duas coisas: <b>um problema de pesquisa em uma frase</b> e <b>um quadro de referências verificadas</b>.</p>
+      <ol class="steps">
+        <li><input type="checkbox" data-save="a1s1"><span>Escreva em duas linhas o seu <b>espanto</b>: o tema ou o incômodo filosófico que realmente lhe chama a atenção.</span></li>
+        <li><input type="checkbox" data-save="a1s2"><span>Monte um prompt com as <b>cinco camadas</b> (use o <a href="#prompts">montador</a>) e peça à IA três recortes de problema de pesquisa. Escolha um e escreva seu problema em uma frase, em forma de pergunta.</span></li>
+        <li><input type="checkbox" data-save="a1s3"><span>Peça à IA <b>três referências</b> para o recorte escolhido.</span></li>
+        <li><input type="checkbox" data-save="a1s4"><span>Verifique cada uma pelos <b>quatro passos</b> e monte o quadro abaixo; classifique cada uma como <i>real</i>, <i>real com erro</i> (autor, ano, título ou livro trocados) ou <i>inexistente</i>.</span></li>
+        <li><input type="checkbox" data-save="a1s5"><span><b>Troque o quadro com um colega</b> e confira uma referência dele pelos quatro passos.</span></li>
+      </ol>
+      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
+      <label class="f" for="a1esp">1 · Meu espanto (2 linhas)</label><textarea id="a1esp" data-save="a1-espanto"></textarea>
+      <label class="f" for="a1prob">2 · Meu problema de pesquisa (uma frase, em forma de pergunta)</label><input type="text" id="a1prob" data-save="a1-problema">
+      <label class="f">4 · Quadro de referências verificadas</label>
+      <div class="tbl-wrap"><table id="refTable"><thead><tr><th>Referência (como a IA deu)</th><th>Existe?</th><th>Dados conferem?</th><th>Diz isso?</th><th>Sustenta?</th><th>Classificação</th><th></th></tr></thead><tbody></tbody></table></div>
+      <div class="row2"><button class="btn sm" id="addRef" type="button">+ Adicionar referência</button><button class="btn sm copy-table" type="button">Copiar quadro</button><span class="saved" id="savedA1">Salvo</span></div>
+      <p class="note">Dica: guarde o quadro antes do intervalo (copie para o seu editor de texto). Nada é enviado a servidor algum; limpar os dados do navegador apaga o que está aqui.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= MÓDULO 4 ======================= -->
 <section class="module" id="m4" data-nav="Módulo 4">
   <div class="wrap">
@@ -302,7 +338,7 @@
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>Maiêutica, <em>disputatio</em>, falácias, adulação.</div>
       <div><b>Conceito da Computação</b>Teste adversarial e bajulação (<em>sycophancy</em>).</div>
-      <div><b>Prática</b><a href="#atv2">Atividade 2</a>: seu argumento no tribunal da IA.</div>
+      <div><b>Prática</b><a href="#atividade2">Atividade 2</a>: seu argumento no tribunal da IA.</div>
     </div>
     <article class="read">
       <p>A maior utilidade filosófica de um modelo de linguagem não está em escrever por você, mas em <strong>conversar com você</strong>: obrigar a definir termos, apresentar objeções e apontar saltos de raciocínio. Aqui a máquina trabalha a favor do pensamento, e não no lugar dele. Duas tradições da nossa disciplina ensinam como.</p>
@@ -331,6 +367,9 @@
           <p class="cap">Texto integral em <a href="https://classics.mit.edu/Plato/gorgias.html" target="_blank" rel="noopener">classics.mit.edu</a>.</p>
         </div></details>
 
+      <h3>Dois prompts prontos: Sócrates e advogado do diabo</h3>
+      <p>Para a Atividade 2, use o <a href="#p-socrates">prompt socrático</a> (a IA só pergunta, uma por vez, e nunca responde) e o <a href="#p-diabo">advogado do diabo</a> (as três objeções mais fortes à sua tese, cada uma com a premissa em que ataca). Ambos estão prontos para copiar na seção <a href="#prompts">Prompts</a>.</p>
+
       <h3>Caçando falácias</h3>
       <p>Nas <em>Refutações sofísticas</em>, Aristóteles estuda os argumentos que parecem válidos sem o ser; a petição de princípio é tratada nos <em>Analíticos anteriores</em> (II, 16). A IA pode ajudar a localizá-los no seu texto, mas também pode cometê-los: peça sempre o trecho exato e confira.</p>
       <div class="tbl-wrap" style="font-family:var(--font-ui)"><table style="min-width:560px"><thead><tr><th>Falácia</th><th>Exemplo</th><th>Pergunta-teste</th></tr></thead><tbody>
@@ -343,6 +382,33 @@
   </div>
 </section>
 
+<!-- ======================= ATIVIDADE 2 ======================= -->
+<section class="alt" id="atividade2" data-nav="Atividade 2">
+  <div class="wrap">
+    <!-- Atividade 2 -->
+    <div class="act" id="atv2" data-act="a2">
+      <div class="act-top"><div><span class="kicker">Módulo 4 · <span class="time">30 min</span></span><h3>Atividade 2 · Seu argumento no tribunal da IA</h3></div></div>
+      <p>O objetivo é testar uma tese sua contra perguntas e objeções fortes, reformulá-la e conseguir explicá-la em um minuto, sem ler.</p>
+      <ol class="steps">
+        <li><input type="checkbox" data-save="a2s1"><span>Escreva sua <b>tese</b> em 3 a 5 linhas (pode ser a hipótese da Atividade 1).</span></li>
+        <li><input type="checkbox" data-save="a2s2"><span>Rode o <a href="#p-socrates">prompt socrático</a> por cinco ou seis rodadas e registre as perguntas da IA. Responda com as suas palavras; observe onde suas definições eram frágeis.</span></li>
+        <li><input type="checkbox" data-save="a2s3"><span>Rode o <a href="#p-diabo">advogado do diabo</a> e escolha a objeção mais forte, aquela que você teria mais dificuldade de responder.</span></li>
+        <li><input type="checkbox" data-save="a2s4"><span>Releia a tese procurando as <b>quatro falácias</b> (petição de princípio, falso dilema, apelo à autoridade, ad hominem).</span></li>
+        <li><input type="checkbox" data-save="a2s5"><span>Reescreva a tese respondendo à objeção escolhida.</span></li>
+        <li><input type="checkbox" data-save="a2s6"><span>Explique a nova tese à sua dupla em <b>um minuto, sem ler</b>, e ouça: ela entendeu? Qual ponto ficou obscuro?</span></li>
+      </ol>
+      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
+      <div class="grid g2">
+        <div><label class="f" for="a2t">Tese inicial</label><textarea id="a2t" data-save="a2-tese"></textarea></div>
+        <div><label class="f" for="a2o">Objeção mais forte</label><textarea id="a2o" data-save="a2-objecao"></textarea></div>
+        <div><label class="f" for="a2r">Tese reformulada</label><textarea id="a2r" data-save="a2-reformulada"></textarea></div>
+        <div><label class="f" for="a2p">A pergunta da IA que mais me fez pensar</label><textarea id="a2p" data-save="a2-pergunta"></textarea></div>
+      </div>
+      <div class="row2" style="margin-top:12px"><button class="btn sm copy-act" data-fields="a2t,a2o,a2r,a2p" data-labels="Tese inicial|Objeção mais forte|Tese reformulada|Pergunta que mais fez pensar" type="button">Copiar registro</button></div>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= MÓDULO 5 ======================= -->
 <section class="module" id="m5" data-nav="Módulo 5">
   <div class="wrap">
@@ -350,7 +416,7 @@
     <div class="meta3">
       <div><b>Ideia da Filosofia</b>Técnica e prudência (Aristóteles); responsabilidade (Jonas); ética.</div>
       <div><b>Conceito da Computação</b>Princípios de IA ética; privacidade, LGPD e transparência.</div>
-      <div><b>Prática</b><a href="#atv3">Atividade 3</a>: do rascunho ao texto assinado.</div>
+      <div><b>Prática</b><a href="#atividade3">Atividade 3</a>: do rascunho ao texto assinado.</div>
     </div>
     <article class="read">
       <h3>A IA como leitora crítica</h3>
@@ -386,78 +452,57 @@
   </div>
 </section>
 
-<!-- ======================= FECHAMENTO ======================= -->
-<section class="module" id="fechamento" data-nav="Fechamento">
+<!-- ======================= NORMAS ======================= -->
+<section class="alt" id="normas" data-nav="Normas">
   <div class="wrap">
-    <div class="mod-head"><div class="mod-n">∞</div><div><span class="kicker">10 min (sugestão)</span><h2>Que é o homem?</h2></div></div>
-    <article class="read">
-      <p>Kant resumiu as perguntas da filosofia em três: <em>que posso saber? que devo fazer? que me é permitido esperar?</em> (<em>Crítica da razão pura</em>, A805/B833). Na <em>Lógica</em> acrescenta uma quarta, que as contém: <strong>que é o homem?</strong> A inteligência artificial devolve essa pergunta com urgência nova: o que fazemos quando uma máquina faz o que julgávamos próprio do humano, escrever? A resposta que este minicurso propõe é modesta e exigente: usar a ferramenta sem abrir mão do que só pode ser nosso, a pergunta, o juízo e a responsabilidade.</p>
-    </article>
-    <h3 style="margin-top:30px">Código de boas práticas: seis compromissos</h3>
-    <p class="sub">Escolha três e comece esta semana. Sua escolha fica salva neste navegador.</p>
-    <div class="grid g3 pledge" id="pledge" style="margin-top:18px">
-      <div class="card"><label><input type="checkbox" data-save="pl1"><span><b>1 · Eu penso primeiro</b><br>Defino o problema e a tese antes de pedir ajuda.</span></label></div>
-      <div class="card"><label><input type="checkbox" data-save="pl2"><span><b>2 · Eu pergunto melhor</b><br>Uso prompts com papel, contexto, tarefa, formato e restrições.</span></label></div>
-      <div class="card"><label><input type="checkbox" data-save="pl3"><span><b>3 · Eu verifico tudo</b><br>Nenhuma referência entra no texto sem os quatro passos.</span></label></div>
-      <div class="card"><label><input type="checkbox" data-save="pl4"><span><b>4 · Eu testo meus argumentos</b><br>Uso a IA para encontrar objeções, e não para evitá-las.</span></label></div>
-      <div class="card"><label><input type="checkbox" data-save="pl5"><span><b>5 · Eu protejo dados</b><br>Não exponho dados pessoais nem trabalhos de terceiros.</span></label></div>
-      <div class="card"><label><input type="checkbox" data-save="pl6"><span><b>6 · Eu declaro e respondo</b><br>Informo o uso de IA e assino o que escrevo.</span></label></div>
+    <div class="sec-head">
+      <span class="kicker">Módulo 5</span>
+      <h2>O que dizem as normas brasileiras hoje</h2>
+      <p class="sub">Em 2026, o Brasil ainda não tem uma lei geral sobre inteligência artificial (o PL 2338/2023 segue em tramitação), mas já existem orientações e normas setoriais que pesam sobre quem escreve na universidade. Em comum, elas não proíbem o uso: exigem transparência, responsabilidade de quem assina e políticas próprias de cada instituição.</p>
     </div>
-    <p class="note" id="pledgeN"></p>
+    <div class="grid g2 norm">
+      <div class="card gold"><span class="tagline">CNE · Educação</span><h3>Parecer CNE/CP nº 15/2026</h3>
+        <p>Aprovado em 1º de setembro de 2026, traz as <em>Diretrizes para a Utilização da Inteligência Artificial na Educação Brasileira</em>. Na educação superior, cada instituição estabelece políticas próprias para o uso de IA no ensino, na pesquisa e na extensão, com princípios de autoria, integridade acadêmica, transparência, responsabilidade intelectual e proteção de direitos, podendo prever formas de declaração de uso.</p>
+        <p>Cabe ao estudante a responsabilidade intelectual pela seleção, verificação e veracidade das informações, e a transparência quanto ao uso da IA. Na pesquisa, a IA deve ser declarada sempre que sua contribuição for relevante para a elaboração de textos, a análise de dados, a revisão bibliográfica ou a programação, e ela não transfere a autoria nem a responsabilidade. O texto veda a sanção acadêmica fundada exclusivamente em ferramenta de detecção de conteúdo gerado por IA e o uso de conteúdos produzidos por estudantes para treinar modelos de terceiros sem autorização específica.</p>
+        <p class="note"><b>Atenção ao status:</b> a resolução que institui essas diretrizes ainda depende de homologação pelo MEC e de publicação; confira se isso já ocorreu.</p></div>
+      <div class="card gold"><span class="tagline">CNPq · Pesquisa</span><h3>Portaria CNPq nº 2.664/2026</h3>
+        <p>Publicada no DOU de 11/03/2026, instituiu a Política de Integridade na Atividade Científica. Na pesquisa apoiada pelo CNPq (por exemplo, com bolsas), é preciso <b>declarar o uso de ferramentas de IA generativa em qualquer fase</b> (concepção, redação, análise de dados, submissão), especificando a ferramenta e a finalidade; é vedado apresentar conteúdo gerado por IA como se fosse de autoria humana, e os autores respondem integralmente por plágios e imprecisões.</p></div>
+      <div class="card"><span class="tagline">MEC · Educação</span><h3>Referencial de IA na Educação (2026)</h3>
+        <p>O MEC divulgou em 2026 o <em>Referencial para o Uso e Desenvolvimento Responsáveis de IA na Educação</em>, que destaca a supervisão humana efetiva, a transparência e a explicabilidade, e a proteção de dados e da privacidade de estudantes e docentes.</p></div>
+      <div class="card"><span class="tagline">ABNT e leis</span><h3>Normas técnicas e legislação</h3>
+        <p>Valem a ABNT NBR 6023:2025 (referências), a NBR 10520:2023 (citações) e a NBR 14724:2024 (trabalhos acadêmicos); até onde pudemos verificar, não há norma da ABNT específica para citar IA generativa. Se sua instituição ainda adotar a edição de 2018 da NBR 6023, siga a orientação dela.</p>
+        <p>LGPD (<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Lei nº 13.709/2018</a>) e direitos autorais (<a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei nº 9.610/1998</a>).</p></div>
+    </div>
+    <div class="alert"><b>Na prática.</b> Por isso a prática mais segura é a que este minicurso adota: não tratar a IA como fonte de autoridade, citar apenas fontes verificadas e declarar o uso (ferramenta, finalidade e limites). Em todos os casos, a regra da sua instituição, do seu curso e do seu orientador vale mais do que qualquer guia genérico: <b>pergunte e registre.</b> Normas e status mudam: confira as fontes oficiais (gov.br/mec, Diário Oficial da União) antes de citar em trabalhos.</div>
   </div>
 </section>
 
-<!-- ======================= ATIVIDADES ======================= -->
-<section class="alt" id="atividades" data-nav="Atividades">
+<!-- ======================= DECLARAÇÃO ======================= -->
+<section id="declaracao" data-nav="Declaração">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Mão na massa</span>
-      <h2>As três atividades</h2>
-      <p class="sub">Marque cada passo ao concluir e registre o que fizer: o que você escrever aqui fica salvo só neste navegador e não é enviado a ninguém. Se preferir papel, use as <a href="downloads/Fichas_das_atividades.pdf">fichas em PDF</a>.</p>
+      <span class="kicker">Módulo 5 · para a Atividade 3</span>
+      <h2>Declaração de uso de inteligência artificial</h2>
+      <p class="sub">Declarar o uso de IA é o oposto do plágio: quem declara assume a responsabilidade pelo que escreveu. O modelo pode ser adaptado e anexado ao trabalho quando a instituição ou o orientador pedirem. Um teste prático, de inspiração kantiana (a publicidade como critério): se você teria vergonha de declarar o uso, reveja-o.</p>
     </div>
-
-    <!-- Atividade 1 -->
-    <div class="act" id="atv1" data-act="a1">
-      <div class="act-top"><div><span class="kicker">Módulo 3 · <span class="time">30 min</span></span><h3>Atividade 1 · Do espanto à referência verificada</h3></div></div>
-      <p>Faça no computador, de preferência com um editor de texto aberto para registrar o que fizer. O produto final são duas coisas: <b>um problema de pesquisa em uma frase</b> e <b>um quadro de referências verificadas</b>.</p>
-      <ol class="steps">
-        <li><input type="checkbox" data-save="a1s1"><span>Escreva em duas linhas o seu <b>espanto</b>: o tema ou o incômodo filosófico que realmente lhe chama a atenção.</span></li>
-        <li><input type="checkbox" data-save="a1s2"><span>Monte um prompt com as <b>cinco camadas</b> (use o <a href="#prompts">montador</a>) e peça à IA três recortes de problema de pesquisa. Escolha um e escreva seu problema em uma frase, em forma de pergunta.</span></li>
-        <li><input type="checkbox" data-save="a1s3"><span>Peça à IA <b>três referências</b> para o recorte escolhido.</span></li>
-        <li><input type="checkbox" data-save="a1s4"><span>Verifique cada uma pelos <b>quatro passos</b> e monte o quadro abaixo; classifique cada uma como <i>real</i>, <i>real com erro</i> (autor, ano, título ou livro trocados) ou <i>inexistente</i>.</span></li>
-        <li><input type="checkbox" data-save="a1s5"><span><b>Troque o quadro com um colega</b> e confira uma referência dele pelos quatro passos.</span></li>
-      </ol>
-      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
-      <label class="f" for="a1esp">1 · Meu espanto (2 linhas)</label><textarea id="a1esp" data-save="a1-espanto"></textarea>
-      <label class="f" for="a1prob">2 · Meu problema de pesquisa (uma frase, em forma de pergunta)</label><input type="text" id="a1prob" data-save="a1-problema">
-      <label class="f">4 · Quadro de referências verificadas</label>
-      <div class="tbl-wrap"><table id="refTable"><thead><tr><th>Referência (como a IA deu)</th><th>Existe?</th><th>Dados conferem?</th><th>Diz isso?</th><th>Sustenta?</th><th>Classificação</th><th></th></tr></thead><tbody></tbody></table></div>
-      <div class="row2"><button class="btn sm" id="addRef" type="button">+ Adicionar referência</button><button class="btn sm copy-table" type="button">Copiar quadro</button><span class="saved" id="savedA1">Salvo</span></div>
-      <p class="note">Dica: guarde o quadro antes do intervalo (copie para o seu editor de texto). Nada é enviado a servidor algum; limpar os dados do navegador apaga o que está aqui.</p>
-    </div>
-
-    <!-- Atividade 2 -->
-    <div class="act" id="atv2" data-act="a2">
-      <div class="act-top"><div><span class="kicker">Módulo 4 · <span class="time">30 min</span></span><h3>Atividade 2 · Seu argumento no tribunal da IA</h3></div></div>
-      <p>O objetivo é testar uma tese sua contra perguntas e objeções fortes, reformulá-la e conseguir explicá-la em um minuto, sem ler.</p>
-      <ol class="steps">
-        <li><input type="checkbox" data-save="a2s1"><span>Escreva sua <b>tese</b> em 3 a 5 linhas (pode ser a hipótese da Atividade 1).</span></li>
-        <li><input type="checkbox" data-save="a2s2"><span>Rode o <a href="#p-socrates">prompt socrático</a> por cinco ou seis rodadas e registre as perguntas da IA. Responda com as suas palavras; observe onde suas definições eram frágeis.</span></li>
-        <li><input type="checkbox" data-save="a2s3"><span>Rode o <a href="#p-diabo">advogado do diabo</a> e escolha a objeção mais forte, aquela que você teria mais dificuldade de responder.</span></li>
-        <li><input type="checkbox" data-save="a2s4"><span>Releia a tese procurando as <b>quatro falácias</b> (petição de princípio, falso dilema, apelo à autoridade, ad hominem).</span></li>
-        <li><input type="checkbox" data-save="a2s5"><span>Reescreva a tese respondendo à objeção escolhida.</span></li>
-        <li><input type="checkbox" data-save="a2s6"><span>Explique a nova tese à sua dupla em <b>um minuto, sem ler</b>, e ouça: ela entendeu? Qual ponto ficou obscuro?</span></li>
-      </ol>
-      <div class="prog-line"><i></i></div><div class="note prog-txt"></div>
-      <div class="grid g2">
-        <div><label class="f" for="a2t">Tese inicial</label><textarea id="a2t" data-save="a2-tese"></textarea></div>
-        <div><label class="f" for="a2o">Objeção mais forte</label><textarea id="a2o" data-save="a2-objecao"></textarea></div>
-        <div><label class="f" for="a2r">Tese reformulada</label><textarea id="a2r" data-save="a2-reformulada"></textarea></div>
-        <div><label class="f" for="a2p">A pergunta da IA que mais me fez pensar</label><textarea id="a2p" data-save="a2-pergunta"></textarea></div>
+    <div class="builder">
+      <div>
+        <label class="f" for="d1">Título do trabalho</label><input type="text" id="d1" data-save="d1" placeholder="Título">
+        <label class="f" for="d2">Autor(a)</label><input type="text" id="d2" data-save="d2" placeholder="Seu nome">
+        <label class="f" for="d3">Data</label><input type="text" id="d3" data-save="d3" placeholder="__/__/____">
+        <label class="f" for="d4">Ferramenta(s)</label><input type="text" id="d4" data-save="d4" placeholder="ex.: ChatGPT, Gemini ou Claude, versão gratuita">
+        <label class="f" for="d5">Finalidade do uso</label><textarea id="d5" data-save="d5" placeholder="ex.: sugestão de recortes de tema; leitura crítica do parágrafo 3; formatação de referências" style="min-height:70px"></textarea>
+        <label class="f" for="d6">Não utilizei IA para</label><textarea id="d6" data-save="d6" placeholder="ex.: formulação da tese, interpretação das obras, redação do texto final" style="min-height:70px"></textarea>
+        <label style="display:flex;gap:10px;margin-top:14px;align-items:flex-start"><input type="checkbox" id="d7" data-save="d7" style="margin-top:4px"> <span>Todas as referências foram conferidas nas fontes originais.</span></label>
       </div>
-      <div class="row2" style="margin-top:12px"><button class="btn sm copy-act" data-fields="a2t,a2o,a2r,a2p" data-labels="Tese inicial|Objeção mais forte|Tese reformulada|Pergunta que mais fez pensar" type="button">Copiar registro</button></div>
+      <div class="card prompt"><div class="head"><h4>Sua declaração</h4><div class="row2"><button class="btn sm copy" type="button" data-copy="#decOut">Copiar</button><button class="btn sm" id="decDl" type="button">Baixar .txt</button><button class="btn sm" id="decPrint" type="button">Imprimir</button></div></div><pre id="decOut" style="font-family:var(--font-ui);font-size:.92rem"></pre></div>
     </div>
+  </div>
+</section>
 
+<!-- ======================= ATIVIDADE 3 ======================= -->
+<section class="alt" id="atividade3" data-nav="Atividade 3">
+  <div class="wrap">
     <!-- Atividade 3 -->
     <div class="act" id="atv3" data-act="a3">
       <div class="act-top"><div><span class="kicker">Módulo 5 · <span class="time">25 min</span></span><h3>Atividade 3 · Do rascunho ao texto assinado</h3></div></div>
@@ -483,6 +528,27 @@
       <label class="f" for="a3c">Parágrafo final (reescrito por mim)</label><textarea id="a3c" data-save="a3-final" style="min-height:140px"></textarea>
       <div class="row2" style="margin-top:12px"><button class="btn sm copy-act" data-fields="a3a,a3b,a3c" data-labels="Rascunho|Decisões sobre a leitura da IA|Parágrafo final" type="button">Copiar registro</button></div>
     </div>
+  </div>
+</section>
+
+<!-- ======================= FECHAMENTO ======================= -->
+<section class="module" id="fechamento" data-nav="Fechamento">
+  <div class="wrap">
+    <div class="mod-head"><div class="mod-n">∞</div><div><span class="kicker">10 min (sugestão)</span><h2>Fechamento</h2></div></div>
+    <h3>Código de boas práticas: seis compromissos</h3>
+    <p class="sub">Escolha três e comece esta semana. Sua escolha fica salva neste navegador.</p>
+    <div class="grid g3 pledge" id="pledge" style="margin-top:18px">
+      <div class="card"><label><input type="checkbox" data-save="pl1"><span><b>1 · Eu penso primeiro</b><br>Defino o problema e a tese antes de pedir ajuda.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl2"><span><b>2 · Eu pergunto melhor</b><br>Uso prompts com papel, contexto, tarefa, formato e restrições.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl3"><span><b>3 · Eu verifico tudo</b><br>Nenhuma referência entra no texto sem os quatro passos.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl4"><span><b>4 · Eu testo meus argumentos</b><br>Uso a IA para encontrar objeções, e não para evitá-las.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl5"><span><b>5 · Eu protejo dados</b><br>Não exponho dados pessoais nem trabalhos de terceiros.</span></label></div>
+      <div class="card"><label><input type="checkbox" data-save="pl6"><span><b>6 · Eu declaro e respondo</b><br>Informo o uso de IA e assino o que escrevo.</span></label></div>
+    </div>
+    <p class="note" id="pledgeN"></p>
+    <article class="read" style="margin-top:46px"><h3>Que é o homem?</h3>
+      <p>Kant resumiu as perguntas da filosofia em três: <em>que posso saber? que devo fazer? que me é permitido esperar?</em> (<em>Crítica da razão pura</em>, A805/B833). Na <em>Lógica</em> acrescenta uma quarta, que as contém: <strong>que é o homem?</strong> A inteligência artificial devolve essa pergunta com urgência nova: o que fazemos quando uma máquina faz o que julgávamos próprio do humano, escrever? A resposta que este minicurso propõe é modesta e exigente: usar a ferramenta sem abrir mão do que só pode ser nosso, a pergunta, o juízo e a responsabilidade.</p>
+    </article>
   </div>
 </section>
 
@@ -604,54 +670,6 @@
   </div>
 </section>
 
-<!-- ======================= NORMAS ======================= -->
-<section class="alt" id="normas" data-nav="Normas">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Módulo 5</span>
-      <h2>O que dizem as normas brasileiras hoje</h2>
-      <p class="sub">Em 2026, o Brasil ainda não tem uma lei geral sobre inteligência artificial (o PL 2338/2023 segue em tramitação), mas já existem orientações e normas setoriais que pesam sobre quem escreve na universidade. Em comum, elas não proíbem o uso: exigem transparência, responsabilidade de quem assina e políticas próprias de cada instituição.</p>
-    </div>
-    <div class="grid g2 norm">
-      <div class="card gold"><span class="tagline">CNE · Educação</span><h3>Parecer CNE/CP nº 15/2026</h3>
-        <p>Aprovado em 1º de setembro de 2026, traz as <em>Diretrizes para a Utilização da Inteligência Artificial na Educação Brasileira</em>. Na educação superior, cada instituição estabelece políticas próprias para o uso de IA no ensino, na pesquisa e na extensão, com princípios de autoria, integridade acadêmica, transparência, responsabilidade intelectual e proteção de direitos, podendo prever formas de declaração de uso.</p>
-        <p>Cabe ao estudante a responsabilidade intelectual pela seleção, verificação e veracidade das informações, e a transparência quanto ao uso da IA. Na pesquisa, a IA deve ser declarada sempre que sua contribuição for relevante para a elaboração de textos, a análise de dados, a revisão bibliográfica ou a programação, e ela não transfere a autoria nem a responsabilidade. O texto veda a sanção acadêmica fundada exclusivamente em ferramenta de detecção de conteúdo gerado por IA e o uso de conteúdos produzidos por estudantes para treinar modelos de terceiros sem autorização específica.</p>
-        <p class="note"><b>Atenção ao status:</b> a resolução que institui essas diretrizes ainda depende de homologação pelo MEC e de publicação; confira se isso já ocorreu.</p></div>
-      <div class="card gold"><span class="tagline">CNPq · Pesquisa</span><h3>Portaria CNPq nº 2.664/2026</h3>
-        <p>Publicada no DOU de 11/03/2026, instituiu a Política de Integridade na Atividade Científica. Na pesquisa apoiada pelo CNPq (por exemplo, com bolsas), é preciso <b>declarar o uso de ferramentas de IA generativa em qualquer fase</b> (concepção, redação, análise de dados, submissão), especificando a ferramenta e a finalidade; é vedado apresentar conteúdo gerado por IA como se fosse de autoria humana, e os autores respondem integralmente por plágios e imprecisões.</p></div>
-      <div class="card"><span class="tagline">MEC · Educação</span><h3>Referencial de IA na Educação (2026)</h3>
-        <p>O MEC divulgou em 2026 o <em>Referencial para o Uso e Desenvolvimento Responsáveis de IA na Educação</em>, que destaca a supervisão humana efetiva, a transparência e a explicabilidade, e a proteção de dados e da privacidade de estudantes e docentes.</p></div>
-      <div class="card"><span class="tagline">ABNT e leis</span><h3>Normas técnicas e legislação</h3>
-        <p>Valem a ABNT NBR 6023:2025 (referências), a NBR 10520:2023 (citações) e a NBR 14724:2024 (trabalhos acadêmicos); até onde pudemos verificar, não há norma da ABNT específica para citar IA generativa. Se sua instituição ainda adotar a edição de 2018 da NBR 6023, siga a orientação dela.</p>
-        <p>LGPD (<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">Lei nº 13.709/2018</a>) e direitos autorais (<a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei nº 9.610/1998</a>).</p></div>
-    </div>
-    <div class="alert"><b>Na prática.</b> Por isso a prática mais segura é a que este minicurso adota: não tratar a IA como fonte de autoridade, citar apenas fontes verificadas e declarar o uso (ferramenta, finalidade e limites). Em todos os casos, a regra da sua instituição, do seu curso e do seu orientador vale mais do que qualquer guia genérico: <b>pergunte e registre.</b> Normas e status mudam: confira as fontes oficiais (gov.br/mec, Diário Oficial da União) antes de citar em trabalhos.</div>
-  </div>
-</section>
-
-<!-- ======================= DECLARAÇÃO ======================= -->
-<section id="declaracao" data-nav="Declaração">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Atividade 3 · passo 5</span>
-      <h2>Declaração de uso de inteligência artificial</h2>
-      <p class="sub">Declarar o uso de IA é o oposto do plágio: quem declara assume a responsabilidade pelo que escreveu. O modelo pode ser adaptado e anexado ao trabalho quando a instituição ou o orientador pedirem. Um teste prático, de inspiração kantiana (a publicidade como critério): se você teria vergonha de declarar o uso, reveja-o.</p>
-    </div>
-    <div class="builder">
-      <div>
-        <label class="f" for="d1">Título do trabalho</label><input type="text" id="d1" data-save="d1" placeholder="Título">
-        <label class="f" for="d2">Autor(a)</label><input type="text" id="d2" data-save="d2" placeholder="Seu nome">
-        <label class="f" for="d3">Data</label><input type="text" id="d3" data-save="d3" placeholder="__/__/____">
-        <label class="f" for="d4">Ferramenta(s)</label><input type="text" id="d4" data-save="d4" placeholder="ex.: ChatGPT, Gemini ou Claude, versão gratuita">
-        <label class="f" for="d5">Finalidade do uso</label><textarea id="d5" data-save="d5" placeholder="ex.: sugestão de recortes de tema; leitura crítica do parágrafo 3; formatação de referências" style="min-height:70px"></textarea>
-        <label class="f" for="d6">Não utilizei IA para</label><textarea id="d6" data-save="d6" placeholder="ex.: formulação da tese, interpretação das obras, redação do texto final" style="min-height:70px"></textarea>
-        <label style="display:flex;gap:10px;margin-top:14px;align-items:flex-start"><input type="checkbox" id="d7" data-save="d7" style="margin-top:4px"> <span>Todas as referências foram conferidas nas fontes originais.</span></label>
-      </div>
-      <div class="card prompt"><div class="head"><h4>Sua declaração</h4><div class="row2"><button class="btn sm copy" type="button" data-copy="#decOut">Copiar</button><button class="btn sm" id="decDl" type="button">Baixar .txt</button><button class="btn sm" id="decPrint" type="button">Imprimir</button></div></div><pre id="decOut" style="font-family:var(--font-ui);font-size:.92rem"></pre></div>
-    </div>
-  </div>
-</section>
-
 <!-- ======================= MATERIAIS ======================= -->
 <section class="alt" id="materiais" data-nav="Materiais">
   <div class="wrap">
@@ -710,6 +728,7 @@
     </div>
   </div>
 </section>
+
 </main>
 
 <footer>
