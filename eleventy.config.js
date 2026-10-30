@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("src/demos");
   eleventyConfig.addPassthroughCopy("src/seminario");
+  eleventyConfig.addPassthroughCopy("src/docencia");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   // CNAME do domínio próprio
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
