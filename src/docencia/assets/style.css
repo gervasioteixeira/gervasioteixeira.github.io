@@ -315,3 +315,12 @@ body.aula .help{display:block}
 .fichas label.f{display:block;margin:14px 0 6px;font-weight:700;font-size:.85rem;color:var(--gold2)}
 .print-hide{}
 @media print{.nav,.totop,.cta,.btn{display:none!important}body{background:#fff;color:#111}section{padding:24px 0}.card,.act{border-color:#999;background:#fff}}
+
+/* ícones numerados: círculo dourado sólido com número escuro e legível */
+.num{width:42px;height:42px;background:var(--gold2);color:#0a1630;font-size:1.1rem;font-weight:800;box-shadow:0 0 0 5px rgba(232,200,116,.16)}
+.rules .card span.num{color:#0a1630;font-size:1.1rem}
+/* preenchimento pelo estudante */
+.fields{display:grid;gap:2px;margin:14px 0 4px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:16px}
+.fields label.f{margin-top:8px}
+.fields .clear{grid-column:1/-1;justify-self:start;margin-top:10px}
+.prompt pre.live{border-color:rgba(200,162,74,.5)}

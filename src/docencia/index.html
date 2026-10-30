@@ -64,10 +64,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="kicker">A disciplina</span><h2>Carga horária, ementa e objetivos</h2><p class="sub">30 horas. Dois encontros presenciais somam 11 horas; as demais são atividades fora de sala e o trabalho final.</p></div>
 
-    <div class="grid g3 rules" style="margin-bottom:40px">
-      <div class="card"><span class="num">30h</span><b>Carga horária</b><span>Pós-graduação lato sensu em Docência do Ensino Superior</span></div>
-      <div class="card"><span class="num">2</span><b>Encontros presenciais</b><span>Sexta, 18h às 22h (sala). Sábado, 7h às 14h (laboratório de informática)</span></div>
-      <div class="card"><span class="num">6</span><b>Eixos na ementa</b><span>Da TI na educação à gestão da informação</span></div>
+    <div class="grid g3" style="margin-bottom:40px">
+      <div class="card"><span class="pct">30h</span><h3 style="margin-top:10px">Carga horária</h3><p>Pós-graduação lato sensu em Docência do Ensino Superior</p></div>
+      <div class="card"><span class="pct">2</span><h3 style="margin-top:10px">Encontros presenciais</h3><p>Sexta, 18h às 22h (sala). Sábado, 7h às 14h (laboratório de informática)</p></div>
+      <div class="card"><span class="pct">6</span><h3 style="margin-top:10px">Eixos na ementa</h3><p>Da TI na educação à gestão da informação</p></div>
     </div>
 
     <h3>Ementa</h3>
@@ -200,6 +200,14 @@
         <li><input type="checkbox" data-save="a1s3"><span>Escolham uma <b>metodologia</b> e uma <b>ferramenta</b>.</span></li>
         <li><input type="checkbox" data-save="a1s4"><span>Digam qual <b>evidência</b> mostrará que a turma aprendeu.</span></li>
       </ol>
+      <div id="ficha1" style="margin:16px 0 4px">
+        <label class="f" for="a1-disc">Disciplina</label><input type="text" id="a1-disc" data-save="a1-disc">
+        <label class="f" for="a1-obj">Objetivo de aprendizagem</label><input type="text" id="a1-obj" data-save="a1-obj">
+        <label class="f" for="a1-met">Metodologia</label><input type="text" id="a1-met" data-save="a1-met">
+        <label class="f" for="a1-ferr">Ferramenta de TI</label><input type="text" id="a1-ferr" data-save="a1-ferr">
+        <label class="f" for="a1-evid">Evidência de que aprenderam</label><input type="text" id="a1-evid" data-save="a1-evid">
+        <div class="row2" style="margin-top:14px"><button class="btn sm primary" type="button" data-copyform="#ficha1">Copiar ficha</button></div>
+      </div>
       <p class="mini">Exemplo: disciplina “Metodologia de Pesquisa”; objetivo “formular perguntas de pesquisa claras”; metodologia “sala de aula invertida”; ferramenta “vídeo curto + quiz no Google Forms”; evidência “quiz prévio e pergunta reescrita em aula”.</p>
     </div>
   </div>
@@ -250,7 +258,7 @@
 <!-- ======================= PROMPTS ======================= -->
 <section class="alt" id="prompts">
   <div class="wrap">
-    <div class="sec-head"><span class="kicker">Aulas 1 e 2 · prompts</span><h2>Prompt em cinco camadas e quatro modelos</h2><p class="sub">Papel, contexto, tarefa, formato e restrições. Troque os colchetes por dados da sua aula real, sem dados pessoais.</p></div>
+    <div class="sec-head"><span class="kicker">Aulas 1 e 2 · prompts</span><h2>Prompt em cinco camadas e quatro modelos</h2><p class="sub">Papel, contexto, tarefa, formato e restrições. Preencha os campos de cada modelo com os dados da sua aula real, sem dados pessoais: o prompt se monta sozinho e você copia o resultado.</p></div>
 
     <div class="tbl-wrap" style="margin-bottom:34px"><table style="min-width:560px"><thead><tr><th>Camada</th><th>Pergunta</th><th>Exemplo</th></tr></thead><tbody>
       <tr><td><b>Papel</b></td><td>Quem a IA deve ser?</td><td>Você é um designer instrucional.</td></tr>
@@ -259,16 +267,16 @@
       <tr><td><b>Formato</b></td><td>Como entregar?</td><td>Tabela com enunciado, alternativas, gabarito e justificativa.</td></tr>
       <tr><td><b>Restrições</b></td><td>O que evitar e conferir?</td><td>Não cite autores nem datas que não possa comprovar; liste o que devo conferir.</td></tr></tbody></table></div>
 
-    <div class="grid g2">
-      <div class="card prompt"><div class="head"><div><h3>Plano de aula</h3><p>Objetivo, metodologia, atividades e avaliação</p></div><button class="btn sm copy" type="button" data-copy="#p1">Copiar</button></div>
+    <div class="grid" style="gap:20px">
+      <div class="card prompt" data-fill id="pc1"><div class="head"><div><h3>Plano de aula</h3><p>Objetivo, metodologia, atividades e avaliação</p></div><button class="btn sm copy" type="button" data-copy="#p1">Copiar</button></div>
         <pre id="p1">Você é um designer instrucional. Minha turma: [curso, período, número de estudantes, conhecimentos prévios]. Tempo disponível: [duração]. Objetivo de aprendizagem: [objetivo]. Proponha um plano de aula com objetivo, metodologia ativa, atividades com tempo, recursos e forma de avaliação. Entregue em uma tabela por etapa. Não cite autores ou dados que você não possa comprovar e liste ao final o que devo conferir.</pre></div>
-      <div class="card prompt"><div class="head"><div><h3>Roteiro de vídeo</h3><p>Vídeo curto para sala invertida</p></div><button class="btn sm copy" type="button" data-copy="#p2">Copiar</button></div>
+      <div class="card prompt" data-fill id="pc2"><div class="head"><div><h3>Roteiro de vídeo</h3><p>Vídeo curto para sala invertida</p></div><button class="btn sm copy" type="button" data-copy="#p2">Copiar</button></div>
         <pre id="p2">Você é um roteirista educacional. Crie o roteiro de um vídeo de 5 minutos sobre [tema] para [público]. Entregue em três colunas: cena, fala e imagem. Use linguagem simples, inclua sugestão de legendas e termine com uma pergunta de reflexão. Liste ao final os fatos que devo conferir.</pre></div>
-      <div class="card prompt"><div class="head"><div><h3>Estudo de caso</h3><p>Caso fictício com dilema</p></div><button class="btn sm copy" type="button" data-copy="#p3">Copiar</button></div>
+      <div class="card prompt" data-fill id="pc3"><div class="head"><div><h3>Estudo de caso</h3><p>Caso fictício com dilema</p></div><button class="btn sm copy" type="button" data-copy="#p3">Copiar</button></div>
         <pre id="p3">Você é professor(a) de [área]. Escreva um caso curto e fictício, com um dilema e três perguntas de discussão, para trabalhar [conceito] com estudantes de [nível]. Não use pessoas, empresas ou leis reais. Indique ao final o que o professor deve verificar.</pre></div>
-      <div class="card prompt"><div class="head"><div><h3>Rubrica</h3><p>Critérios e níveis</p></div><button class="btn sm copy" type="button" data-copy="#p4">Copiar</button></div>
+      <div class="card prompt" data-fill id="pc4"><div class="head"><div><h3>Rubrica</h3><p>Critérios e níveis</p></div><button class="btn sm copy" type="button" data-copy="#p4">Copiar</button></div>
         <pre id="p4">Você é um avaliador. Crie uma rubrica com quatro critérios e três níveis (excelente, adequado, a melhorar) para avaliar [atividade]. Entregue em tabela. Use critérios observáveis, sem julgamentos subjetivos, e explique em uma linha como aplicar cada nível.</pre></div>
-      <div class="card prompt gold"><div class="head"><div><h3>Quiz de 5 questões</h3><p>Com gabarito comentado, para revisar</p></div><button class="btn sm copy" type="button" data-copy="#p5">Copiar</button></div>
+      <div class="card prompt gold" data-fill id="pc5"><div class="head"><div><h3>Quiz de 5 questões</h3><p>Com gabarito comentado, para revisar</p></div><button class="btn sm copy" type="button" data-copy="#p5">Copiar</button></div>
         <pre id="p5">Você é um professor de [área]. Crie 5 questões objetivas de múltipla escolha sobre [conteúdo], para estudantes de [nível]. Cada questão deve ter 4 alternativas, apenas uma correta, e um gabarito comentado que explique por que a correta está certa e por que as outras estão erradas. Evite pegadinhas e dupla negação. Ao final, liste o que devo conferir.</pre></div>
       <div class="card prompt"><div class="head"><div><h3>Dados fictícios para análise</h3><p>Para treinar com planilhas</p></div><button class="btn sm copy" type="button" data-copy="#p6">Copiar</button></div>
         <pre id="p6">Gere uma tabela fictícia, em formato CSV, com 30 estudantes de duas turmas (A e B). Colunas: identificador (E01, E02...), turma, frequência em percentual, notas A1, A2 e A3 de 0 a 10, média e situação (aprovado se a média for 7 ou mais). Use valores plausíveis e não use nomes reais.</pre></div>
@@ -317,15 +325,20 @@
     <div class="alert"><b>Atenção.</b> Situação conferida em 30/10/2026 nas páginas oficiais do gov.br (CNE, CNPq e MEC) e da Câmara dos Deputados. Normas e status mudam: consulte os textos oficiais e o Diário Oficial da União antes de citar em trabalhos.</div>
 
     <h3 style="margin-top:40px">Declaração de uso de IA</h3>
-    <div class="card prompt" style="margin-top:14px"><div class="head"><div><p>Modelo para incluir em materiais e trabalhos que usaram IA</p></div><button class="btn sm copy" type="button" data-copy="#decl">Copiar</button></div>
-      <pre id="decl">DECLARAÇÃO DE USO DE INTELIGÊNCIA ARTIFICIAL
-Título:
-Autor(es):
-Data:
-Ferramenta(s) (nome e versão):
-Finalidade (para que a IA foi usada):
-O que foi conferido por mim (questões, gabarito, fontes):
-Limites (o que não foi delegado à IA):</pre></div>
+    <p>Declarar o uso de IA é o oposto do plágio: quem declara assume a responsabilidade pelo que produziu. Preencha os campos e copie, baixe ou imprima a sua declaração para anexar ao material ou ao trabalho. Teste prático: se você teria vergonha de declarar o uso, reveja-o.</p>
+    <div class="builder" style="margin-top:14px">
+      <div class="card" id="declForm">
+        <label class="f" for="d1">Título do material ou trabalho</label><input type="text" id="d1" data-save="d1" placeholder="Título">
+        <label class="f" for="d2">Autor(es)</label><input type="text" id="d2" data-save="d2" placeholder="Seu nome (e dos colegas do grupo)">
+        <label class="f" for="d3">Data</label><input type="text" id="d3" data-save="d3" placeholder="__/__/____">
+        <label class="f" for="d4">Ferramenta(s) e versão</label><input type="text" id="d4" data-save="d4" placeholder="ex.: ChatGPT, Gemini (versão gratuita)">
+        <label class="f" for="d5">Finalidade do uso</label><textarea id="d5" data-save="d5" placeholder="ex.: gerar rascunho de 5 questões; sugerir estrutura do módulo 1" style="min-height:70px"></textarea>
+        <label class="f" for="d6">O que foi conferido por mim</label><textarea id="d6" data-save="d6" placeholder="ex.: questões, gabarito e fontes, conferidos um a um" style="min-height:70px"></textarea>
+        <label class="f" for="d7">Não utilizei IA para</label><textarea id="d7" data-save="d7" placeholder="ex.: definir objetivos, atribuir notas, interpretar resultados" style="min-height:70px"></textarea>
+        <label style="display:flex;gap:10px;margin-top:14px;align-items:flex-start"><input type="checkbox" id="d8" data-save="d8" style="margin-top:4px"> <span>Todas as informações e referências foram conferidas nas fontes originais.</span></label>
+      </div>
+      <div class="card prompt"><div class="head"><h4>Sua declaração</h4><div class="row2"><button class="btn sm copy" type="button" data-copy="#decOut">Copiar</button><button class="btn sm" id="decDl" type="button">Baixar .txt</button><button class="btn sm" id="decPrint" type="button">Imprimir</button></div></div><pre id="decOut" class="live" style="font-family:var(--font-ui);font-size:.92rem"></pre></div>
+    </div>
   </div>
 </section>
 
@@ -431,7 +444,7 @@ Limites (o que não foi delegado à IA):</pre></div>
       <label class="f" for="f-aval">Avaliação de cada módulo</label><textarea id="f-aval" data-save="f-aval" rows="3"></textarea>
       <label class="f" for="f-ferr">Ferramentas</label><textarea id="f-ferr" data-save="f-ferr" rows="2"></textarea>
       <label class="f" for="f-ia">IA usada, prompts e verificações</label><textarea id="f-ia" data-save="f-ia" rows="3"></textarea>
-      <div class="row2" style="margin-top:16px"><button class="btn sm primary" id="copiarFicha" type="button">Copiar ficha</button></div>
+      <div class="row2" style="margin-top:16px"><button class="btn sm primary" type="button" data-copyform="#ficha">Copiar ficha</button></div>
     </div>
 
     <div class="sec-head" style="margin-top:50px"><span class="kicker">Para levar</span><h2>Seis compromissos</h2><p class="sub">Escolha três para praticar nesta semana.</p></div>
