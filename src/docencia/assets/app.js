@@ -99,10 +99,11 @@
       var raw = tk.slice(1, -1);
       var label = raw.charAt(0).toUpperCase() + raw.slice(1);
       var id = card.id + "-f" + i;
+      var wrap = document.createElement("div"); wrap.className = "fld";
       var lb = document.createElement("label"); lb.className = "f"; lb.setAttribute("for", id); lb.textContent = label;
       var inp = document.createElement("input"); inp.type = "text"; inp.id = id; inp.placeholder = raw; inp.autocomplete = "off";
       var sv = store("get", id); if (sv !== null) inp.value = sv;
-      box.appendChild(lb); box.appendChild(inp);
+      wrap.appendChild(lb); wrap.appendChild(inp); box.appendChild(wrap);
       return inp;
     });
     var clr = document.createElement("button");
