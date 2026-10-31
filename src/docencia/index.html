@@ -267,6 +267,20 @@
       <tr><td><b>Formato</b></td><td>Como entregar?</td><td>Tabela com enunciado, alternativas, gabarito e justificativa.</td></tr>
       <tr><td><b>Restrições</b></td><td>O que evitar e conferir?</td><td>Não cite autores nem datas que não possa comprovar; liste o que devo conferir.</td></tr></tbody></table></div>
 
+    <h3 id="montador">Montador de prompt em cinco camadas</h3>
+    <p class="mini" style="margin:6px 0 0">Preencha as cinco camadas com os dados da sua aula, sem dados pessoais. O prompt se monta ao lado e você copia o resultado. Os campos já trazem o exemplo da tabela acima.</p>
+    <div class="builder" style="margin:14px 0 40px">
+      <div>
+        <div class="layer"><label class="f" for="b1">1 · Papel (quem a IA deve ser)</label><input type="text" id="b1" data-save="b1" value="Você é um designer instrucional."></div>
+        <div class="layer"><label class="f" for="b2">2 · Contexto (turma, nível, tempo, objetivo)</label><input type="text" id="b2" data-save="b2" value="Minha turma tem 18 pós-graduandos em Docência do Ensino Superior, com pouca experiência em TI."></div>
+        <div class="layer"><label class="f" for="b3">3 · Tarefa (o que produzir)</label><input type="text" id="b3" data-save="b3" value="Proponha um quiz de 5 questões sobre sala de aula invertida."></div>
+        <div class="layer"><label class="f" for="b4">4 · Formato (tabela, lista…)</label><input type="text" id="b4" data-save="b4" value="Tabela com enunciado, alternativas, gabarito e justificativa."></div>
+        <div class="layer"><label class="f" for="b5">5 · Restrições (o que evitar e conferir)</label><input type="text" id="b5" data-save="b5" value="Não cite autores nem datas que não possa comprovar; liste o que devo conferir."></div>
+      </div>
+      <div class="card prompt"><div class="head"><h4>Seu prompt</h4><button class="btn sm copy" type="button" data-copy="#builderOut">Copiar</button></div><pre id="builderOut"></pre>
+        <p class="note">A restrição final não elimina a alucinação, mas reduz o risco de invenção. Confira sempre a resposta da IA.</p></div>
+    </div>
+
     <div class="grid" style="gap:20px">
       <div class="card prompt" data-fill id="pc1"><div class="head"><div><h3>Plano de aula</h3><p>Objetivo, metodologia, atividades e avaliação</p></div><button class="btn sm copy" type="button" data-copy="#p1">Copiar</button></div>
         <pre id="p1">Você é um designer instrucional. Minha turma: [curso, período, número de estudantes, conhecimentos prévios]. Tempo disponível: [duração]. Objetivo de aprendizagem: [objetivo]. Proponha um plano de aula com objetivo, metodologia ativa, atividades com tempo, recursos e forma de avaliação. Entregue em uma tabela por etapa. Não cite autores ou dados que você não possa comprovar e liste ao final o que devo conferir.</pre></div>

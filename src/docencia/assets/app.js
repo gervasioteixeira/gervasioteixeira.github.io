@@ -170,6 +170,19 @@
     });
   }
 
+  // Montador de prompt em cinco camadas
+  (function () {
+    var out = document.getElementById("builderOut"); if (!out) return;
+    var ids = ["b1", "b2", "b3", "b4", "b5"], names = ["Papel", "Contexto", "Tarefa", "Formato", "Restrições"];
+    function up() {
+      out.textContent = ids.map(function (id, i) {
+        return names[i] + ": " + (document.getElementById(id).value || "").trim();
+      }).join("\n");
+    }
+    ids.forEach(function (id) { document.getElementById(id).addEventListener("input", up); });
+    up();
+  })();
+
   // Botão de voltar ao topo
   var up = document.getElementById("totop");
   if (up) {
