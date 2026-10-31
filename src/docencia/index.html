@@ -122,13 +122,13 @@
     <h3>Aula 2 · sábado, 31/10 · 7h às 14h</h3>
     <ol class="timeline" style="list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px">
       <li class="slot"><div class="row"><div class="t">07:00</div><div class="ti">Retomada, combinados e prompts<small>Cinco camadas e exercício</small></div><span class="tag">30 min</span></div></li>
-      <li class="slot"><div class="row"><div class="t">07:30</div><div class="ti">Oficina 1 · IA para planejar aulas e criar materiais<small>Do plano de aula ao material em cinco passos</small></div><span class="tag"><a href="#oficinas" style="text-decoration:none;color:inherit">Oficinas</a></span></div></li>
+      <li class="slot"><div class="row"><div class="t">07:30</div><div class="ti">Oficina 1 · IA para planejar aulas e criar materiais<small>Do plano de aula ao material em cinco passos</small></div><span class="tag"><a href="#of1" style="text-decoration:none;color:inherit">Oficinas</a></span></div></li>
       <li class="slot break"><div class="row"><div class="t">08:45</div><div class="ti">Intervalo<small>15 minutos</small></div><span class="tag">Pausa</span></div></li>
-      <li class="slot"><div class="row"><div class="t">09:00</div><div class="ti">Oficina 2 · quiz, gamificação e avaliação automatizada<small>Quiz, rubrica e boas questões</small></div><span class="tag"><a href="#oficinas" style="text-decoration:none;color:inherit">Oficinas</a></span></div></li>
-      <li class="slot"><div class="row"><div class="t">10:15</div><div class="ti">Plataformas virtuais de aprendizagem<small>Boas práticas e esqueleto do minicurso</small></div><span class="tag"><a href="#oficinas" style="text-decoration:none;color:inherit">AVA</a></span></div></li>
+      <li class="slot"><div class="row"><div class="t">09:00</div><div class="ti">Oficina 2 · quiz, gamificação e avaliação automatizada<small>Quiz, rubrica e boas questões</small></div><span class="tag"><a href="#of2" style="text-decoration:none;color:inherit">Oficinas</a></span></div></li>
+      <li class="slot"><div class="row"><div class="t">10:15</div><div class="ti">Plataformas virtuais de aprendizagem<small>Boas práticas e esqueleto do minicurso</small></div><span class="tag"><a href="#of3" style="text-decoration:none;color:inherit">AVA</a></span></div></li>
       <li class="slot break"><div class="row"><div class="t">11:00</div><div class="ti">Intervalo<small>15 minutos</small></div><span class="tag">Pausa</span></div></li>
-      <li class="slot"><div class="row"><div class="t">11:15</div><div class="ti">Dados de aprendizagem<small>Planilhas e IA, com dados fictícios</small></div><span class="tag"><a href="#oficinas" style="text-decoration:none;color:inherit">Dados</a></span></div></li>
-      <li class="slot"><div class="row"><div class="t">12:00</div><div class="ti">Atividade do sábado · minicurso em grupo<small>Planejamento e módulo 1 (30% da nota)</small></div><span class="tag"><a href="#atividade" style="text-decoration:none;color:inherit">Atividade</a></span></div></li>
+      <li class="slot"><div class="row"><div class="t">11:15</div><div class="ti">Dados de aprendizagem<small>Planilhas e IA, com dados fictícios</small></div><span class="tag"><a href="#of4" style="text-decoration:none;color:inherit">Dados</a></span></div></li>
+      <li class="slot"><div class="row"><div class="t">12:00</div><div class="ti">Atividade do sábado · minicurso em grupo<small>Planejamento e módulo 1 (30% da nota)</small></div><span class="tag"><a href="#atv2" style="text-decoration:none;color:inherit">Atividade</a></span></div></li>
       <li class="slot"><div class="row"><div class="t">13:30</div><div class="ti">Apresentações e encerramento<small>3 minutos por grupo, mais 1 de feedback</small></div><span class="tag">Fim</span></div></li>
     </ol>
   </div>
@@ -292,11 +292,11 @@
         <pre id="p4">Você é um avaliador. Crie uma rubrica com quatro critérios e três níveis (excelente, adequado, a melhorar) para avaliar [atividade]. Entregue em tabela. Use critérios observáveis, sem julgamentos subjetivos, e explique em uma linha como aplicar cada nível.</pre></div>
       <div class="card prompt gold" data-fill id="pc5"><div class="head"><div><h3>Quiz de 5 questões</h3><p>Com gabarito comentado, para revisar</p></div><button class="btn sm copy" type="button" data-copy="#p5">Copiar</button></div>
         <pre id="p5">Você é um professor de [área]. Crie 5 questões objetivas de múltipla escolha sobre [conteúdo], para estudantes de [nível]. Cada questão deve ter 4 alternativas, apenas uma correta, e um gabarito comentado que explique por que a correta está certa e por que as outras estão erradas. Evite pegadinhas e dupla negação. Ao final, liste o que devo conferir.</pre></div>
-      <div class="card prompt"><div class="head"><div><h3>Dados fictícios para análise</h3><p>Para treinar com planilhas</p></div><button class="btn sm copy" type="button" data-copy="#p6">Copiar</button></div>
+      <div class="card prompt" id="pc6"><div class="head"><div><h3>Dados fictícios para análise</h3><p>Para treinar com planilhas</p></div><button class="btn sm copy" type="button" data-copy="#p6">Copiar</button></div>
         <pre id="p6">Gere uma tabela fictícia, em formato CSV, com 30 estudantes de duas turmas (A e B). Colunas: identificador (E01, E02...), turma, frequência em percentual, notas A1, A2 e A3 de 0 a 10, média e situação (aprovado se a média for 7 ou mais). Use valores plausíveis e não use nomes reais.</pre></div>
     </div>
 
-    <h3 style="margin-top:44px">Checklist de verificação</h3>
+    <h3 id="checklist" style="margin-top:44px">Checklist de verificação</h3>
     <ol class="steps act" style="list-style:none;display:grid;gap:8px;margin-top:14px">
       <li><input type="checkbox" data-save="ck1"><span><b>Existe?</b> A fonte, o autor ou a lei citados existem de fato?</span></li>
       <li><input type="checkbox" data-save="ck2"><span><b>Os dados conferem?</b> Datas, números e nomes batem com uma fonte confiável?</span></li>
@@ -338,7 +338,7 @@
     </div>
     <div class="alert"><b>Atenção.</b> Situação conferida em 30/10/2026 nas páginas oficiais do gov.br (CNE, CNPq e MEC) e da Câmara dos Deputados. Normas e status mudam: consulte os textos oficiais e o Diário Oficial da União antes de citar em trabalhos.</div>
 
-    <h3 style="margin-top:40px">Declaração de uso de IA</h3>
+    <h3 id="declaracao" style="margin-top:40px">Declaração de uso de IA</h3>
     <p>Declarar o uso de IA é o oposto do plágio: quem declara assume a responsabilidade pelo que produziu. Preencha os campos e copie, baixe ou imprima a sua declaração para anexar ao material ou ao trabalho. Teste prático: se você teria vergonha de declarar o uso, reveja-o.</p>
     <div class="builder" style="margin-top:14px">
       <div class="card" id="declForm">
@@ -367,16 +367,16 @@
       <div class="card gold"><h3>Produto do dia</h3><p>Ao final, cada grupo apresenta o módulo 1 do seu minicurso.</p></div>
     </div>
 
-    <h3>Oficina 1 · IA para planejar aulas e criar materiais (75 min)</h3>
+    <h3 id="of1">Oficina 1 · IA para planejar aulas e criar materiais (75 min)</h3>
     <ol class="steps act" style="list-style:none;display:grid;gap:8px;margin:14px 0 34px">
       <li><input type="checkbox" data-save="o1s1"><span><b>Planejar:</b> use o prompt de plano de aula para gerar objetivo, metodologia, atividades e avaliação.</span></li>
-      <li><input type="checkbox" data-save="o1s2"><span><b>Verificar:</b> confira objetivos, tempo e fatos com o <a href="#prompts">checklist</a>.</span></li>
+      <li><input type="checkbox" data-save="o1s2"><span><b>Verificar:</b> confira objetivos, tempo e fatos com o <a href="#checklist">checklist</a>.</span></li>
       <li><input type="checkbox" data-save="o1s3"><span><b>Produzir:</b> crie o material (slides, infográfico ou roteiro de vídeo).</span></li>
       <li><input type="checkbox" data-save="o1s4"><span><b>Adequar:</b> ajuste à turma, à acessibilidade e à linguagem.</span></li>
-      <li><input type="checkbox" data-save="o1s5"><span><b>Registrar:</b> salve no Drive e preencha a <a href="#etica">declaração de uso</a>.</span></li>
+      <li><input type="checkbox" data-save="o1s5"><span><b>Registrar:</b> salve no Drive e preencha a <a href="#declaracao">declaração de uso</a>.</span></li>
     </ol>
 
-    <h3>Oficina 2 · quiz, gamificação e avaliação automatizada (75 min)</h3>
+    <h3 id="of2">Oficina 2 · quiz, gamificação e avaliação automatizada (75 min)</h3>
     <div class="grid g3" style="margin:14px 0 20px">
       <div class="card"><h3>Avaliação formativa</h3><p>Quiz curto ao longo da aula, com feedback imediato (Kahoot, Quizizz, Mentimeter).</p></div>
       <div class="card"><h3>Correção automática</h3><p>Questionário com gabarito e pontuação (Google Forms, no modo questionário).</p></div>
@@ -396,7 +396,7 @@
       <tr><td><b>Uso crítico de IA</b></td><td>Verificado e declarado</td><td>Declarado, pouco verificado</td><td>Sem verificação nem declaração</td></tr></tbody></table></div>
     <p class="mini" style="margin-bottom:34px">Exemplo ilustrativo de rubrica. Boa questão objetiva: um conceito por questão, enunciado claro, alternativas plausíveis, gabarito comentado e linguagem sem viés.</p>
 
-    <h3>Plataformas virtuais de aprendizagem (45 min)</h3>
+    <h3 id="of3">Plataformas virtuais de aprendizagem (45 min)</h3>
     <p>Um AVA ajuda a <b>organizar</b> (módulos, materiais, prazos), <b>comunicar</b> (avisos, fóruns, dúvidas) e <b>avaliar</b> (tarefas, questionários, rubricas). Exemplos: Moodle, Google Classroom e Microsoft Teams. Cinco práticas: módulos claros, instruções completas, prazos visíveis, acessibilidade (legendas, texto alternativo e contraste) e um canal fixo de dúvidas.</p>
     <div class="grid g3" style="margin:14px 0 34px">
       <div class="card"><b>Boas-vindas</b><p class="mini">Apresentação e como estudar</p></div>
@@ -404,8 +404,8 @@
       <div class="card"><b>Módulos 1, 2 e 3</b><p class="mini">Material, atividade e avaliação de cada um</p></div>
     </div>
 
-    <h3>Dados de aprendizagem (45 min)</h3>
-    <p>Use o prompt de <a href="#prompts">dados fictícios</a>, cole o CSV no Google Planilhas e monte pelo menos duas visões: <b>visão geral</b> (aprovados e médias), <b>distribuição das notas</b>, <b>frequência × desempenho</b> (dispersão) e <b>comparação por turma</b>.</p>
+    <h3 id="of4">Dados de aprendizagem (45 min)</h3>
+    <p>Use o prompt de <a href="#pc6">dados fictícios</a>, cole o CSV no Google Planilhas e monte pelo menos duas visões: <b>visão geral</b> (aprovados e médias), <b>distribuição das notas</b>, <b>frequência × desempenho</b> (dispersão) e <b>comparação por turma</b>.</p>
     <div class="alert"><b>Cuidado.</b> Correlação não prova causa; use os dados para fazer perguntas, não para rotular estudantes. Dados reais de estudantes só com autorização e anonimização, conforme a LGPD.</div>
   </div>
 </section>
