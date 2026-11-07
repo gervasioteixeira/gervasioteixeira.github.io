@@ -54,7 +54,7 @@
   {
     "nome": "Supermercado ERP + PDV",
     "tag": "Varejo · em desenvolvimento",
-    "texto": "ERP e frente de caixa para supermercados, em desenvolvimento. O PDV é offline-first: vende sem internet e sincroniza depois, sem perder nem duplicar vendas. A retaguarda cobre estoque com custo e margem, compras (fornecedores, pedidos, conferência pelo XML da nota e sugestão pelo giro), cadastro único de pessoas, transferências entre lojas e avisos dos caixas com problema. Os módulos opcionais são ligados por cliente. A emissão de NFC-e ainda está em levantamento.",
+    "texto": "ERP e frente de caixa para supermercados, em desenvolvimento. O PDV é offline-first: vende sem internet e sincroniza depois, sem perder nem duplicar vendas. A retaguarda cobre estoque com custo e margem, compras (fornecedores, pedidos, entrada pelo XML da nota com custo real e sugestão pelo giro), cadastro único de pessoas, transferências entre lojas e avisos dos caixas com problema. Os módulos opcionais são ligados por cliente. A emissão de NFC-e ainda está em levantamento.",
     "stack": [
       "Laravel 13",
       "PHP 8.3",
@@ -72,7 +72,8 @@
     "detalhes": [
       "Retaguarda web com produtos e preços por loja, promoções com vigência, usuários com perfis e alçadas, turnos de caixa e relatórios de vendas, faturamento, margem e curva ABC.",
       "Estoque com livro-razão imutável: mínimo e alertas de reposição, contagem, transferência entre lojas (imediata ou com envio e recebimento, com perda em trânsito), custo médio ponderado e valorização.",
-      "Compras: fornecedores, pedido de compra com recebimento parcial que dá entrada no estoque já com o custo da nota, conferência do recebimento com o XML da NF-e (a mesma nota não entra duas vezes), sugestão de compra pelo giro e curva ABC dos produtos.",
+      "Compras: fornecedores, pedido de compra com recebimento parcial, conferência do recebimento com o XML da NF-e (a mesma nota não entra duas vezes), sugestão de compra pelo giro e curva ABC dos produtos.",
+      "Custo real da compra: a entrada no estoque leva o custo posto na loja (preço da nota mais IPI, ICMS-ST, frete e despesas, com as regras configuráveis por cliente e o rateio exato, sem perder centavo), conversão de caixa para unidade e entrada direta pelo XML, sem pedido, com a margem antes e depois.",
       "Cadastro único de pessoas com papéis (cliente, fornecedor, transportador, vendedor): a mesma pessoa não é digitada duas vezes, e o fornecedor é o perfil comercial dela.",
       "Módulos opcionais ligados e desligados por cliente, com dependências e pendências que impedem desligar; desligar preserva os dados e as permissões do módulo ficam adormecidas no perfil.",
       "PDV desktop com leitura de código de barras e de etiqueta de balança, venda por quantidade e peso, pagamento em dinheiro, PIX e cartão, desconto por forma de pagamento e com autorização de supervisor, devolução e identificação do operador por PIN.",
